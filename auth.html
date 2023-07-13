@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+  <title>Log In</title>
+</head>
+<body>
+  <section>
+    <div class="container d-flex flex-column">
+      <div class="row align-items-center justify-content-center gx-0 min-vh-100">
+        <div class="col-12 col-md-6 col-lg-4 py-8 py-md-11">
+          <img src="./assets/img/logo.png" alt="..." style="margin-top: -247px; margin-left: -58px;">
+          <center>
+            <h1 style="color: var(--font-1, #37474F);
+            font-family: Plus Jakarta Sans;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 125%;">Masuk</h1>
+            <p style="color: var(--font-1, #37474F);
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 125%;">Selamat Datang Kembali</p>
+          </center>
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukan email anda" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Kata Sandi</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" required placeholder="Masukan kata sandi anda">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1" style="color: #A8A8A8;
+              font-family: Poppins;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              letter-spacing: -0.24px;">Dengan mengklik Daftar, Anda menyetujui Ketentuan, 
+                Kebijakan Privasi, dan Kebijakan Cookie kami.</label>
+              </div>
+            <button type="submit" class="btn w-100 btn-primary">Masuk</button>
+          </form>
+          <br>
+          <br>
+          <p style="color: #37474F;
+          text-align: center;
+          font-family: Poppins;
+          ">belum memiliki akun ?
+          <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#daftar">Daftar</button>
+          </p>
+        </div>
+        <div class="col-lg-7 offset-lg-1 align-self-stretch d-none d-lg-block">
+          <div class="h-100 w-cover bg-cover" style="background-image: url(./assets/img/bernd-dittrich-zh-bj-m-62-f-6-m-unsplash-1.png); width: 765px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="daftar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="daftarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content text-center ">
+        <div class="modal-header">
+          <!-- <h1 class="modal-title fs-5" id="daftarLabel">Modal title</h1> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+            <path d="M33.3288 66.0503C35.1697 66.0503 36.664 67.4877 36.664 69.2586V73.1794C36.664 79.8335 42.2949 85.2501 49.2079 85.2501H70.3193C77.2626 85.2501 82.9108 79.8168 82.9108 73.1377C82.9108 71.3669 84.4052 69.9294 86.246 69.9294C88.0869 69.9294 89.5812 71.3669 89.5812 73.1377C89.5812 83.3542 80.94 91.6667 70.3193 91.6667H49.2079C38.6132 91.6667 29.9936 83.3751 29.9936 73.1794V69.2586C29.9936 67.4877 31.4879 66.0503 33.3288 66.0503ZM63.4219 46.7884C64.7155 46.7884 65.8806 47.5717 66.374 48.7758C66.8674 49.9758 66.5896 51.3591 65.6775 52.2758L53.5622 64.3924C52.9403 65.0132 52.1235 65.3257 51.3067 65.3257C50.4899 65.3257 49.6689 65.0132 49.047 64.384C47.8031 63.1257 47.8073 61.0966 49.0553 59.8466L55.6892 53.2091H13.6093C11.8472 53.2091 10.4167 51.7716 10.4167 50.0008C10.4167 48.23 11.8472 46.7884 13.6093 46.7884H63.4219ZM70.3648 8.33333C80.9595 8.33333 89.5834 16.6249 89.5834 26.8206V58.5453C89.5834 60.3161 88.0847 61.7495 86.2482 61.7495C84.403 61.7495 82.9087 60.3161 82.9087 58.5453V26.8206C82.9087 20.1665 77.2821 14.7499 70.3648 14.7499H49.2534C42.3101 14.7499 36.6619 20.1832 36.6619 26.8623V30.7414C36.6619 32.5123 35.1718 33.9456 33.3266 33.9456C31.4858 33.9456 29.9914 32.5123 29.9914 30.7414V26.8623C29.9914 16.6457 38.6327 8.33333 49.2534 8.33333H70.3648ZM49.0379 35.6243C50.2735 34.3618 52.2927 34.3535 53.5531 35.5993L56.6089 38.6326C57.861 39.8743 57.8735 41.9076 56.6296 43.1659C56.0077 43.8034 55.1867 44.1201 54.3616 44.1201C53.5531 44.1201 52.7404 43.8117 52.1144 43.1909L49.0628 40.1618C47.8106 38.9159 47.7982 36.8868 49.0379 35.6243Z" fill="#2264D1"/>
+          </svg>
+          <br>
+          <br>
+          <button class="btn btn-warning" type="button" style="color: #000;
+          font-family: Plus Jakarta Sans;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;">Harap Mendaftar melewati SIINAS</button>
+          <br/>
+          <br/>
+          <p style="color: #000;
+          text-align: center;
+          font-family: Plus Jakarta Sans;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;">Untuk pertanyaaan lebih lanjut silahkan hubungi call center <br>
+            disperindag provinsi kepri </p>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap js-->
+  <script src="./assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
