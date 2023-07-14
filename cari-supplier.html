@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/logo-sirapi.svg"
+      type="image/x-icon"
+    />
+    <title>Sirapi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="bg-white border-gray-200">
+      <div
+        class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4 md:px-12 px-2"
+      >
+        <a href="/" class="flex items-center">
+          <img
+            src="/assets/icons/logo-sirapi.svg"
+            class="h-[75px] mr-3"
+            alt="Flowbite Logo"
+          />
+        </a>
+        <div class="flex md:order-2">
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="md:hidden text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 mr-1"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>
+
+          <div class="relative hidden md:block">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <div class="flex border border-gray-300 rounded-full">
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 pl-10 text-sm text-gray-900 border-0 rounded-full focus:ring-0 focus:border-0"
+                placeholder="Cari..."
+              />
+              <div
+                class="inline-block my-2 w-0.5 self-stretch bg-[#DADADA80]"
+              ></div>
+              <select
+                id="countries"
+                class="border border-0 text-gray-900 text-sm rounded-full focus:ring-0 focus:border-0 block w-fit p-2.5"
+              >
+                <option selected>Industri</option>
+                <option value="tekonologi">Teknologi</option>
+              </select>
+            </div>
+          </div>
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="md:ml-20 ml-4 text-white bg-[#3D56F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-normal rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+          >
+            Masuk
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 md:hidden">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Search..."
+            />
+          </div>
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                aria-current="page"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Cari Proyek</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Cari Supplier</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Kategori -->
+    <section>
+      <div class="p-8 lg:px-16 rounded-lg border border-[#DADADA]">
+        <div class="flex flex-wrap gap-x-20 gap-y-8">
+          <div class="text-[#8594AD] font-medium font-base">
+            Farmasi, Kosmetik, Alkes
+          </div>
+          <div class="text-[#8594AD] font-medium font-base">
+            Pembangkit Energi
+          </div>
+          <div class="text-[#8594AD] font-medium font-base">Pangan</div>
+          <div class="text-[#8594AD] font-medium font-base">Hulu agro</div>
+          <div class="text-[#8594AD] font-medium font-base">Kimia Dasar</div>
+          <div class="text-[#8594AD] font-medium font-base">
+            Alat Transportasi
+          </div>
+          <div class="text-[#8594AD] font-medium font-base">
+            Elektronika dan Telematika ICT
+          </div>
+          <div class="text-[#8594AD] font-medium font-base">
+            Logam Dasar dan Bahan Gajian Non Logam
+          </div>
+          <div class="text-[#8594AD] font-medium font-base">
+            Barang modal, Komponen, Bahan Penolong dan Jasa Industri
+          </div>
+          <div class="text-[#8594AD] font-medium font-base">
+            Kimia dasar, Migas dan Batu Bara
+          </div>
+          <div class="text-[#8594AD] font-medium font-base">
+            Tekstil,kulit, Alas kaki, Aneka
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Kategori -->
+
+    <!-- Cari Supplier -->
+    <section>
+      <section class="bg-white">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-8 lg:px-6">
+          <div class="max-w-screen-md mb-8">
+            <h2
+              class="mb-4 text-lg tracking-tight font-semibold text-[#2264D1]"
+            >
+              Cari Supplier
+            </h2>
+          </div>
+
+          <div class="p-8 rounded-lg border border-[#DADADA]">
+            <div
+              class="flex flex-col md:flex-row justify-between text-xl items-center mb-6"
+            >
+              <p class="text-[#8594AD] font-medium">500 Services Available</p>
+              <div class="flex items-center">
+                <div class="">Sort by :</div>
+                <select
+                  id="countries"
+                  class="w-fit border-0 font-semibold rounded-lg focus:ring-0 focus:border-0 block p-2.5"
+                >
+                  <option selected>Terlaris</option>
+                  <option value="">Terbaru</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+              <div class="max-w-sm bg-white">
+                <a href="#">
+                  <img
+                    class="rounded-t-lg"
+                    src="/assets/images/kelapa.png"
+                    alt=""
+                  />
+                </a>
+                <div class="">
+                  <a href="#">
+                    <div class="flex items-center gap-x-3 my-4">
+                      <img src="/assets/images/user.png" alt="" />
+                      <h4>CV. Kopyor indoneisa</h4>
+                    </div>
+                  </a>
+                  <p class="mb-3 font-medium text-sm text-[#8594AD]">
+                    menjual dan menyediakan kebutuhan pangan dibidang kopyor
+                  </p>
+                  <div
+                    class="flex items-center font-medium text-[#37474F] text-sm mb-3"
+                  >
+                    <img
+                      class="mr-2"
+                      src="/assets/icons/star-rating.svg"
+                      alt=""
+                    />
+                    <p class="mr-2">5.0</p>
+                    <p>(90)</p>
+                  </div>
+                  <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
+                </div>
+              </div>
+              <div class="max-w-sm bg-white">
+                <a href="#">
+                  <img
+                    class="rounded-t-lg"
+                    src="/assets/images/kelapa.png"
+                    alt=""
+                  />
+                </a>
+                <div class="">
+                  <a href="#">
+                    <div class="flex items-center gap-x-3 my-4">
+                      <img src="/assets/images/user.png" alt="" />
+                      <h4>CV. Kopyor indoneisa</h4>
+                    </div>
+                  </a>
+                  <p class="mb-3 font-medium text-sm text-[#8594AD]">
+                    menjual dan menyediakan kebutuhan pangan dibidang kopyor
+                  </p>
+                  <div
+                    class="flex items-center font-medium text-[#37474F] text-sm mb-3"
+                  >
+                    <img
+                      class="mr-2"
+                      src="/assets/icons/star-rating.svg"
+                      alt=""
+                    />
+                    <p class="mr-2">5.0</p>
+                    <p>(90)</p>
+                  </div>
+                  <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
+                </div>
+              </div>
+              <div class="max-w-sm bg-white">
+                <a href="#">
+                  <img
+                    class="rounded-t-lg"
+                    src="/assets/images/kelapa.png"
+                    alt=""
+                  />
+                </a>
+                <div class="">
+                  <a href="#">
+                    <div class="flex items-center gap-x-3 my-4">
+                      <img src="/assets/images/user.png" alt="" />
+                      <h4>CV. Kopyor indoneisa</h4>
+                    </div>
+                  </a>
+                  <p class="mb-3 font-medium text-sm text-[#8594AD]">
+                    menjual dan menyediakan kebutuhan pangan dibidang kopyor
+                  </p>
+                  <div
+                    class="flex items-center font-medium text-[#37474F] text-sm mb-3"
+                  >
+                    <img
+                      class="mr-2"
+                      src="/assets/icons/star-rating.svg"
+                      alt=""
+                    />
+                    <p class="mr-2">5.0</p>
+                    <p>(90)</p>
+                  </div>
+                  <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
+                </div>
+              </div>
+              <div class="max-w-sm bg-white">
+                <a href="#">
+                  <img
+                    class="rounded-t-lg"
+                    src="/assets/images/kelapa.png"
+                    alt=""
+                  />
+                </a>
+                <div class="">
+                  <a href="#">
+                    <div class="flex items-center gap-x-3 my-4">
+                      <img src="/assets/images/user.png" alt="" />
+                      <h4>CV. Kopyor indoneisa</h4>
+                    </div>
+                  </a>
+                  <p class="mb-3 font-medium text-sm text-[#8594AD]">
+                    menjual dan menyediakan kebutuhan pangan dibidang kopyor
+                  </p>
+                  <div
+                    class="flex items-center font-medium text-[#37474F] text-sm mb-3"
+                  >
+                    <img
+                      class="mr-2"
+                      src="/assets/icons/star-rating.svg"
+                      alt=""
+                    />
+                    <p class="mr-2">5.0</p>
+                    <p>(90)</p>
+                  </div>
+                  <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
+                </div>
+              </div>
+              <div class="max-w-sm bg-white">
+                <a href="#">
+                  <img
+                    class="rounded-t-lg"
+                    src="/assets/images/kelapa.png"
+                    alt=""
+                  />
+                </a>
+                <div class="">
+                  <a href="#">
+                    <div class="flex items-center gap-x-3 my-4">
+                      <img src="/assets/images/user.png" alt="" />
+                      <h4>CV. Kopyor indoneisa</h4>
+                    </div>
+                  </a>
+                  <p class="mb-3 font-medium text-sm text-[#8594AD]">
+                    menjual dan menyediakan kebutuhan pangan dibidang kopyor
+                  </p>
+                  <div
+                    class="flex items-center font-medium text-[#37474F] text-sm mb-3"
+                  >
+                    <img
+                      class="mr-2"
+                      src="/assets/icons/star-rating.svg"
+                      alt=""
+                    />
+                    <p class="mr-2">5.0</p>
+                    <p>(90)</p>
+                  </div>
+                  <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-wrap gap-y-8 md:gap-y-0 justify-center items-center gap-x-12 mt-16"
+            >
+              <div
+                class="flex justify-center items-center rounded-full h-[50px] w-[50px] border border-[#DADADA]"
+              >
+                <iconify-icon icon="formkit:arrowleft"></iconify-icon>
+              </div>
+              <div class="flex flex-col items-center">
+                <p>1</p>
+                <div class="w-6 h-0.5 self-stretch bg-[#37474F] mt-2"></div>
+              </div>
+              <a href="#" class="text-[#A0A0A0]">2</a>
+              <a href="#" class="text-[#A0A0A0]">3</a>
+              <a href="#" class="text-[#A0A0A0]">4</a>
+              <a href="#" class="text-[#A0A0A0]">5</a>
+              <a href="#" class="text-[#A0A0A0]">6</a>
+              <a href="#" class="text-[#A0A0A0]">7</a>
+              <a href="#" class="text-[#A0A0A0]">8</a>
+              <a href="#" class="text-[#A0A0A0]">9</a>
+              <a href="#" class="text-[#A0A0A0]">10</a>
+              <div
+                class="flex justify-center items-center rounded-full h-[50px] w-[50px] border border-[#DADADA]"
+              >
+                <iconify-icon icon="formkit:arrowright"></iconify-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Cari Supplier -->
+
+    <!-- Footer -->
+    <footer class="bg-[#3676E0] text-white">
+      <div class="py-4 px-4 mx-auto max-w-screen-xl sm:pt-16 lg:px-6">
+        <div
+          class="flex flex-col md:flex-row gap-y-10 md:gap-y-0 justify-between"
+        >
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Kategori</h5>
+            <a class="font-medium" href="#">Elektronika dan telematika ICT</a>
+            <a class="font-medium" href="#">Alat transportasi</a>
+            <a class="font-medium" href="#">Farmasi, kosmetik dan alkes</a>
+            <a class="font-medium" href="#">Pembangkit energi</a>
+            <a class="font-medium" href="#">Pangan</a>
+            <a class="font-medium" href="#">Hulu agro</a>
+            <a class="font-medium" href="#"
+              >Tekstil,kulit,alas kaki dan aneka</a
+            >
+            <a class="font-medium" href="#">Kimia dasar</a>
+            <a class="font-medium" href="#"
+              >Logam dasar dan bahan gajian non logam</a
+            >
+            <a class="font-medium" href="#"
+              >Barang modal, komponen, bahan penolong <br />
+              dan jasa Industri</a
+            >
+            <a class="font-medium" href="#">Kimia dasar, Migas dan Batu bara</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Cara Penggunaan</h5>
+            <a class="font-medium" href="#">Daftar sebagai ikm</a>
+            <a class="font-medium" href="#">Daftar sebagai ib</a>
+            <a class="font-medium" href="#">Cara mulai jual produk</a>
+            <a class="font-medium" href="#">FAQ</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Tentang Sirapi</h5>
+            <a class="font-medium" href="#">Syarat dan ketentuan</a>
+            <a class="font-medium" href="#">Kebijakan privasi</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Hubungan Kami</h5>
+            <a class="font-medium" href="#">Admin@sirapi.com</a>
+            <div class="flex-1"></div>
+            <div class="flex gap-x-6">
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img class="w-[25px]" src="/assets/icons/facebook.svg" alt="" />
+              </a>
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img
+                  class="w-[25px]"
+                  src="/assets/icons/instagram.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img class="w-[25px]" src="/assets/icons/youtube.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center font-medium mt-9">
+          © Hak cipta dilindungi. dinas perindustrian dan perdagangan provinsi
+          kepulauan riau.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+  </body>
+</html>

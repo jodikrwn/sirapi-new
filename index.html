@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/logo-sirapi.svg"
+      type="image/x-icon"
+    />
+    <title>Sirapi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="bg-white border-gray-200">
+      <div
+        class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4 md:px-12 px-2"
+      >
+        <a href="/" class="flex items-center">
+          <img
+            src="/assets/icons/logo-sirapi.svg"
+            class="h-[75px] mr-3"
+            alt="Flowbite Logo"
+          />
+        </a>
+        <div class="flex md:order-2">
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="md:hidden text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 mr-1"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>
+
+          <div class="relative hidden md:block">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <div class="flex border border-gray-300 rounded-full">
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 pl-10 text-sm text-gray-900 border-0 rounded-full focus:ring-0 focus:border-0"
+                placeholder="Cari..."
+              />
+              <div
+                class="inline-block my-2 w-0.5 self-stretch bg-[#DADADA80]"
+              ></div>
+              <select
+                id="countries"
+                class="border border-0 text-gray-900 text-sm rounded-full focus:ring-0 focus:border-0 block w-fit p-2.5"
+              >
+                <option selected>Industri</option>
+                <option value="tekonologi">Teknologi</option>
+              </select>
+            </div>
+          </div>
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="md:ml-20 ml-4 text-white bg-[#3D56F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-normal rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+          >
+            Masuk
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 md:hidden">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Search..."
+            />
+          </div>
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                aria-current="page"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Cari Proyek</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Cari Supplier</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Hero -->
+    <section class="bg-white">
+      <div
+        class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+      >
+        <div class="mr-auto place-self-center lg:col-span-5">
+          <h1
+            class="max-w-2xl mb-4 text-5xl text-[#2264D1] font-semibold tracking-tight leading-[67px]"
+          >
+            Sistem Informasi <br />
+            Rantai Pasok
+            <span class="text-[#F6D100]">Industri</span>
+          </h1>
+          <p
+            class="max-w-2xl mb-6 font-light text-[#8594AD] lg:mb-8 md:text-lg lg:text-xl"
+          >
+            Menghubungkan Industri Kecil dan Menengah dengan Industri Besar
+            melalui Integrasi Rantai Pasok Industri
+          </p>
+          <a
+            href="#"
+            class="bg-[#3D56F5] inline-flex items-center justify-center px-5 py-3 text-base font-normal text-center text-white rounded-lg hover:bg-blue-800"
+          >
+            Daftar Sekarang
+          </a>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-7 lg:flex">
+          <img src="/assets/images/hero.png" alt="hero" />
+        </div>
+      </div>
+    </section>
+    <!-- Hero -->
+
+    <!-- Social Proof -->
+    <section class="bg-[#EBF8FE]">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="mb-8 lg:mb-16">
+          <h2
+            class="mb-4 text-3xl tracking-tight font-semibold text-[#2264D1] text-center"
+          >
+            Sirapi hadir untuk membantu mengintegrasikan IKM dengan IB untuk
+            memenuhi kebutuhan rantai pasok
+          </h2>
+        </div>
+        <div
+          class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-24 md:space-y-0"
+        >
+          <div class="bg-white p-6 rounded-lg">
+            <div
+              class="flex mb-7 justify-center items-center rounded-full h-[120px] w-[120px] bg-[#F6D100]"
+            >
+              <img class="w-[60px]" src="/assets/icons/star.svg" alt="" />
+            </div>
+            <h3 class="mb-2 text-2xl text-[#2264D1] font-semibold md:h-[70px]">
+              Top Supplier
+            </h3>
+            <p class="text-[#8594AD] font-normal">
+              IKM telah melalui seleksi dan proses dari sirapi
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg">
+            <div
+              class="flex mb-7 justify-center items-center rounded-full h-[120px] w-[120px] bg-[#F6D100]"
+            >
+              <img class="w-[60px]" src="/assets/icons/users.svg" alt="" />
+            </div>
+            <h3 class="mb-2 text-2xl text-[#2264D1] font-semibold md:h-[70px]">
+              Tersedia Berbagai Industri Unggulan
+            </h3>
+            <p class="text-[#8594AD] font-normal">
+              11 industri kepri tersedia di dalam sirapi
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg">
+            <div
+              class="flex mb-7 justify-center items-center rounded-full h-[120px] w-[120px] bg-[#F6D100]"
+            >
+              <img class="w-[60px]" src="/assets/icons/broken.svg" alt="" />
+            </div>
+            <h3 class="mb-2 text-2xl text-[#2264D1] font-semibold md:h-[70px]">
+              Akses Kepasar Yang Lebih Besar
+            </h3>
+            <p class="text-[#8594AD] font-normal">
+              Melalui sirapi IKM dan IB bisa tumbuh bersama melalui kemitraan
+              yang kuat
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Social Proof -->
+
+    <!-- Kategori -->
+    <section>
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="max-w-screen-md mb-8 lg:mb-16">
+          <h2 class="mb-4 text-3xl tracking-tight font-semibold text-[#2264D1]">
+            Cari <span class="text-[#F6D100]">Industri</span> Unggulan Dengan
+            Kategori
+          </h2>
+        </div>
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-4 md:gap-x-10 md:gap-y-9 gap-y-8"
+        >
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[80px] text-center mb-4"
+            >
+              Elektronika dan Telematika ICT
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[80px] text-center mb-4"
+            >
+              Farmasi, Kosmetik, Alkes
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[80px] text-center mb-4"
+            >
+              Pembangkit Energi
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[80px] text-center mb-4"
+            >
+              Pangan
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[80px] text-center mb-4"
+            >
+              Hulu agro
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[80px] text-center mb-4"
+            >
+              Tekstil,kulit, Alas kaki, Aneka
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[80px] text-center mb-4"
+            >
+              Kimia Dasar
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[80px] text-center mb-4"
+            >
+              Logam Dasar dan Bahan Gajian Non Logam
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[110px] text-center"
+            >
+              Barang modal, Komponen, Bahan Penolong dan Jasa Industri
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[110px] text-center"
+            >
+              Kimia dasar, Migas dan Batu Bara
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#EBF8FE] p-6 rounded-lg">
+            <h4
+              class="mb-2 text-xl text-[#2264D1] font-medium md:h-[110px] text-center"
+            >
+              Alat Transportasi
+            </h4>
+            <div class="flex md:justify-between justify-around">
+              <div class="flex items-center">
+                <img src="/assets/icons/store.svg" alt="" />
+                <div class="ml-2 text-[#7AD5FF]">600 Ikm</div>
+              </div>
+              <div class="flex items-center">
+                <img src="/assets/icons/factory.svg" alt="" />
+                <div class="ml-2 text-[#A4C3FF]">1120 Ib</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Kategori -->
+
+    <!-- Langkah Mudah -->
+    <section class="bg-[#EBF8FE]">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="mb-8 lg:mb-16">
+          <h2
+            class="mb-4 text-3xl tracking-tight font-semibold text-[#2264D1] text-center"
+          >
+            Langkah Mudah Dalam Mencari Rantai Pasok Di
+            <span class="text-[#F6D100]">Sirapi</span>
+          </h2>
+        </div>
+        <div
+          class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+        >
+          <div
+            class="p-6 flex flex-col text-center items-center text-[#2264D1]"
+          >
+            <div
+              class="flex mb-7 justify-center items-center rounded-full h-[120px] w-[120px] bg-[#F6D100]"
+            >
+              <img class="w-[80px]" src="/assets/icons/search.svg" alt="" />
+            </div>
+            <h3 class="mb-2 text-2xl font-semibold">Cari</h3>
+            <p class="font-normal">
+              cari dan pilih mitra berdasarkan bidang kapabilitas dan ulasan
+            </p>
+          </div>
+          <div
+            class="p-6 flex flex-col text-center items-center text-[#2264D1]"
+          >
+            <div
+              class="flex mb-7 justify-center items-center rounded-full h-[120px] w-[120px] bg-[#F6D100]"
+            >
+              <img
+                class="w-[80px]"
+                src="/assets/icons/conversation.svg"
+                alt=""
+              />
+            </div>
+            <h3 class="mb-2 text-2xl font-semibold">Berdiskusi</h3>
+            <p class="font-normal">
+              diskusikan detail pekerjaan atau ruang lingkup pekerjaan yang anda
+              inginkan lalu meminta penawaran harga dari mitra
+            </p>
+          </div>
+          <div
+            class="p-6 flex flex-col text-center items-center text-[#2264D1]"
+          >
+            <div
+              class="flex mb-7 justify-center items-center rounded-full h-[120px] w-[120px] bg-[#F6D100]"
+            >
+              <img class="w-[80px]" src="/assets/icons/thumbs-up.svg" alt="" />
+            </div>
+            <h3 class="mb-2 text-2xl font-semibold">
+              Setujui dan berikan ulasan
+            </h3>
+            <p class="font-normal">
+              Setujui hasil kerja mitra dan berikan ulasan ketika mitra sudah
+              menyelesaikan pekerjaannya
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Langkah Mudah -->
+
+    <!-- Perusahaan -->
+    <section>
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="mb-8 lg:mb-16">
+          <h2
+            class="mb-4 text-3xl tracking-tight font-medium text-[#2264D1] text-center"
+          >
+            Lebih dari 1000 Pekerjaan kami selesai dari perusahaan Terkemuka di
+            kepri yang telah mempercayai dan memilih layanan sirapi
+          </h2>
+        </div>
+        <div
+          class="flex flex-wrap md:gap-y-0 gap-y-3 flex-col md:flex-row justify-between items-center"
+        >
+          <img src="/assets//images/pct.png" alt="" />
+          <img src="/assets//images/se.png" alt="" />
+          <img src="/assets//images/fedex.png" alt="" />
+          <img src="/assets//images/Ciputra.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Perusahaan -->
+
+    <!-- Footer -->
+    <footer class="bg-[#3676E0] text-white">
+      <div class="py-4 px-4 mx-auto max-w-screen-xl sm:pt-16 lg:px-6">
+        <div
+          class="flex flex-col md:flex-row gap-y-10 md:gap-y-0 justify-between"
+        >
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Kategori</h5>
+            <a class="font-medium" href="#">Elektronika dan telematika ICT</a>
+            <a class="font-medium" href="#">Alat transportasi</a>
+            <a class="font-medium" href="#">Farmasi, kosmetik dan alkes</a>
+            <a class="font-medium" href="#">Pembangkit energi</a>
+            <a class="font-medium" href="#">Pangan</a>
+            <a class="font-medium" href="#">Hulu agro</a>
+            <a class="font-medium" href="#"
+              >Tekstil,kulit,alas kaki dan aneka</a
+            >
+            <a class="font-medium" href="#">Kimia dasar</a>
+            <a class="font-medium" href="#"
+              >Logam dasar dan bahan gajian non logam</a
+            >
+            <a class="font-medium" href="#"
+              >Barang modal, komponen, bahan penolong <br />
+              dan jasa Industri</a
+            >
+            <a class="font-medium" href="#">Kimia dasar, Migas dan Batu bara</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Cara Penggunaan</h5>
+            <a class="font-medium" href="#">Daftar sebagai ikm</a>
+            <a class="font-medium" href="#">Daftar sebagai ib</a>
+            <a class="font-medium" href="#">Cara mulai jual produk</a>
+            <a class="font-medium" href="#">FAQ</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Tentang Sirapi</h5>
+            <a class="font-medium" href="#">Syarat dan ketentuan</a>
+            <a class="font-medium" href="#">Kebijakan privasi</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Hubungan Kami</h5>
+            <a class="font-medium" href="#">Admin@sirapi.com</a>
+            <div class="flex-1"></div>
+            <div class="flex gap-x-6">
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img class="w-[25px]" src="/assets/icons/facebook.svg" alt="" />
+              </a>
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img
+                  class="w-[25px]"
+                  src="/assets/icons/instagram.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img class="w-[25px]" src="/assets/icons/youtube.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center font-medium mt-9">
+          © Hak cipta dilindungi. dinas perindustrian dan perdagangan provinsi
+          kepulauan riau.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+  </body>
+</html>
