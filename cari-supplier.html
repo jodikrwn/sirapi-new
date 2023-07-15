@@ -425,34 +425,73 @@
       <div
         class="hidden md:block p-8 lg:px-16 rounded-lg border border-[#DADADA]"
       >
-        <div class="flex flex-wrap gap-x-20 gap-y-8">
-          <div class="text-[#8594AD] font-medium font-base">
+        <div class="flex flex-wrap gap-x-16 gap-y-5">
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
             Farmasi, Kosmetik, Alkes
-          </div>
-          <div class="text-[#8594AD] font-medium font-base">
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
             Pembangkit Energi
-          </div>
-          <div class="text-[#8594AD] font-medium font-base">Pangan</div>
-          <div class="text-[#8594AD] font-medium font-base">Hulu agro</div>
-          <div class="text-[#8594AD] font-medium font-base">Kimia Dasar</div>
-          <div class="text-[#8594AD] font-medium font-base">
+          </button>
+          <button
+            type="button"
+            class="bg-[#D1F1FF80] text-[#2264D1] rounded-lg py-2 px-3 font-medium font-base"
+          >
+            Pangan
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
+            Hulu agro
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
+            Kimia Dasar
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
             Alat Transportasi
-          </div>
-          <div class="text-[#8594AD] font-medium font-base">
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
             Elektronika dan Telematika ICT
-          </div>
-          <div class="text-[#8594AD] font-medium font-base">
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
             Logam Dasar dan Bahan Gajian Non Logam
-          </div>
-          <div class="text-[#8594AD] font-medium font-base">
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
             Barang modal, Komponen, Bahan Penolong dan Jasa Industri
-          </div>
-          <div class="text-[#8594AD] font-medium font-base">
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
             Kimia dasar, Migas dan Batu Bara
-          </div>
-          <div class="text-[#8594AD] font-medium font-base">
+          </button>
+          <button
+            type="button"
+            class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
+          >
             Tekstil,kulit, Alas kaki, Aneka
-          </div>
+          </button>
         </div>
       </div>
     </section>
@@ -474,7 +513,32 @@
             <div
               class="flex flex-col md:flex-row justify-between text-xl items-center mb-6"
             >
-              <p class="text-[#8594AD] font-medium">500 Services Available</p>
+              <p class="text-[#8594AD] font-medium mb-2 md:mb-0">
+                500 Services Available
+              </p>
+              <div class="flex flex-col md:hidden items-center">
+                <div class="">Filter by :</div>
+                <select
+                  id="countries"
+                  class="max-w-xs border-0 font-semibold rounded-lg focus:ring-0 focus:border-0 block p-2.5"
+                >
+                  <option selected>Farmasi, Kosmetik, Alkes</option>
+                  <option value="">Pembangkit Energi</option>
+                  <option value="">Pangan</option>
+                  <option value="">Hulu agro</option>
+                  <option value="">Kimia Dasar</option>
+                  <option value="">Alat Transportasi</option>
+                  <option value="">Elektronika dan Telematika ICT</option>
+                  <option value="">
+                    Logam Dasar dan Bahan Gajian Non Logam
+                  </option>
+                  <option value="">
+                    Barang modal, Komponen, Bahan Penolong dan Jasa Industri
+                  </option>
+                  <option value="">Kimia dasar, Migas dan Batu Bara</option>
+                  <option value="">Tekstil,kulit, Alas kaki, Aneka</option>
+                </select>
+              </div>
               <div class="flex items-center">
                 <div class="">Sort by :</div>
                 <select
@@ -487,7 +551,9 @@
               </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-10">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10"
+            >
               <div class="max-w-sm hover:bg-[#D1F1FF80] rounded-lg p-4">
                 <a href="#">
                   <img
