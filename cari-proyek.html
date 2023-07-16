@@ -154,22 +154,24 @@
               rotate="180deg"
             ></iconify-icon>
           </button>
-          <button
-            type="button"
-            class="hidden md:inline-block xl:ml-20 ml-4 text-white bg-[#3D56F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-normal rounded-lg text-sm px-4 py-2 text-center mr-3 xl:mr-0"
+          <a
+            href="/dashboard-ib.html"
+            class="hidden md:inline-flex items-center xl:ml-20 ml-4 text-white bg-[#3D56F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-normal rounded-lg text-sm px-4 py-2 text-center mr-3 xl:mr-0"
           >
             Masuk
-          </button>
+          </a>
         </div>
         <div
           id="defaultModal"
           tabindex="-1"
           aria-hidden="true"
-          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full"
         >
-          <div class="relative w-full max-w-2xl max-h-full">
+          <div class="relative w-full h-full flex">
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow">
+            <div
+              class="relative bg-white rounded-lg shadow w-full flex flex-col"
+            >
               <!-- Modal header -->
               <div class="flex items-start justify-between p-4">
                 <button

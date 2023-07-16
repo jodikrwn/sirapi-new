@@ -154,22 +154,24 @@
               rotate="180deg"
             ></iconify-icon>
           </button>
-          <button
-            type="button"
-            class="hidden md:inline-block xl:ml-20 ml-4 text-white bg-[#3D56F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-normal rounded-lg text-sm px-4 py-2 text-center mr-3 xl:mr-0"
+          <a
+            href="/dashboard-ib.html"
+            class="hidden md:inline-flex items-center xl:ml-20 ml-4 text-white bg-[#3D56F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-normal rounded-lg text-sm px-4 py-2 text-center mr-3 xl:mr-0"
           >
             Masuk
-          </button>
+          </a>
         </div>
         <div
           id="defaultModal"
           tabindex="-1"
           aria-hidden="true"
-          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full"
         >
-          <div class="relative w-full max-w-2xl max-h-full">
+          <div class="relative w-full h-full flex">
             <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow">
+            <div
+              class="relative bg-white rounded-lg shadow w-full flex flex-col"
+            >
               <!-- Modal header -->
               <div class="flex items-start justify-between p-4">
                 <button
@@ -517,11 +519,11 @@
                 <p class="text-[#8594AD] font-medium mb-2 md:mb-0">
                   500 Services Available
                 </p>
-                <div class="flex flex-col md:hidden items-center">
+                <div class="flex flex-col md:hidden items-center mt-2 sm:mt-0">
                   <div class="">Filter by :</div>
                   <select
                     id="countries"
-                    class="max-w-xs border-0 font-semibold rounded-lg focus:ring-0 focus:border-0 block p-2.5"
+                    class="max-w-xs border-0 font-semibold text-[#37474F] rounded-lg focus:ring-0 focus:border-0 block p-2.5"
                   >
                     <option selected>Farmasi, Kosmetik, Alkes</option>
                     <option value="">Pembangkit Energi</option>
@@ -540,15 +542,55 @@
                     <option value="">Tekstil,kulit, Alas kaki, Aneka</option>
                   </select>
                 </div>
-                <div class="flex items-center">
+                <div
+                  class="flex flex-col mt-2 sm:mt-0 sm:flex-row items-center"
+                >
                   <div class="">Sort by :</div>
-                  <select
-                    id="countries"
-                    class="w-fit border-0 font-semibold rounded-lg focus:ring-0 focus:border-0 block p-2.5"
+
+                  <button
+                    id="dropdownSortButton"
+                    data-dropdown-toggle="dropdownSort"
+                    class="font-semibold rounded-lg px-5 text-xl text-[#37474F] py-2.5 text-center inline-flex items-center"
+                    type="button"
                   >
-                    <option value="">Harga Termurah</option>
-                    <option selected>Terlaris</option>
-                  </select>
+                    Terlaris
+                    <svg
+                      class="w-2.5 h-2.5 ml-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown sort -->
+                  <div
+                    id="dropdownSort"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-fit"
+                  >
+                    <ul
+                      class="py-2 text-xl text-[#37474F]"
+                      aria-labelledby="dropdownSortButton"
+                    >
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Harga Termurah</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Terlaris</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
