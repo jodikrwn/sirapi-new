@@ -26,7 +26,7 @@
       <div
         class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4 xl:px-12 px-2"
       >
-        <a href="/" class="flex items-center">
+        <a href="./" class="flex items-center">
           <img
             src="./assets/icons/logo-sirapi.svg"
             class="h-[75px] mr-3"
@@ -67,12 +67,12 @@
               ></div>
 
               <button
-                id="dropdownDefaultButton"
-                data-dropdown-toggle="dropdown"
-                class="focus:ring-2 rounded-full focus:outline-none focus:ring-indigo-500 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
+                id="dropdownKategoriButton"
+                data-dropdown-toggle="dropdownKategori"
+                class="focus:ring-2 whitespace-nowrap rounded-full focus:outline-none focus:ring-indigo-500 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
                 type="button"
               >
-                Industri
+                <div id="textKategoriSearch">Industri</div>
                 <svg
                   class="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -91,15 +91,18 @@
               </button>
               <!-- Dropdown menu -->
               <div
-                id="dropdown"
+                id="dropdownKategori"
                 class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none w-[230px]"
               >
                 <ul
                   class="py-2 text-sm text-gray-700"
-                  aria-labelledby="dropdownDefaultButton"
+                  aria-labelledby="dropdownKategoriButton"
                 >
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      onclick="setKategoriCari('Industri Unggulan')"
                       ><div class="flex flex-col space-y-0.5">
                         <p class="font-medium">Industri Unggulan</p>
                         <span class="text-[10px] text-[#8594AD]"
@@ -109,7 +112,10 @@
                     >
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      onclick="setKategoriCari('Profil Perusahaan')"
                       ><div class="flex flex-col space-y-0.5">
                         <p class="font-medium">Profil Perusahaan</p>
                         <span class="text-[10px] text-[#8594AD]"
@@ -119,7 +125,10 @@
                     >
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      onclick="setKategoriCari('Bahan Baku')"
                       ><div class="flex flex-col space-y-0.5">
                         <p class="font-medium">Bahan Baku</p>
                         <span class="text-[10px] text-[#8594AD]"
@@ -129,7 +138,10 @@
                     >
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      onclick="setKategoriCari('Lokasi')"
                       ><div class="flex flex-col space-y-0.5">
                         <p class="font-medium">Lokasi</p>
                         <span class="text-[10px] text-[#8594AD]"
@@ -159,7 +171,7 @@
             <button
               id="dropdownNotificationButton"
               data-dropdown-toggle="dropdownNotification"
-              class="inline-flex mx-6 items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none"
+              class="hidden sm:inline-flex mx-6 items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none"
               type="button"
             >
               <img src="./assets/icons/bell.svg" alt="" />
@@ -202,7 +214,7 @@
                   href="#"
                   class="flex px-4 py-3 hover:bg-[#FBE88080] rounded-b-lg"
                 >
-                  <img class="mr-5" src="/assets/icons/send.svg" alt="send" />
+                  <img class="mr-5" src="./assets/icons/send.svg" alt="send" />
                   <p class="text-sm">
                     Kontrak Kamu “ dicari serbuk kepala kuliatas murni “ telah
                     dimulai
@@ -212,7 +224,7 @@
                   href="#"
                   class="flex px-4 py-3 hover:bg-[#FBE88080] rounded-b-lg"
                 >
-                  <img class="mr-5" src="/assets/icons/send.svg" alt="send" />
+                  <img class="mr-5" src="./assets/icons/send.svg" alt="send" />
                   <p class="text-sm">
                     Kontrak Kamu “ dicari serbuk kepala kuliatas murni “ telah
                     dimulai
@@ -225,7 +237,7 @@
             <!-- User -->
             <button
               type="button"
-              class="flex mr-3 text-sm bg-gray-800 rounded-full xl:mr-0 focus:ring-4 focus:ring-gray-300"
+              class="hidden sm:flex mr-3 text-sm bg-gray-800 rounded-full xl:mr-0 focus:ring-4 focus:ring-gray-300"
               id="user-menu-button"
               aria-expanded="false"
               data-dropdown-toggle="user-dropdown"
@@ -269,7 +281,7 @@
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="./"
                     class="flex items-center gap-x-2 px-4 py-2 hover:bg-[#F8E57D]"
                     ><img
                       class="w-5"
@@ -451,7 +463,7 @@
               <a href="#" class="flex gap-4 items-center py-4 px-8">
                 <img
                   class="rounded-full w-10 h-10"
-                  src="/assets/images/user-profile.png"
+                  src="./assets/images/user-profile.png"
                   alt="user"
                 />
                 <div class="text-xs">
@@ -876,6 +888,7 @@
     </footer>
     <!-- Footer -->
 
+    <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
   </body>
