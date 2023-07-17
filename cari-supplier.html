@@ -533,32 +533,91 @@
                 </p>
                 <div class="flex flex-col md:hidden items-center mt-2 sm:mt-0">
                   <div class="">Filter by :</div>
-                  <select
-                    id="countries"
-                    class="max-w-xs border-0 font-semibold text-[#37474F] rounded-lg focus:ring-0 focus:border-0 block p-2.5"
+                  <button
+                    id="dropdownFilterButton"
+                    data-dropdown-toggle="dropdownFilter"
+                    class="font-semibold rounded-lg px-5 text-xl text-[#37474F] py-2.5 text-center inline-flex items-center"
+                    type="button"
                   >
-                    <option selected>Farmasi, Kosmetik, Alkes</option>
-                    <option value="">Pembangkit Energi</option>
-                    <option value="">Pangan</option>
-                    <option value="">Hulu agro</option>
-                    <option value="">Kimia Dasar</option>
-                    <option value="">Alat Transportasi</option>
-                    <option value="">Elektronika dan Telematika ICT</option>
-                    <option value="">
-                      Logam Dasar dan Bahan Gajian Non Logam
-                    </option>
-                    <option value="">
-                      Barang modal, Komponen, Bahan Penolong dan Jasa Industri
-                    </option>
-                    <option value="">Kimia dasar, Migas dan Batu Bara</option>
-                    <option value="">Tekstil,kulit, Alas kaki, Aneka</option>
-                  </select>
+                    Farmasi, Kosmetik, Alkes
+                    <svg
+                      class="w-2.5 h-2.5 ml-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown Filter -->
+                  <div
+                    id="dropdownFilter"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-fit"
+                  >
+                    <ul
+                      class="py-2 text-xl text-[#37474F]"
+                      aria-labelledby="dropdownFilterButton"
+                    >
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Pembangkit Energi</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Pangan</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Hulu agro</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Alat Transportasi</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Elektronika dan Telematika ICT</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Logam Dasar dan Bahan Gajian Non Logam</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Barang modal, Komponen, Bahan Penolong dan Jasa
+                          Industri</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Kimia dasar, Migas dan Batu Bara</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          >Tekstil,kulit, Alas kaki, Aneka</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div
                   class="flex flex-col mt-2 sm:mt-0 sm:flex-row items-center"
                 >
                   <div class="">Sort by :</div>
-
                   <button
                     id="dropdownSortButton"
                     data-dropdown-toggle="dropdownSort"

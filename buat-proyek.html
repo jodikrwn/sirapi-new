@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./assets/icons/logo-sirapi.svg"
+      href="/assets/icons/logo-sirapi.svg"
       type="image/x-icon"
     />
     <title>Sirapi</title>
@@ -632,433 +632,254 @@
     <!-- Navbar Logged In -->
 
     <main>
-      <!-- Kategori -->
       <section>
-        <div
-          class="hidden md:block xl:p-8 py-4 lg:px-4 rounded-lg border border-[#DADADA]"
-        >
-          <div class="max-w-screen-xl mx-auto flex flex-wrap gap-x-16 gap-y-5">
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Farmasi, Kosmetik, Alkes
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Pembangkit Energi
-            </button>
-            <button
-              type="button"
-              class="bg-[#D1F1FF80] text-[#2264D1] rounded-lg py-2 px-3 font-medium font-base"
-            >
-              Pangan
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Hulu agro
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Kimia Dasar
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Alat Transportasi
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Elektronika dan Telematika ICT
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Logam Dasar dan Bahan Gajian Non Logam
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Barang modal, Komponen, Bahan Penolong dan Jasa Industri
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Kimia dasar, Migas dan Batu Bara
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Tekstil,kulit, Alas kaki, Aneka
-            </button>
+        <div class="max-w-screen-xl mx-auto">
+          <div
+            class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 mb-28"
+          >
+            <div class="">
+              <div
+                class="flex flex-col md:flex-row gap-y-3 items-center py-7 px-8 border border-b-[#DADADA] border-x-0 border-t-0 justify-between"
+              >
+                <h1 class="font-medium text-2xl">
+                  Sekarang Selesaikan dan Tinjau Postingan Proyek Anda
+                </h1>
+                <button
+                  type="button"
+                  class="font-medium bg-[#F3F3FE] rounded-lg px-5 py-2.5"
+                >
+                  Posting Proyek Anda Sekarang
+                </button>
+              </div>
+
+              <div
+                class="border border-b-[#DADADA] py-5 px-8 border-x-0 border-t-0"
+              >
+                <h2 class="font-medium text-xl mb-5">Title</h2>
+                <input
+                  type="text"
+                  id="title"
+                  class="border w-full lg:w-3/4 border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+                  value="di cari biji nikel kualitas super duper wah  dengan tingkat kemurniaan yang bagus"
+                  required
+                />
+              </div>
+
+              <div
+                class="border border-b-[#DADADA] py-10 px-8 border-x-0 border-t-0"
+              >
+                <h2 class="font-medium text-xl mb-5">
+                  Deskripsikan Proyek Anda
+                </h2>
+                <p class="font-medium text-[#8594AD] mb-5">
+                  inilah cara talenta mengetahui apa yang Anda butuhkan dan
+                  mengapa Anda hebat untuk diajak bekerja sama!
+                </p>
+                <p class="font-medium text-[#8594AD] mb-5">
+                  Sertakan ekspektasi Anda tentang tugas atau hasil, apa yang
+                  Anda cari dalam hubungan kerja, dan sesuatu yang unik tentang
+                  proyek, tim, atau perusahaan Anda.
+                </p>
+                <textarea
+                  id="deskripsi"
+                  maxlength="5000"
+                  rows="8"
+                  class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Sudah memiliki deskripsi pekerjaan? Tempelkan di sini!"
+                ></textarea>
+                <div class="text-right text-[#8594AD] font-medium mt-3 mb-6">
+                  <span id="char_count">5000</span> karakter tersisa
+                </div>
+                <label
+                  for="file-upload"
+                  class="rounded-full text-white text-sm items-center gap-x-2 bg-[#3D56F5] inline-flex px-4 py-2 cursor-pointer"
+                >
+                  <iconify-icon
+                    width="20"
+                    icon="eva:attach-fill"
+                    style="color: white"
+                  ></iconify-icon>
+                  Attach file
+                </label>
+                <input class="hidden" id="file-upload" type="file" />
+                <p class="mt-2 text-[#8594AD] text-sm">
+                  Ukuran file maksimum 100 MB
+                </p>
+              </div>
+
+              <div
+                class="border border-b-[#DADADA] py-10 px-8 border-x-0 border-t-0"
+              >
+                <h2 class="font-medium text-xl mb-5">
+                  Jenis Industri Unggulan
+                </h2>
+                <div class="flex flex-col md:flex-row gap-x-16">
+                  <div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        checked
+                        id="checkbox1"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox1" class="ml-3 text-sm font-medium"
+                        >Elektronika Dan Telematika ICT</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        checked
+                        id="checkbox2"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox2" class="ml-3 text-sm font-medium"
+                        >Farmasi, Kosmetik, Alkes</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="checkbox3"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox3" class="ml-3 text-sm font-medium"
+                        >Pembangkit Energi</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="checkbox4"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox4" class="ml-3 text-sm font-medium"
+                        >Pangan</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="checkbox5"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox5" class="ml-3 text-sm font-medium"
+                        >Kimia Dasar</label
+                      >
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="checkbox6"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox6" class="ml-3 text-sm font-medium"
+                        >Logam Dasar dan Bahan Gajian Non Logam</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="checkbox7"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox7" class="ml-3 text-sm font-medium"
+                        >Alat Transportasi</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="checkbox8"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox8" class="ml-3 text-sm font-medium"
+                        >Barang Modal, Komponen, Bahan Penolong dan Jasa
+                        Industri</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="checkbox9"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox9" class="ml-3 text-sm font-medium"
+                        >Kimia Dasar, Migas dan Batu Bara</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-4">
+                      <input
+                        id="checkbox10"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-[#3D56F5] bg-[#E6E7FD] border-[#3D56F5] rounded"
+                      />
+                      <label for="checkbox10" class="ml-3 text-sm font-medium"
+                        >Tekstil, Kulit, Alas kaki, Aneka</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-x-7 mt-10">
+                  <div>
+                    <h2 class="font-semibold text-xl mb-2">Durasi Selesai</h2>
+                    <p class="font-medium text-lg">1 Hari</p>
+                  </div>
+                  <div>
+                    <button
+                      class="flex justify-center items-center rounded-full h-[38px] w-[38px] border border-[2px] border-[#DADADA]"
+                    >
+                      <img src="./assets/icons/pencil.svg" alt="pencil" />
+                    </button>
+                  </div>
+                </div>
+                <div class="flex gap-x-7 mt-8">
+                  <div>
+                    <h2 class="font-semibold text-xl mb-2">Budget</h2>
+                    <p class="font-medium text-lg">Rp 50.000.000/Ton</p>
+                  </div>
+                  <div>
+                    <button
+                      class="flex justify-center items-center rounded-full h-[38px] w-[38px] border border-[2px] border-[#DADADA]"
+                    >
+                      <img src="./assets/icons/pencil.svg" alt="pencil" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col md:flex-row gap-y-3 justify-between py-7 px-8"
+              >
+                <button
+                  type="button"
+                  class="text-[#3D56F5] bg-[#F3F3FE] hover:bg-red-600 hover:border-red-600 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                >
+                  Posting Proyek Anda Sekarang
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- Kategori -->
-
-      <!-- Dashboard Saya -->
-      <section>
-        <section class="bg-white">
-          <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-8 lg:px-6">
-            <div class="max-w-screen-md mb-8">
-              <h2
-                class="mb-4 text-lg tracking-tight font-semibold text-[#2264D1]"
-              >
-                Dashboard Saya
-              </h2>
-            </div>
-
-            <div class="p-8 rounded-lg border border-[#DADADA]">
-              <div
-                class="flex flex-col md:flex-row justify-between text-xl items-center mb-6"
-              >
-                <p class="text-[#8594AD] font-medium mb-2 md:mb-0">
-                  500 Services Available
-                </p>
-                <div class="flex flex-col md:hidden items-center">
-                  <div class="">Filter by :</div>
-                  <button
-                    id="dropdownFilterButton"
-                    data-dropdown-toggle="dropdownFilter"
-                    class="font-semibold rounded-lg px-5 text-xl text-[#37474F] py-2.5 text-center inline-flex items-center"
-                    type="button"
-                  >
-                    Farmasi, Kosmetik, Alkes
-                    <svg
-                      class="w-2.5 h-2.5 ml-2.5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 10 6"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="m1 1 4 4 4-4"
-                      />
-                    </svg>
-                  </button>
-                  <!-- Dropdown Filter -->
-                  <div
-                    id="dropdownFilter"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-fit"
-                  >
-                    <ul
-                      class="py-2 text-xl text-[#37474F]"
-                      aria-labelledby="dropdownFilterButton"
-                    >
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Pembangkit Energi</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Pangan</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Hulu agro</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Alat Transportasi</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Elektronika dan Telematika ICT</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Logam Dasar dan Bahan Gajian Non Logam</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Barang modal, Komponen, Bahan Penolong dan Jasa
-                          Industri</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Kimia dasar, Migas dan Batu Bara</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Tekstil,kulit, Alas kaki, Aneka</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-col mt-2 sm:mt-0 sm:flex-row items-center"
-                >
-                  <div class="">Sort by :</div>
-                  <button
-                    id="dropdownSortButton"
-                    data-dropdown-toggle="dropdownSort"
-                    class="font-semibold rounded-lg px-5 text-xl text-[#37474F] py-2.5 text-center inline-flex items-center"
-                    type="button"
-                  >
-                    Terlaris
-                    <svg
-                      class="w-2.5 h-2.5 ml-2.5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 10 6"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="m1 1 4 4 4-4"
-                      />
-                    </svg>
-                  </button>
-                  <!-- Dropdown sort -->
-                  <div
-                    id="dropdownSort"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-fit"
-                  >
-                    <ul
-                      class="py-2 text-xl text-[#37474F]"
-                      aria-labelledby="dropdownSortButton"
-                    >
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Harga Termurah</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
-                          >Terlaris</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10"
-              >
-                <div class="max-w-sm hover:bg-[#D1F1FF80] rounded-lg p-4">
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="./assets/images/kelapa.png"
-                      alt=""
-                    />
-                  </a>
-                  <div class="">
-                    <a href="#">
-                      <div class="flex items-center gap-x-3 my-4">
-                        <img src="./assets/images/user.png" alt="" />
-                        <h4>CV. Kopyor indoneisa</h4>
-                      </div>
-                    </a>
-                    <p class="mb-3 font-medium text-sm text-[#8594AD]">
-                      menjual dan menyediakan kebutuhan pangan dibidang kopyor
-                    </p>
-                    <div
-                      class="flex items-center font-medium text-[#37474F] text-sm mb-3"
-                    >
-                      <img
-                        class="mr-2"
-                        src="./assets/icons/star-rating.svg"
-                        alt=""
-                      />
-                      <p class="mr-2">5.0</p>
-                      <p>(90)</p>
-                    </div>
-                    <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
-                  </div>
-                </div>
-                <div class="max-w-sm hover:bg-[#D1F1FF80] rounded-lg p-4">
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="./assets/images/kelapa.png"
-                      alt=""
-                    />
-                  </a>
-                  <div class="">
-                    <a href="#">
-                      <div class="flex items-center gap-x-3 my-4">
-                        <img src="./assets/images/user.png" alt="" />
-                        <h4>CV. Kopyor indoneisa</h4>
-                      </div>
-                    </a>
-                    <p class="mb-3 font-medium text-sm text-[#8594AD]">
-                      menjual dan menyediakan kebutuhan pangan dibidang kopyor
-                    </p>
-                    <div
-                      class="flex items-center font-medium text-[#37474F] text-sm mb-3"
-                    >
-                      <img
-                        class="mr-2"
-                        src="./assets/icons/star-rating.svg"
-                        alt=""
-                      />
-                      <p class="mr-2">5.0</p>
-                      <p>(90)</p>
-                    </div>
-                    <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
-                  </div>
-                </div>
-                <div class="max-w-sm hover:bg-[#D1F1FF80] rounded-lg p-4">
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="./assets/images/kelapa.png"
-                      alt=""
-                    />
-                  </a>
-                  <div class="">
-                    <a href="#">
-                      <div class="flex items-center gap-x-3 my-4">
-                        <img src="./assets/images/user.png" alt="" />
-                        <h4>CV. Kopyor indoneisa</h4>
-                      </div>
-                    </a>
-                    <p class="mb-3 font-medium text-sm text-[#8594AD]">
-                      menjual dan menyediakan kebutuhan pangan dibidang kopyor
-                    </p>
-                    <div
-                      class="flex items-center font-medium text-[#37474F] text-sm mb-3"
-                    >
-                      <img
-                        class="mr-2"
-                        src="./assets/icons/star-rating.svg"
-                        alt=""
-                      />
-                      <p class="mr-2">5.0</p>
-                      <p>(90)</p>
-                    </div>
-                    <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
-                  </div>
-                </div>
-                <div class="max-w-sm hover:bg-[#D1F1FF80] rounded-lg p-4">
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="./assets/images/kelapa.png"
-                      alt=""
-                    />
-                  </a>
-                  <div class="">
-                    <a href="#">
-                      <div class="flex items-center gap-x-3 my-4">
-                        <img src="./assets/images/user.png" alt="" />
-                        <h4>CV. Kopyor indoneisa</h4>
-                      </div>
-                    </a>
-                    <p class="mb-3 font-medium text-sm text-[#8594AD]">
-                      menjual dan menyediakan kebutuhan pangan dibidang kopyor
-                    </p>
-                    <div
-                      class="flex items-center font-medium text-[#37474F] text-sm mb-3"
-                    >
-                      <img
-                        class="mr-2"
-                        src="./assets/icons/star-rating.svg"
-                        alt=""
-                      />
-                      <p class="mr-2">5.0</p>
-                      <p>(90)</p>
-                    </div>
-                    <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
-                  </div>
-                </div>
-                <div class="max-w-sm hover:bg-[#D1F1FF80] rounded-lg p-4">
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="./assets/images/kelapa.png"
-                      alt=""
-                    />
-                  </a>
-                  <div class="">
-                    <a href="#">
-                      <div class="flex items-center gap-x-3 my-4">
-                        <img src="./assets/images/user.png" alt="" />
-                        <h4>CV. Kopyor indoneisa</h4>
-                      </div>
-                    </a>
-                    <p class="mb-3 font-medium text-sm text-[#8594AD]">
-                      menjual dan menyediakan kebutuhan pangan dibidang kopyor
-                    </p>
-                    <div
-                      class="flex items-center font-medium text-[#37474F] text-sm mb-3"
-                    >
-                      <img
-                        class="mr-2"
-                        src="./assets/icons/star-rating.svg"
-                        alt=""
-                      />
-                      <p class="mr-2">5.0</p>
-                      <p>(90)</p>
-                    </div>
-                    <p class="font-medium text-sm">From Rp. 500.000 / kg</p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-wrap gap-y-8 md:gap-y-0 justify-center items-center gap-x-12 mt-16"
-              >
-                <div
-                  class="flex justify-center items-center rounded-full h-[50px] w-[50px] border border-[#DADADA]"
-                >
-                  <iconify-icon icon="formkit:arrowleft"></iconify-icon>
-                </div>
-                <div class="flex flex-col items-center">
-                  <p>1</p>
-                  <div class="w-6 h-0.5 self-stretch bg-[#37474F] mt-2"></div>
-                </div>
-                <a href="#" class="text-[#A0A0A0]">2</a>
-                <a href="#" class="text-[#A0A0A0]">3</a>
-                <a href="#" class="text-[#A0A0A0]">4</a>
-                <a href="#" class="text-[#A0A0A0]">5</a>
-                <a href="#" class="text-[#A0A0A0]">6</a>
-                <a href="#" class="text-[#A0A0A0]">7</a>
-                <a href="#" class="text-[#A0A0A0]">8</a>
-                <a href="#" class="text-[#A0A0A0]">9</a>
-                <a href="#" class="text-[#A0A0A0]">10</a>
-                <div
-                  class="flex justify-center items-center rounded-full h-[50px] w-[50px] border border-[#DADADA]"
-                >
-                  <iconify-icon icon="formkit:arrowright"></iconify-icon>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-      <!-- Dashboard Saya -->
     </main>
 
     <!-- Footer -->
@@ -1142,6 +963,19 @@
     </footer>
     <!-- Footer -->
 
+    <script>
+      let textArea = document.getElementById("deskripsi");
+      let characterCounter = document.getElementById("char_count");
+      const maxNumOfChars = 5000;
+
+      const countCharacters = () => {
+        let numOfEnteredChars = textArea.value.length;
+        let counter = maxNumOfChars - numOfEnteredChars;
+        characterCounter.textContent = counter;
+      };
+
+      textArea.addEventListener("input", countCharacters);
+    </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
