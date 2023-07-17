@@ -637,568 +637,195 @@
           <h1
             class="my-10 text-center px-4 sm:px-0 md:text-left md:pl-20 text-[#37474F] font-semibold text-3xl"
           >
-            Dicari Biji Nikel Murni
+            Riwayat Produk
           </h1>
 
-          <div class="md:pl-20 flex justify-center md:justify-start">
-            <ul
-              class="flex flex-col sm:flex-row divide-y sm:divide-y-0 w-fit border border-[#DADADA] rounded-lg text-[#37474F] flex-wrap justify-center -mb-px text-sm font-medium text-center"
-              id="myTab"
-              data-tabs-toggle="#myTabContent"
-              role="tablist"
-            >
-              <li
-                class="flex border max-sm:border-r-0 sm:border-r-[#DADADA] border-y-0 border-l-0 [&_.text-blue-600]:bg-[#2264D1] [&_.text-blue-600]:text-white"
-                role="presentation"
-              >
+          <div
+            class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 mb-28"
+          >
+            <div class="md:px-16 px-4 my-12">
+              <div class="relative w-full md:w-[80%]">
+                <input
+                  type="search"
+                  id="search-dropdown"
+                  class="block p-2.5 w-full z-20 text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Cari Berdasarkan Proyek, IKM, atau nama perusahaan"
+                  required
+                />
                 <button
-                  class="inline-block w-full p-4 sm:rounded-l-lg"
-                  id="lihat-tab"
-                  data-tabs-target="#lihat"
-                  type="button"
-                  role="tab"
-                  aria-controls="lihat"
-                  aria-selected="false"
+                  type="submit"
+                  class="absolute w-[50px] flex justify-center items-center top-0 right-0 p-2.5 text-sm font-medium h-full text-white bg-[#2264D1] rounded-r-lg border border-[#2264D1] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                 >
-                  Lihat Postingan Proyek
+                  <svg
+                    class="w-4 h-4"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                  <span class="sr-only">Search</span>
                 </button>
-              </li>
-              <li
-                class="flex border max-sm:border-r-0 md:border-r-[#DADADA] border-y-0 border-l-0 [&_.text-blue-600]:bg-[#2264D1] [&_.text-blue-600]:text-white"
-                role="presentation"
-              >
-                <button
-                  class="inline-block w-full p-4"
-                  id="tinjau-tab"
-                  data-tabs-target="#tinjau"
-                  type="button"
-                  role="tab"
-                  aria-controls="tinjau"
-                  aria-selected="false"
-                >
-                  Tinjau IKM (2)
-                </button>
-              </li>
-              <li
-                class="flex [&_.text-blue-600]:bg-[#2264D1] [&_.text-blue-600]:text-white"
-                role="presentation"
-              >
-                <button
-                  class="inline-block w-full p-4 sm:rounded-r-lg"
-                  id="berjalan-tab"
-                  data-tabs-target="#berjalan"
-                  type="button"
-                  role="tab"
-                  aria-controls="berjalan"
-                  aria-selected="false"
-                >
-                  Pekerjaan yang <br />
-                  sedang berjalan(0)
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div id="myTabContent">
-            <!-- Lihat Postingan Proyek -->
+              </div>
+            </div>
+
             <div
-              class="hidden"
-              id="lihat"
-              role="tabpanel"
-              aria-labelledby="lihat-tab"
+              class="md:px-16 px-4 flex flex-col sm:flex-row gap-y-2 items-center gap-x-4 mb-10"
             >
-              <div
-                class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 mb-28"
+              <p class="text-[#37474F] font-semibold">Sortir</p>
+              <button
+                id="dropdownSortButton"
+                data-dropdown-toggle="dropdownSort"
+                class="font-medium md:w-[250px] justify-between bg-[#F2F2F2] rounded-lg px-4 text-[#37474F] py-2.5 text-center inline-flex items-center"
+                type="button"
               >
-                <div class="grid grid-cols-12">
-                  <div class="md:col-span-9 col-span-12">
-                    <div
-                      class="border border-b-[#DADADA] py-5 px-8 border-x-0 border-t-0"
+                <p id="textSortir">Tanggal Mulai</p>
+                <svg
+                  class="w-2.5 h-2.5 ml-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown sort -->
+              <div
+                id="dropdownSort"
+                class="z-10 hidden md:w-[210px] bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-fit border border-[#DADADA]"
+              >
+                <ul
+                  class="py-2 text-[#37474F]"
+                  aria-labelledby="dropdownSortButton"
+                >
+                  <li onclick="setSortir('Tanggal Berakhir')">
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Tanggal Berakhir</a
                     >
-                      <h2 class="text-[#2264D1] font-semibold text-xl mb-4">
-                        Nikel
-                      </h2>
-                      <p class="text-[#8594AD] font-medium">
-                        Diposting 13 jam yang lalu
-                      </p>
-                    </div>
-                    <div
-                      class="text-[#37474F] font-medium border border-b-[#DADADA] py-5 px-8 border-x-0 border-t-0 min-h-[300px]"
+                  </li>
+                  <li onclick="setSortir('Tanggal Mulai')">
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Tanggal Mulai</a
                     >
-                      <p>Kami mencari kualitas nikel terbaik se kepri</p>
-                    </div>
+                  </li>
+                  <li onclick="setSortir('Nama Ikm')">
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Nama Ikm</a
+                    >
+                  </li>
+                  <li onclick="setSortir('Nama Produk')">
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Nama Produk</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-                    <div
-                      class="font-medium flex flex-col md:flex-row gap-y-3 justify-evenly border border-b-[#DADADA] py-5 px-8 border-x-0 border-t-0"
-                    >
-                      <p>12, mar 2023 -13 , Jun 2023</p>
-                      <p>Kurang dari sebulan</p>
-                    </div>
-
-                    <div
-                      class="flex flex-col md:flex-row border border-b-[#DADADA] py-5 px-8 border-x-0 border-t-0"
-                    >
-                      <p class="font-medium mr-4">Jenis Proyek :</p>
-                      <p>Proyek yang Sedang Berlangsung</p>
-                    </div>
-
-                    <div
-                      class="border border-b-[#DADADA] py-5 px-8 border-x-0 border-t-0"
-                    >
-                      <h2 class="font-medium text-xl mb-5">
-                        Industri unggulan
-                      </h2>
-                      <div class="flex flex-wrap gap-x-4 gap-y-3 mt-5">
-                        <button
-                          class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                        >
-                          Pangan
-                        </button>
-                        <button
-                          class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                        >
-                          Biji Kopi
-                        </button>
-                        <button
-                          class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                        >
-                          Ayam Segar
-                        </button>
-                        <button
-                          class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                        >
-                          Teh hijau
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="py-5 px-8">
-                      <h2 class="font-medium text-xl mb-5">
-                        Aktivitas pada Pekerjaan Ini
-                      </h2>
-                      <div class="flex flex-col md:flex-row gap-x-4 mb-2">
-                        <p class="text-[#8594AD] font-medium">Proposal :</p>
-                        <p>Kurang dari 5</p>
-                      </div>
-                      <div class="flex flex-col md:flex-row gap-x-4 mb-2">
-                        <p class="text-[#8594AD] font-medium">
-                          Terakhir Di lihat Klien
-                        </p>
-                        <p>1 Menit yang lalu</p>
-                      </div>
-                      <div class="flex flex-col md:flex-row gap-x-4 mb-2">
-                        <p class="text-[#8594AD] font-medium">
-                          Sedang Di interview:
-                        </p>
-                        <p>0</p>
-                      </div>
-                      <div class="flex flex-col md:flex-row gap-x-4 mb-2">
-                        <p class="text-[#8594AD] font-medium">
-                          Undang Terkirim :
-                        </p>
-                        <p>0</p>
-                      </div>
-                      <div class="flex flex-col md:flex-row gap-x-4 mb-2">
-                        <p class="text-[#8594AD] font-medium">
-                          Undangan yang tidak dijawab :
-                        </p>
-                        <p>0</p>
-                      </div>
-                    </div>
+            <div class="flex flex-col">
+              <a
+                href="#"
+                class="hover:bg-[#F3F3FE] lg:px-16 px-4 py-8 border border-b-[#DADADA] border-t-0 border-x-0"
+              >
+                <h2 class="text-[#2264D1] font-semibold text-xl mb-4">
+                  Bibit Pisang raja
+                </h2>
+                <div class="grid grid-cols-12 gap-x-4">
+                  <div
+                    class="col-span-12 xl:flex xl:gap-x-2 md:col-span-4 font-semibold text-[#37474F] text-xl"
+                  >
+                    <p>Produksi :</p>
+                    <p>CV. Pisang batam</p>
                   </div>
                   <div
-                    class="md:col-span-3 col-span-12 flex flex-col gap-y-6 items-center p-5 md:py-0 md:pt-16 border border-l-0 border-t md:border-t-0 md:border-l-[1px] md:border-l-[#DADADA] border-y-0 border-r-0"
+                    class="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col mt-4 md:mt-0"
                   >
-                    <a
-                      href="#"
-                      class="flex items-center text-[#2264D1] gap-x-4"
-                    >
-                      <img src="./assets/icons/pencil.svg" alt="pencil" />
-                      <p>Edit Postingan</p>
-                    </a>
-                    <a
-                      href="#"
-                      class="flex items-center text-[#2264D1] gap-x-3"
-                    >
-                      <iconify-icon
-                        width="24"
-                        icon="humbleicons:times"
-                      ></iconify-icon>
-                      <p>Hapus Postingan</p>
-                    </a>
+                    <p class="text-[#37474F] font-semibold text-xl mb-4">
+                      Sedang Di proses
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-x-5">
+                      <p>IDR 40.000.000</p>
+                      <p>Total pembelian</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <!-- Lihat Postingan Proyek -->
 
-            <!-- Tinjau IKM -->
-            <div
-              class="hidden"
-              id="tinjau"
-              role="tabpanel"
-              aria-labelledby="tinjau-tab"
-            >
-              <div
-                class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 mb-28"
-              >
-                <div
-                  class="border border-b-[#DADADA] py-5 px-8 border-x-0 border-t-0"
-                >
-                  <h2 class="text-[#2264D1] font-semibold text-xl mb-4">
-                    Pencarian
-                  </h2>
-                </div>
-
-                <div
-                  class="border border-b-[#DADADA] py-5 px-8 border-x-0 border-t-0"
-                >
-                  <div class="relative md:w-1/2">
-                    <input
-                      type="search"
-                      id="search-dropdown"
-                      class="block p-2.5 w-full z-20 text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="Cari IKM"
-                      required
-                    />
+                  <div
+                    class="col-span-12 md:col-span-3 lg:col-span-2 flex flex-col md:items-center items-start"
+                  >
                     <button
-                      type="submit"
-                      class="absolute w-[50px] flex justify-center items-center top-0 right-0 p-2.5 text-sm font-medium h-full text-white bg-[#2264D1] rounded-r-lg border border-[#2264D1] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+                      type="button"
+                      class="mb-6 md:-mt-2 mt-8 text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
                     >
-                      <svg
-                        class="w-4 h-4"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                        />
-                      </svg>
-                      <span class="sr-only">Search</span>
+                      Tinjau
                     </button>
+                    <p>Apr 6 - Apr 8</p>
                   </div>
                 </div>
+              </a>
 
-                <div
-                  class="cursor-pointer py-8 xl:pl-32 px-4 w-full flex flex-col md:flex-row hover:bg-[#D1F1FF80]"
-                >
-                  <div class="md:mr-9">
-                    <div class="relative w-20 h-20">
-                      <img
-                        class="w-20 h-20 rounded-full"
-                        src="./assets/images/user-profile.png"
-                        alt=""
-                      />
-                      <span
-                        class="bottom-1 right-1 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"
-                      ></span>
-                    </div>
-                  </div>
-
-                  <div class="flex flex-col">
-                    <div
-                      class="flex flex-wrap md:flex-row flex-col md:justify-between md:items-center mb-9"
-                    >
-                      <div class="flex flex-col gap-y-1 my-4">
-                        <p class="text-[#2264D1] font-semibold text-sm">
-                          Paman Muthu
-                        </p>
-                        <h2 class="text-[#37474F] text-2xl font-semibold">
-                          CV. Nikel jaya
-                        </h2>
-                        <div class="flex items-center">
-                          <iconify-icon
-                            width="24"
-                            icon="ph:map-pin"
-                            style="color: #8594ad"
-                          ></iconify-icon>
-                          <p class="text-sm ml-1.5 text-[#8594AD]">
-                            Batam, indonesia
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="flex flex-col items-center">
-                        <div>71% kesuksesan pekerjaan</div>
-                        <div
-                          class="md:w-[250px] w-full bg-[#DADADA] rounded-full h-1.5 m-3"
-                        >
-                          <div
-                            class="bg-[#2264D1] h-1.5 rounded-full"
-                            style="width: 45%"
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div class="flex flex-col md:flex-row gap-y-3 mr-4">
-                        <button
-                          type="button"
-                          class="md:mr-6 text-[#3D56F5] bg-[#F3F3FE] hover:bg-[#3D56F5] hover:border-[#3D56F5] hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
-                        >
-                          Pesan
-                        </button>
-                        <button
-                          type="button"
-                          class="text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
-                        >
-                          Mengundang ke pekerjaan
-                        </button>
-                      </div>
-                    </div>
-                    <p class="font-medium text-[#37474F] md:w-2/3">
-                      <span class="font-semibold">Proposal</span>- Halo, kami
-                      dengan senang hati ingin memperkenalkan produk kelapa tua
-                      berkualitas baik dari perusahaan kami kepada Anda...
-                    </p>
-                    <div class="flex flex-wrap gap-x-6 gap-y-3 mt-5">
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Pangan
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Biji Kopi
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Ayam Segar
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Teh hijau
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="cursor-pointer py-8 xl:pl-32 px-4 w-full flex flex-col md:flex-row hover:bg-[#D1F1FF80] border border-t-[#DADADA] border-x-0 border-b-0"
-                >
-                  <div class="md:mr-9">
-                    <div class="relative w-20 h-20">
-                      <img
-                        class="w-20 h-20 rounded-full"
-                        src="./assets/images/user-profile.png"
-                        alt=""
-                      />
-                      <span
-                        class="bottom-1 right-1 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"
-                      ></span>
-                    </div>
-                  </div>
-
-                  <div class="flex flex-col">
-                    <div
-                      class="flex flex-wrap md:flex-row flex-col md:justify-between md:items-center mb-9"
-                    >
-                      <div class="flex flex-col gap-y-1 my-4">
-                        <p class="text-[#2264D1] font-semibold text-sm">
-                          Paman Muthu
-                        </p>
-                        <h2 class="text-[#37474F] text-2xl font-semibold">
-                          CV. Nikel jaya
-                        </h2>
-                        <div class="flex items-center">
-                          <iconify-icon
-                            width="24"
-                            icon="ph:map-pin"
-                            style="color: #8594ad"
-                          ></iconify-icon>
-                          <p class="text-sm ml-1.5 text-[#8594AD]">
-                            Batam, indonesia
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="flex flex-col md:flex-row gap-y-3 mr-4">
-                        <button
-                          type="button"
-                          class="md:mr-6 text-[#3D56F5] bg-[#F3F3FE] hover:bg-[#3D56F5] hover:border-[#3D56F5] hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
-                        >
-                          Pesan
-                        </button>
-                        <button
-                          type="button"
-                          class="text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
-                        >
-                          Mengundang ke pekerjaan
-                        </button>
-                      </div>
-                    </div>
-                    <p class="font-medium text-[#37474F] md:w-2/3">
-                      <span class="font-semibold">Proposal</span>- Halo, kami
-                      dengan senang hati ingin memperkenalkan produk kelapa tua
-                      berkualitas baik dari perusahaan kami kepada Anda...
-                    </p>
-                    <div class="flex flex-wrap gap-x-6 gap-y-3 mt-5">
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Pangan
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Biji Kopi
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Ayam Segar
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Teh hijau
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Tinjau IKM -->
-
-            <!-- Pekerjaan yang sedang berjalan -->
-            <div
-              class="hidden"
-              id="berjalan"
-              role="tabpanel"
-              aria-labelledby="berjalan-tab"
-            >
-              <div
-                class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 my-10"
+              <a
+                href="#"
+                class="hover:bg-[#F3F3FE] lg:px-16 px-4 py-8 border border-b-[#DADADA] border-t-0 border-x-0"
               >
-                <div
-                  class="cursor-pointer py-8 xl:pl-32 px-4 w-full flex flex-col md:flex-row hover:bg-[#D1F1FF80]"
-                >
-                  <div class="md:mr-9">
-                    <div class="relative w-20 h-20">
-                      <img
-                        class="w-20 h-20 rounded-full"
-                        src="./assets/images/user-profile.png"
-                        alt=""
-                      />
-                      <span
-                        class="bottom-1 right-1 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white rounded-full"
-                      ></span>
-                    </div>
-                  </div>
-
-                  <div class="flex flex-col">
-                    <div
-                      class="flex flex-wrap md:flex-row flex-col md:justify-between md:items-center mb-9"
-                    >
-                      <div class="flex flex-col gap-y-1 my-4">
-                        <p class="text-[#2264D1] font-semibold text-sm">
-                          Paman Muthu
-                        </p>
-                        <h2 class="text-[#37474F] text-2xl font-semibold">
-                          CV. Nikel jaya
-                        </h2>
-                        <div class="flex items-center">
-                          <iconify-icon
-                            width="24"
-                            icon="ph:map-pin"
-                            style="color: #8594ad"
-                          ></iconify-icon>
-                          <p class="text-sm ml-1.5 text-[#8594AD]">
-                            Batam, indonesia
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="flex flex-col items-center">
-                        <div>71% kesuksesan pekerjaan</div>
-                        <div
-                          class="md:w-[250px] w-full bg-[#DADADA] rounded-full h-1.5 m-3"
-                        >
-                          <div
-                            class="bg-[#2264D1] h-1.5 rounded-full"
-                            style="width: 45%"
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div class="flex flex-col md:flex-row gap-y-3 mr-4">
-                        <button
-                          type="button"
-                          class="md:mr-6 text-[#3D56F5] bg-[#F3F3FE] hover:bg-[#3D56F5] hover:border-[#3D56F5] hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
-                        >
-                          Pesan
-                        </button>
-                        <button
-                          type="button"
-                          class="text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
-                        >
-                          Proyek Selesai
-                        </button>
-                      </div>
-                    </div>
-                    <p class="font-medium text-[#37474F] md:w-2/3">
-                      <span class="font-semibold">Proposal</span>- Halo, kami
-                      dengan senang hati ingin memperkenalkan produk kelapa tua
-                      berkualitas baik dari perusahaan kami kepada Anda...
-                    </p>
-                    <div class="flex flex-wrap gap-x-6 gap-y-3 mt-5">
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Pangan
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Biji Kopi
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Ayam Segar
-                      </button>
-                      <button
-                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                      >
-                        Teh hijau
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex items-center flex-col md:flex-row gap-y-6 justify-between border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 mb-28 pt-5 pb-8 px-8"
-              >
-                <div>
-                  <h3 class="text-[#2264D1] font-semibold text-xl mb-2">
-                    Mencari bibit kurma kualitas bagus
-                  </h3>
-                  <p class="text-[#37474F] text-lg font-medium">
-                    Kontrak Selesai pada Tanggal 15 Nov
-                  </p>
-                  <p class="text-[#8594AD] font-medium">
-                    CV. Nikel Jaya Menunggu umpan balik dari anda
-                  </p>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    class="text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                <h2 class="text-[#2264D1] font-semibold text-xl mb-4">
+                  Bibit Pisang raja
+                </h2>
+                <div class="grid grid-cols-12 gap-x-4">
+                  <div
+                    class="col-span-12 xl:flex xl:gap-x-2 md:col-span-4 font-medium text-[#8594AD] text-lg"
                   >
-                    Berikan Umpan Balik
-                  </button>
+                    <p>Ikm yang dipekerjakan :</p>
+                    <p>CV.Digital</p>
+                  </div>
+                  <div
+                    class="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col mt-4 md:mt-0"
+                  >
+                    <p class="text-[#37474F] font-semibold text-xl mb-4">
+                      Produk telah diterima
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-x-5">
+                      <p>IDR 40.000.000</p>
+                      <p>Total pembelian</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-span-12 md:col-span-3 lg:col-span-2 flex flex-col md:items-center items-start"
+                  >
+                    <button
+                      type="button"
+                      class="mb-6 md:-mt-2 mt-8 text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                    >
+                      Ulasan
+                    </button>
+                    <p class="whitespace-nowrap">Apr 6 - Apr 8</p>
+                  </div>
                 </div>
+              </a>
+
+              <div class="flex justify-center p-5">
+                <button
+                  type="button"
+                  class="text-[#3D56F5] bg-[#F3F3FE] hover:bg-[#3D56F5] hover:border-[#3D56F5] hover:text-white font-medium border border-[#3D56F5] rounded-lg text-sm px-5 py-2.5"
+                >
+                  Lihat Semua
+                </button>
               </div>
             </div>
-            <!-- Pekerjaan yang sedang berjalan -->
           </div>
         </div>
       </section>
@@ -1285,6 +912,14 @@
     </footer>
     <!-- Footer -->
 
+    <script>
+      function setSortir(sortBy) {
+        button = document.getElementById("dropdownSortButton");
+        textButton = document.getElementById("textSortir");
+        textButton.innerText = sortBy;
+        button.click();
+      }
+    </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
