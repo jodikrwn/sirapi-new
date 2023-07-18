@@ -736,7 +736,7 @@
                     class="font-semibold rounded-lg px-5 text-xl text-[#37474F] py-2.5 text-center inline-flex items-center"
                     type="button"
                   >
-                    Farmasi, Kosmetik, Alkes
+                    <p id="textFilterBy">Farmasi, Kosmetik, Alkes</p>
                     <svg
                       class="w-2.5 h-2.5 ml-2.5"
                       aria-hidden="true"
@@ -763,48 +763,83 @@
                       aria-labelledby="dropdownFilterButton"
                     >
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Farmasi, Kosmetik, Alkes')"
+                          >Farmasi, Kosmetik, Alkes</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Pembangkit Energi')"
                           >Pembangkit Energi</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Pangan')"
                           >Pangan</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Hulu agro')"
                           >Hulu agro</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Alat Transportasi')"
                           >Alat Transportasi</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Elektronika dan Telematika ICT')"
                           >Elektronika dan Telematika ICT</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Logam Dasar dan Bahan Gajian Non Logam')"
                           >Logam Dasar dan Bahan Gajian Non Logam</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Barang modal, Komponen, Bahan Penolong dan Jasa Industri')"
                           >Barang modal, Komponen, Bahan Penolong dan Jasa
                           Industri</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Kimia dasar, Migas dan Batu Bara')"
                           >Kimia dasar, Migas dan Batu Bara</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setFilterBy('Tekstil,kulit, Alas kaki, Aneka')"
                           >Tekstil,kulit, Alas kaki, Aneka</a
                         >
                       </li>
@@ -821,7 +856,7 @@
                     class="font-semibold rounded-lg px-5 text-xl text-[#37474F] py-2.5 text-center inline-flex items-center"
                     type="button"
                   >
-                    Terlaris
+                    <div id="textSortBy">Terlaris</div>
                     <svg
                       class="w-2.5 h-2.5 ml-2.5"
                       aria-hidden="true"
@@ -848,12 +883,18 @@
                       aria-labelledby="dropdownSortButton"
                     >
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setSortBy('Harga Termurah')"
                           >Harga Termurah</a
                         >
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-[#F6D10080]"
+                          onclick="setSortBy('Terlaris')"
                           >Terlaris</a
                         >
                       </li>
@@ -1142,6 +1183,21 @@
     </footer>
     <!-- Footer -->
 
+    <script>
+      function setFilterBy(filterBy) {
+        button = document.getElementById("dropdownFilterButton");
+        textButton = document.getElementById("textFilterBy");
+        textButton.innerText = filterBy;
+        button.click();
+      }
+
+      function setSortBy(sortBy) {
+        button = document.getElementById("dropdownSortButton");
+        textButton = document.getElementById("textSortBy");
+        textButton.innerText = sortBy;
+        button.click();
+      }
+    </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>

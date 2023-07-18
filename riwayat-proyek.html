@@ -739,7 +739,7 @@
             <div class="flex flex-col">
               <a
                 href="#"
-                class="hover:bg-[#F3F3FE] lg:px-16 px-4 py-8 border border-b-[#DADADA] border-t-0 border-x-0"
+                class="proyek-card hover:bg-[#F3F3FE] lg:px-16 px-4 py-8"
               >
                 <h2 class="text-[#2264D1] font-semibold text-xl mb-4">
                   Mencari bibit jagung kualitas bagus
@@ -779,7 +779,7 @@
 
               <a
                 href="#"
-                class="hover:bg-[#F3F3FE] lg:px-16 px-4 py-8 border border-b-[#DADADA] border-t-0 border-x-0"
+                class="proyek-card hover:bg-[#F3F3FE] lg:px-16 px-4 py-8 border border-t-[#DADADA] border-b-0 border-x-0"
               >
                 <h2 class="text-[#2264D1] font-semibold text-xl mb-4">
                   Mencari bibit anggur kualitas bagus
@@ -817,9 +817,92 @@
                 </div>
               </a>
 
-              <div class="flex justify-center p-5">
+              <a
+                href="#"
+                class="proyek-card hidden hover:bg-[#F3F3FE] lg:px-16 px-4 py-8 border border-t-[#DADADA] border-b-0 border-x-0"
+              >
+                <h2 class="text-[#2264D1] font-semibold text-xl mb-4">
+                  Mencari bibit anggur kualitas bagus
+                </h2>
+                <div class="grid grid-cols-12 gap-x-4">
+                  <div
+                    class="col-span-12 xl:flex xl:gap-x-2 md:col-span-4 font-medium text-[#8594AD] text-lg"
+                  >
+                    <p>Ikm yang dipekerjakan :</p>
+                    <p>CV.Digital</p>
+                  </div>
+                  <div
+                    class="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col mt-4 md:mt-0"
+                  >
+                    <p class="text-[#37474F] font-semibold text-xl mb-4">
+                      Proyek Telah Selesai
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-x-5">
+                      <p>IDR 40.000.000</p>
+                      <p>Total pembelian</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-span-12 md:col-span-3 lg:col-span-2 flex flex-col md:items-center items-start"
+                  >
+                    <button
+                      type="button"
+                      class="mb-6 md:-mt-2 mt-8 text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                    >
+                      Ulasan
+                    </button>
+                    <p class="whitespace-nowrap">Apr 6 - Apr 8</p>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="proyek-card hidden hover:bg-[#F3F3FE] lg:px-16 px-4 py-8 border border-t-[#DADADA] border-b-0 border-x-0"
+              >
+                <h2 class="text-[#2264D1] font-semibold text-xl mb-4">
+                  Mencari bibit anggur kualitas bagus
+                </h2>
+                <div class="grid grid-cols-12 gap-x-4">
+                  <div
+                    class="col-span-12 xl:flex xl:gap-x-2 md:col-span-4 font-medium text-[#8594AD] text-lg"
+                  >
+                    <p>Ikm yang dipekerjakan :</p>
+                    <p>CV.Digital</p>
+                  </div>
+                  <div
+                    class="col-span-12 md:col-span-5 lg:col-span-6 flex flex-col mt-4 md:mt-0"
+                  >
+                    <p class="text-[#37474F] font-semibold text-xl mb-4">
+                      Proyek Telah Selesai
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-x-5">
+                      <p>IDR 40.000.000</p>
+                      <p>Total pembelian</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="col-span-12 md:col-span-3 lg:col-span-2 flex flex-col md:items-center items-start"
+                  >
+                    <button
+                      type="button"
+                      class="mb-6 md:-mt-2 mt-8 text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                    >
+                      Ulasan
+                    </button>
+                    <p class="whitespace-nowrap">Apr 6 - Apr 8</p>
+                  </div>
+                </div>
+              </a>
+
+              <div
+                class="btn-lihat-semua flex justify-center p-5 border border-t-[#DADADA] border-b-0 border-x-0"
+              >
                 <button
                   type="button"
+                  onclick="lihatSemua()"
                   class="text-[#3D56F5] bg-[#F3F3FE] hover:bg-[#3D56F5] hover:border-[#3D56F5] hover:text-white font-medium border border-[#3D56F5] rounded-lg text-sm px-5 py-2.5"
                 >
                   Lihat Semua
@@ -918,6 +1001,16 @@
         textButton = document.getElementById("textSortir");
         textButton.innerText = sortBy;
         button.click();
+      }
+
+      function lihatSemua() {
+        let listProyek = document.getElementsByClassName("proyek-card");
+        for (var i = 0; i < listProyek.length; i++) {
+          if (listProyek[i].classList.contains("hidden")) {
+            listProyek[i].classList.remove("hidden");
+          }
+        }
+        document.querySelector(".btn-lihat-semua").classList.add("hidden");
       }
     </script>
     <script src="./assets/js/index.js"></script>

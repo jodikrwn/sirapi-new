@@ -835,27 +835,511 @@
                 <div class="flex gap-x-7 mt-10">
                   <div>
                     <h2 class="font-semibold text-xl mb-2">Durasi Selesai</h2>
-                    <p class="font-medium text-lg">1 Hari</p>
+                    <div class="flex font-medium text-lg gap-x-1">
+                      <p id="textJumlahDurasi">1</p>
+                      <p id="textTipeDurasi">Hari</p>
+                    </div>
                   </div>
                   <div>
                     <button
+                      data-modal-target="durasiModal"
+                      data-modal-toggle="durasiModal"
                       class="flex justify-center items-center rounded-full h-[38px] w-[38px] border border-[2px] border-[#DADADA]"
                     >
                       <img src="./assets/icons/pencil.svg" alt="pencil" />
                     </button>
+                    <!-- durasi modal -->
+                    <div
+                      data-modal-backdrop="static"
+                      id="durasiModal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                    >
+                      <div class="relative md:w-fit w-full">
+                        <div class="relative bg-white rounded-lg shadow px-4">
+                          <div
+                            class="flex items-start justify-between md:p-4 py-4"
+                          >
+                            <h3 class="text-xl font-semibold text-gray-900">
+                              Durasi Selesai
+                            </h3>
+                          </div>
+                          <div
+                            class="p-4 mb-2 flex justify-center md:gap-x-8 gap-x-4 items-center"
+                          >
+                            <input
+                              type="number"
+                              id="jumlahDurasiInput"
+                              class="md:w-[180px] h-full w-1/2 border border-[#DADADA] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+                              min="0"
+                              value="1"
+                              required
+                            />
+
+                            <button
+                              id="dropdownTipeDurasiButton"
+                              data-dropdown-toggle="dropdownTipeDurasi"
+                              class="font-medium md:w-[180px] w-1/2 justify-between focus:ring-blue-500 focus:border-blue-500 block p-2.5 rounded-lg px-4 text-[#37474F] py-2.5 text-center inline-flex items-center border border-[#DADADA]"
+                              type="button"
+                            >
+                              <p
+                                class="whitespace-nowrap"
+                                id="textTipeDurasiButton"
+                              >
+                                Hari
+                              </p>
+                              <svg
+                                class="w-2.5 h-2.5 ml-2.5"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 10 6"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="m1 1 4 4 4-4"
+                                />
+                              </svg>
+                            </button>
+                            <!-- Dropdown tipe durasi -->
+                            <div
+                              id="dropdownTipeDurasi"
+                              class="z-10 hidden md:w-[210px] bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-fit border border-[#DADADA]"
+                            >
+                              <ul
+                                class="py-2 text-[#37474F]"
+                                aria-labelledby="dropdownTipeDurasiButton"
+                              >
+                                <li onclick="setTipeDurasi('Hari')">
+                                  <div
+                                    class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                                  >
+                                    Hari
+                                  </div>
+                                </li>
+                                <li onclick="setTipeDurasi('Minggu')">
+                                  <div
+                                    class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                                  >
+                                    Minggu
+                                  </div>
+                                </li>
+                                <li onclick="setTipeDurasi('Bulan')">
+                                  <div
+                                    class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                                  >
+                                    Bulan
+                                  </div>
+                                </li>
+                                <li onclick="setTipeDurasi('Tahun')">
+                                  <div
+                                    class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                                  >
+                                    Tahun
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="flex justify-center p-6 rounded-b">
+                            <button
+                              data-modal-hide="durasiModal"
+                              onclick="simpanDurasi()"
+                              type="button"
+                              class="text-white bg-[#3D56F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                            >
+                              Simpan
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="flex gap-x-7 mt-8">
+                <div class="flex flex-wrap gap-y-3 gap-x-7 mt-8">
                   <div>
                     <h2 class="font-semibold text-xl mb-2">Budget</h2>
-                    <p class="font-medium text-lg">Rp 50.000.000/Ton</p>
+                    <div class="flex flex-wrap font-medium text-lg">
+                      <p class="mr-1">Rp</p>
+                      <p id="textJumlahBudget">50.000.000</p>
+                      /
+                      <p id="textTipeBudget">Ton</p>
+                    </div>
                   </div>
                   <div>
                     <button
+                      data-modal-target="budgetModal"
+                      data-modal-toggle="budgetModal"
                       class="flex justify-center items-center rounded-full h-[38px] w-[38px] border border-[2px] border-[#DADADA]"
                     >
                       <img src="./assets/icons/pencil.svg" alt="pencil" />
                     </button>
+                    <!-- budget modal -->
+                    <div
+                      data-modal-backdrop="static"
+                      id="budgetModal"
+                      tabindex="-1"
+                      aria-hidden="true"
+                      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                    >
+                      <div class="relative md:w-fit w-full">
+                        <div class="relative bg-white rounded-lg shadow px-4">
+                          <div
+                            class="flex items-start justify-between md:p-4 py-4"
+                          >
+                            <h3 class="text-xl font-semibold text-gray-900">
+                              Budget
+                            </h3>
+                          </div>
+                          <div
+                            class="p-4 mb-2 flex flex-col md:flex-row gap-y-3 justify-center md:gap-x-8 gap-x-4 items-center"
+                          >
+                            <input
+                              type="number"
+                              id="jumlahBudgetInput"
+                              class="md:w-[180px] w-full h-full border border-[#DADADA] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+                              min="0"
+                              required
+                            />
+
+                            <button
+                              id="dropdownTipeBudgetButton"
+                              data-dropdown-toggle="dropdownTipeBudget"
+                              class="font-medium md:w-[180px] w-full justify-between focus:ring-blue-500 focus:border-blue-500 block p-2.5 rounded-lg px-4 text-[#37474F] py-2.5 text-center inline-flex items-center border border-[#DADADA]"
+                              type="button"
+                            >
+                              <p
+                                class="whitespace-nowrap"
+                                id="textTipeBudgetButton"
+                              >
+                                KG
+                              </p>
+                              <svg
+                                class="w-2.5 h-2.5 ml-2.5"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 10 6"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="m1 1 4 4 4-4"
+                                />
+                              </svg>
+                            </button>
+                            <!-- Dropdown tipe budget -->
+                            <div
+                              id="dropdownTipeBudget"
+                              class="z-10 hidden md:w-[210px] bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-fit border border-[#DADADA]"
+                            >
+                              <ul
+                                class="py-2 text-[#37474F]"
+                                aria-labelledby="dropdownTipeBudgetButton"
+                              >
+                                <li>
+                                  <button
+                                    id="beratDropdownButton"
+                                    data-dropdown-toggle="beratDropdown"
+                                    data-dropdown-placement="right"
+                                    type="button"
+                                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#F6D10080]"
+                                  >
+                                    Satuan Berat<svg
+                                      class="w-2.5 h-2.5 ml-2.5"
+                                      aria-hidden="true"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 6 10"
+                                    >
+                                      <path
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="m1 9 4-4-4-4"
+                                      />
+                                    </svg>
+                                  </button>
+                                  <div
+                                    id="beratDropdown"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-fit"
+                                  >
+                                    <ul
+                                      class="py-2 text-sm text-gray-700"
+                                      aria-labelledby="beratDropdownButton"
+                                    >
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('KG')"
+                                        >
+                                          KG
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('HG')"
+                                        >
+                                          HG
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('DAG')"
+                                        >
+                                          DAG
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('G')"
+                                        >
+                                          G
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('DG')"
+                                        >
+                                          DG
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('CG')"
+                                        >
+                                          CG
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('MG')"
+                                        >
+                                          MG
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li>
+                                  <button
+                                    id="panjangDropdownButton"
+                                    data-dropdown-toggle="panjangDropdown"
+                                    data-dropdown-placement="right"
+                                    type="button"
+                                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#F6D10080]"
+                                  >
+                                    Satuan Panjang<svg
+                                      class="w-2.5 h-2.5 ml-2.5"
+                                      aria-hidden="true"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 6 10"
+                                    >
+                                      <path
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="m1 9 4-4-4-4"
+                                      />
+                                    </svg>
+                                  </button>
+                                  <div
+                                    id="panjangDropdown"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-fit"
+                                  >
+                                    <ul
+                                      class="py-2 text-sm text-gray-700"
+                                      aria-labelledby="panjangDropdownButton"
+                                    >
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('KM')"
+                                        >
+                                          KM
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:b-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('HM')"
+                                        >
+                                          HM
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('DAM')"
+                                        >
+                                          DAM
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('M')"
+                                        >
+                                          M
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('DM')"
+                                        >
+                                          DM
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('CM')"
+                                        >
+                                          CM
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('MM')"
+                                        >
+                                          MM
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li>
+                                  <button
+                                    id="literDropdownButton"
+                                    data-dropdown-toggle="literDropdown"
+                                    data-dropdown-placement="right"
+                                    type="button"
+                                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-[#F6D10080]"
+                                  >
+                                    Satuan Liter<svg
+                                      class="w-2.5 h-2.5 ml-2.5"
+                                      aria-hidden="true"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 6 10"
+                                    >
+                                      <path
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="m1 9 4-4-4-4"
+                                      />
+                                    </svg>
+                                  </button>
+                                  <div
+                                    id="literDropdown"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-fit"
+                                  >
+                                    <ul
+                                      class="py-2 text-sm text-gray-700"
+                                      aria-labelledby="literDropdownButton"
+                                    >
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('KL')"
+                                        >
+                                          KL
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:b-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('HL')"
+                                        >
+                                          HL
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('DAL')"
+                                        >
+                                          DAL
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('L')"
+                                        >
+                                          L
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('DL')"
+                                        >
+                                          DL
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('CL')"
+                                        >
+                                          CL
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <div
+                                          class="block px-4 py-2 hover:bg-[#F6D10080] cursor-pointer"
+                                          onclick="setTipeBudget('ML')"
+                                        >
+                                          ML
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div
+                                    class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                                    onclick="setTipeBudget('Tahun')"
+                                  >
+                                    Tahun
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="flex justify-center p-6 rounded-b">
+                            <button
+                              data-modal-hide="budgetModal"
+                              onclick="simpanBudget()"
+                              type="button"
+                              class="text-white bg-[#3D56F5] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                            >
+                              Simpan
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -964,17 +1448,57 @@
     <!-- Footer -->
 
     <script>
-      let textArea = document.getElementById("deskripsi");
-      let characterCounter = document.getElementById("char_count");
-      const maxNumOfChars = 5000;
+      let jumlahDurasi,
+        tipeDurasi = "Hari",
+        jumlahBudget,
+        tipeBudget = "KG";
 
-      const countCharacters = () => {
-        let numOfEnteredChars = textArea.value.length;
-        let counter = maxNumOfChars - numOfEnteredChars;
-        characterCounter.textContent = counter;
-      };
+      function setTipeDurasi(tipe) {
+        button = document.getElementById("dropdownTipeDurasiButton");
+        textButton = document.getElementById("textTipeDurasiButton");
+        textButton.innerText = tipe;
+        tipeDurasi = tipe;
+        button.click();
+      }
 
-      textArea.addEventListener("input", countCharacters);
+      function simpanDurasi() {
+        jumlahDurasiInput = document.getElementById("jumlahDurasiInput");
+        textTipeDurasi = document.getElementById("textTipeDurasi");
+        textJumlahDurasi = document.getElementById("textJumlahDurasi");
+
+        if (jumlahDurasiInput.value > 0) {
+          textJumlahDurasi.innerText = Number(jumlahDurasiInput.value);
+          textTipeDurasi.innerText = tipeDurasi;
+        } else {
+          textJumlahDurasi.innerText = 0;
+          jumlahDurasiInput.value = 0;
+        }
+      }
+
+      function setTipeBudget(tipe) {
+        button = document.getElementById("dropdownTipeBudgetButton");
+        textButton = document.getElementById("textTipeBudgetButton");
+        textButton.innerText = tipe;
+        tipeBudget = tipe;
+        button.click();
+      }
+
+      function simpanBudget() {
+        jumlahBudgetInput = document.getElementById("jumlahBudgetInput");
+        textTipeBudget = document.getElementById("textTipeBudget");
+        textJumlahBudget = document.getElementById("textJumlahBudget");
+
+        if (jumlahBudgetInput.value > 0) {
+          budget = parseInt(jumlahBudgetInput.value);
+          textJumlahBudget.innerText = budget
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+          textTipeBudget.innerText = tipeBudget;
+        } else {
+          textJumlahBudget.innerText = 0;
+          jumlahBudgetInput.value = 0;
+        }
+      }
     </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>

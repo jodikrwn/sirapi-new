@@ -643,15 +643,15 @@
           <div
             class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 md:pl-16 px-4 py-10"
           >
-            <h2 class="text-2xl font-semibold mb-10">Rincian Proyek</h2>
+            <h2 class="text-2xl font-semibold mb-8">Rincian Proyek</h2>
             <div class="flex md:flex-row flex-col pb-8">
               <div
                 class="border md:border-r-[#DADADA] max-md:border-r-0 border-y-0 border-l-0 py-4 pr-4"
               >
-                <h3 class="text-[#2264D1] text-xl font-semibold mb-5">
+                <h3 class="text-[#2264D1] text-xl font-semibold mb-6">
                   Di Cari Produk Kelapa Tua
                 </h3>
-                <div class="flex items-center gap-x-5 mb-4">
+                <div class="flex items-center gap-x-5 mb-6">
                   <button
                     class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
                   >
@@ -661,15 +661,21 @@
                     Diposting Mei 30,2023
                   </p>
                 </div>
-                <p class="font-medium">
+                <p class="font-medium line-clamp-3 teks-deskripsi">
                   Kami dengan senang hati ingin memperkenalkan produk kelapa tua
                   berkualitas baik dari perusahaan kami kepada Anda. <br />
-                  Sebagai perusahaan yang berkomitmen untuk...
+                  Sebagai perusahaan yang berkomitmen untuk<br />
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt, qui. Illo voluptates beatae reprehenderit nihil,
+                  ipsum ullam quia debitis porro provident error sint molestias
+                  reiciendis numquam commodi consequatur animi omnis?
                 </p>
                 <div class="flex flex-col gap-y-4 my-8">
-                  <a class="text-[#2264D1] font-semibold text-sm" href="#"
-                    >Lihat detail</a
+                  <button
+                    class="btn-lihat-detail w-fit text-[#2264D1] font-semibold text-sm"
                   >
+                    Lihat detail
+                  </button>
 
                   <a class="text-[#2264D1] font-semibold" href="#"
                     >Lihat Proyek Postingan</a
@@ -867,6 +873,14 @@
         textButton.innerText = sortBy;
         button.click();
       }
+
+      let teksDeskripsi = document.querySelector(".teks-deskripsi"),
+        btnMore = document.querySelector(".btn-lihat-detail");
+
+      btnMore.onclick = function () {
+        teksDeskripsi.classList.toggle("line-clamp-3");
+        btnMore.classList.add("hidden");
+      };
     </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
