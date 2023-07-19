@@ -650,11 +650,101 @@
                   <span
                     class="bottom-1 right-1 absolute w-3.5 h-3.5 bg-[#12B76A] border-2 border-white rounded-full"
                   ></span>
-                  <span
+                  <button
+                    data-modal-target="editPhotoModal"
+                    data-modal-toggle="editPhotoModal"
                     class="top-1 p-1 left-1 absolute flex justify-center items-center rounded-full h-[18px] w-[18px] bg-[#F0F4FD]"
                   >
-                    <img src="./assets/icons/pencil-edit.svg" alt="edit"
-                  /></span>
+                    <img src="./assets/icons/pencil-edit.svg" alt="edit" />
+                  </button>
+
+                  <!-- edit photo modal -->
+                  <div
+                    id="editPhotoModal"
+                    tabindex="-1"
+                    aria-hidden="true"
+                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                  >
+                    <div class="relative w-full max-w-2xl max-h-full">
+                      <!-- Modal content -->
+                      <div class="relative bg-white rounded-lg shadow">
+                        <!-- Modal header -->
+                        <div
+                          class="flex items-start justify-end p-4 pb-0 rounded-t"
+                        >
+                          <button
+                            type="button"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                            data-modal-hide="editPhotoModal"
+                          >
+                            <svg
+                              class="w-3 h-3"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 14 14"
+                            >
+                              <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                              />
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                          </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-6 grid grid-cols-2 items-center gap-y-3">
+                          <div
+                            class="col-span-2 lg:col-span-1 flex justify-center"
+                          >
+                            <img
+                              src="./assets/images/user-profile.png"
+                              class="rounded-full w-[250px] h-[250px] object-cover profile-picture cursor-pointer"
+                              alt=""
+                            />
+                            <input
+                              class="rounded-full w-1"
+                              id="uploadFotoProfil"
+                              type="file"
+                              accept="image/*"
+                              hidden
+                            />
+                          </div>
+                          <div
+                            class="col-span-2 lg:col-span-1 gap-y-4 font-medium"
+                          >
+                            <p class="mb-10">
+                              Tunjukkan kepada klien versi terbaik dari diri
+                              Anda!
+                            </p>
+                            <p class="text-[#8594AD]">
+                              gambar yang diubah secara digital tidak
+                              diperbolehkan
+                            </p>
+                          </div>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="flex items-center p-6 gap-x-4 justify-end">
+                          <button
+                            data-modal-hide="editPhotoModal"
+                            type="button"
+                            class="md:mr-6 text-[#3D56F5] font-medium rounded-lg text-sm px-5 py-2.5"
+                          >
+                            Ganti profil
+                          </button>
+                          <button
+                            type="button"
+                            class="text-white bg-[#2264D1] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                          >
+                            Simpan
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -704,8 +794,6 @@
                   Lihat Tampilan Publik
                 </button>
                 <button
-                  data-modal-target="umpanBalikModal"
-                  data-modal-toggle="umpanBalikModal"
                   type="button"
                   class="text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
                 >
@@ -762,29 +850,212 @@
                     </h2>
                     <div>
                       <button
+                        data-modal-target="titleModal"
+                        data-modal-toggle="titleModal"
                         class="flex justify-center items-center rounded-full h-[38px] w-[38px] border border-[2px] border-[#DADADA]"
                       >
                         <img src="./assets/icons/pencil.svg" alt="pencil" />
                       </button>
+                      <!-- title modal -->
+                      <div
+                        id="titleModal"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                      >
+                        <div class="relative w-full max-w-2xl max-h-full">
+                          <!-- Modal content -->
+                          <div class="relative bg-white rounded-lg shadow">
+                            <!-- Modal header -->
+                            <div
+                              class="flex items-start justify-between p-4 rounded-t"
+                            >
+                              <h3 class="text-2xl font-medium">
+                                Ubah judul anda
+                              </h3>
+                              <button
+                                type="button"
+                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                                data-modal-hide="titleModal"
+                              >
+                                <svg
+                                  class="w-3 h-3"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 14 14"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                                  />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                              </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="p-6 text-sm">
+                              <p class="font-medium mb-3">judul anda</p>
+                              <p>
+                                Masukkan deskripsi satu kalimat tentang Produk /
+                                service Anda (mis. supplier kelapa kopyor)
+                              </p>
+                              <input
+                                type="text"
+                                id="title"
+                                class="mt-6 border border-[#DADADA] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="Contoh : penyedia buah kelapa kopyor"
+                                required
+                              />
+                            </div>
+                            <!-- Modal footer -->
+                            <div
+                              class="flex items-center p-6 gap-x-4 justify-end"
+                            >
+                              <button
+                                data-modal-hide="titleModal"
+                                type="button"
+                                class="md:mr-6 text-[#3D56F5] font-medium rounded-lg text-sm px-5 py-2.5"
+                              >
+                                Batal
+                              </button>
+                              <button
+                                type="button"
+                                class="text-white bg-[#2264D1] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                              >
+                                Simpan
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div
                     class="flex items-center justify-between xl:justify-start"
                   >
-                    <p class="font-medium mb-2 xl:w-3/4 mr-4 lg:mr-16">
+                    <p
+                      class="font-medium mb-2 xl:w-3/4 mr-4 lg:mr-16 line-clamp-3 teks-deskripsi"
+                    >
                       Sebagai supplier buah, kami memahami betapa pentingnya
                       memenuhi harapan pelanggan dan memberikan layanan yang
                       luar biasa. Kami bangga menjadi mitra terpercaya dalam
                       menyediakan buah-buahan berkualitas tinggi kepada klien
-                      kami
+                      kami Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Amet, nobis facere voluptatem officia distinctio
+                      nihil quas architecto odio modi laborum numquam ullam
+                      quia, inventore optio pariatur vitae quam enim magnam est
+                      sed blanditiis quaerat quis deleniti! Sed, corrupti
+                      delectus? Laboriosam praesentium mollitia, soluta ratione
+                      minus voluptatibus alias officia asperiores, reprehenderit
+                      saepe dolores minima officiis, sequi vel. Amet delectus
+                      voluptatem illum est quo non, porro molestias error
+                      ratione deleniti tenetur inventore molestiae facilis
+                      fugiat, hic blanditiis perspiciatis sunt a tempora dolores
+                      nesciunt! Minima nesciunt repellat doloremque aperiam
+                      veritatis fuga, vero ipsam vitae labore, quam sint placeat
+                      tempora, deserunt laborum. Temporibus, enim?
                     </p>
                     <div>
                       <button
+                        data-modal-target="overviewModal"
+                        data-modal-toggle="overviewModal"
                         class="flex justify-center items-center rounded-full h-[38px] w-[38px] border border-[2px] border-[#DADADA]"
                       >
                         <img src="./assets/icons/pencil.svg" alt="pencil" />
                       </button>
+                      <!-- overview modal -->
+                      <div
+                        id="overviewModal"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                      >
+                        <div class="relative w-full max-w-2xl max-h-full">
+                          <!-- Modal content -->
+                          <div class="relative bg-white rounded-lg shadow">
+                            <!-- Modal header -->
+                            <div
+                              class="flex items-start justify-between p-4 rounded-t"
+                            >
+                              <h3 class="text-2xl font-medium">
+                                Gambaran Umum
+                              </h3>
+                              <button
+                                type="button"
+                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                                data-modal-hide="overviewModal"
+                              >
+                                <svg
+                                  class="w-3 h-3"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 14 14"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                                  />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                              </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="p-6 text-sm">
+                              <p class="font-medium mb-6">
+                                Gunakan ruang ini untuk menunjukkan kepada klien
+                                bahwa Anda memiliki keterampilan dan pengalaman
+                                yang mereka cari.
+                              </p>
+                              <ul class="list-disc px-6 mb-6">
+                                <li>Jelaskan kekuatan dan keterampilan Anda</li>
+                                <li>
+                                  Soroti proyek, pencapaian, dan pendidikan
+                                </li>
+                                <li>
+                                  Buatlah singkat dan pastikan bebas dari
+                                  kesalahan
+                                </li>
+                              </ul>
+                              <textarea
+                                id="deskripsi"
+                                maxlength="5000"
+                                rows="8"
+                                class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                              ></textarea>
+                              <div class="text-right text-[#8594AD] mt-3">
+                                <span id="char_count">5000</span> karakter
+                              </div>
+                            </div>
+                            <!-- Modal footer -->
+                            <div
+                              class="flex items-center p-6 gap-x-4 justify-end"
+                            >
+                              <button
+                                data-modal-hide="overviewModal"
+                                type="button"
+                                class="md:mr-6 text-[#3D56F5] font-medium rounded-lg text-sm px-5 py-2.5"
+                              >
+                                Batal
+                              </button>
+                              <button
+                                type="button"
+                                class="text-white bg-[#2264D1] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                              >
+                                Simpan
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <button
@@ -1025,17 +1296,286 @@
                       </h3>
                       <div>
                         <button
+                          data-modal-target="unggulanModal"
+                          data-modal-toggle="unggulanModal"
                           class="flex justify-center items-center rounded-full h-[38px] w-[38px] border border-[2px] border-[#DADADA]"
                         >
                           <img src="./assets/icons/pencil.svg" alt="pencil" />
                         </button>
+                        <div
+                          id="unggulanModal"
+                          tabindex="-1"
+                          aria-hidden="true"
+                          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                        >
+                          <div class="relative w-full max-w-3xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow">
+                              <!-- Modal header -->
+                              <div
+                                class="flex items-start justify-between p-4 rounded-t"
+                              >
+                                <h3 class="text-2xl font-medium">
+                                  Ubah Industri unggulan
+                                </h3>
+                                <button
+                                  type="button"
+                                  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                                  data-modal-hide="unggulanModal"
+                                >
+                                  <svg
+                                    class="w-3 h-3"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 14 14"
+                                  >
+                                    <path
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                                    />
+                                  </svg>
+                                  <span class="sr-only">Close modal</span>
+                                </button>
+                              </div>
+                              <!-- Modal body -->
+                              <div class="p-6 text-sm">
+                                <p class="font-medium mb-3">Tag</p>
+                                <div class="p-4 border rounded-lg">
+                                  <ul class="w-full gap-4 flex flex-wrap">
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Elektronika-dan-Telematika-ICT"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Elektronika-dan-Telematika-ICT"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Elektronika dan Telematika ICT
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Farmasi-Kosmetik-ALkes"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Farmasi-Kosmetik-ALkes"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Farmasi, Kosmetik, ALkes
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Pembangkit-Energi"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Pembangkit-Energi"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Pembangkit Energi
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        checked
+                                        type="checkbox"
+                                        id="Pangan"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Pangan"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Pangan
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Hulu-agro"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Hulu-agro"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Hulu agro
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Tekstil-Kulit-Alas-Kaki-Aneka"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Tekstil-Kulit-Alas-Kaki-Aneka"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Tekstil, Kulit, Alas Kaki, Aneka
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Kimia-Dasar"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Kimia-Dasar"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Kimia Dasar
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Logam-Dasar-dan-Bahan-Gajian-Non-Logam"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Logam-Dasar-dan-Bahan-Gajian-Non-Logam"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Logam Dasar dan Bahan Gajian Non Logam
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Kimia-dasar-Migas-dan-Batu-Bara"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Kimia-dasar-Migas-dan-Batu-Bara"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Kimia dasar, Migas dan Batu Bara
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Barang-modal-Komponen-Bahan-Penolong-dan-Jasa-Industri"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Barang-modal-Komponen-Bahan-Penolong-dan-Jasa-Industri"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Barang modal, Komponen, Bahan Penolong
+                                          dan Jasa Industri
+                                        </div>
+                                      </label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="checkbox"
+                                        id="Alat-Transportasi"
+                                        value=""
+                                        class="hidden peer unggulan-checkbox"
+                                        required=""
+                                      />
+                                      <label
+                                        for="Alat-Transportasi"
+                                        class="inline-flex items-center justify-between w-fit px-4 py-2 bg-[#FFE07D] rounded-full cursor-pointer text-[#2264D1] peer-checked:border-blue-600 peer-checked:text-[#F6D100] peer-checked:bg-[#2264D1]"
+                                      >
+                                        <div class="text-sm font-medium">
+                                          Alat Transportasi
+                                        </div>
+                                      </label>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <p class="text-[#8594AD] text-sm mt-2">
+                                  Maximum 10 tag
+                                </p>
+                              </div>
+                              <!-- Modal footer -->
+                              <div
+                                class="flex items-center p-6 gap-x-4 justify-end"
+                              >
+                                <button
+                                  data-modal-hide="unggulanModal"
+                                  type="button"
+                                  class="md:mr-6 text-[#3D56F5] font-medium rounded-lg text-sm px-5 py-2.5"
+                                >
+                                  Batal
+                                </button>
+                                <button
+                                  data-modal-hide="unggulanModal"
+                                  type="button"
+                                  onclick="simpanUnggulan()"
+                                  class="text-white bg-[#2264D1] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-full text-sm px-5 py-2.5"
+                                >
+                                  Simpan
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <button
-                      class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
+                    <div
+                      id="listUnggulan"
+                      class="flex flex-wrap gap-x-6 gap-y-3 mt-5"
                     >
-                      Pangan
-                    </button>
+                      <div
+                        class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
+                      >
+                        Pangan
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1127,11 +1667,60 @@
     <!-- Footer -->
 
     <script>
-      function setSortir(sortBy) {
-        button = document.getElementById("dropdownSortButton");
-        textButton = document.getElementById("textSortir");
-        textButton.innerText = sortBy;
-        button.click();
+      let teksDeskripsi = document.querySelector(".teks-deskripsi"),
+        btnMore = document.querySelector(".btn-lebih-lanjut");
+
+      btnMore.onclick = function () {
+        teksDeskripsi.classList.toggle("line-clamp-3");
+        btnMore.classList.add("hidden");
+      };
+
+      document
+        .querySelector(".profile-picture")
+        .addEventListener("click", function () {
+          document.querySelector("#uploadFotoProfil").click();
+        });
+
+      document.querySelector("#uploadFotoProfil").onchange = function (e) {
+        const name = e.target.files[0].name;
+        const lastDot = name.lastIndexOf(".");
+        const fileName = name.substring(0, lastDot);
+        const ext = name.substring(lastDot + 1);
+
+        console.log(fileName, ext);
+        document
+          .querySelector(".profile-picture")
+          .setAttribute("src", window.URL.createObjectURL(e.target.files[0]));
+      };
+
+      function simpanUnggulan() {
+        let arrUnggulan = [];
+        var inputs = document.querySelectorAll(".unggulan-checkbox");
+        for (var i = 0; i < inputs.length; i++) {
+          if (inputs[i].checked) {
+            let namaUnggulan =
+              inputs[i].nextElementSibling.children[0].innerText;
+            if (!arrUnggulan.includes(namaUnggulan))
+              arrUnggulan.push(namaUnggulan);
+          }
+        }
+
+        let list = document.getElementById("listUnggulan");
+        list.innerHTML = "";
+        for (let i = 0; i < arrUnggulan.length; i++) {
+          let li = document.createElement("div");
+          li.classList.add(
+            "bg-[#FFE07D]",
+            "rounded-full",
+            "py-2",
+            "px-3",
+            "text-[#2264D1]",
+            "font-semibold",
+            "text-xs"
+          );
+          li.innerText = arrUnggulan[i];
+          list.appendChild(li);
+        }
       }
     </script>
     <script src="./assets/js/index.js"></script>

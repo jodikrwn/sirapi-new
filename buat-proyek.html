@@ -690,18 +690,27 @@
                 <div class="text-right text-[#8594AD] font-medium mt-3 mb-6">
                   <span id="char_count">5000</span> karakter tersisa
                 </div>
-                <label
-                  for="file-upload"
-                  class="rounded-full text-white text-sm items-center gap-x-2 bg-[#3D56F5] inline-flex px-4 py-2 cursor-pointer"
-                >
-                  <iconify-icon
-                    width="20"
-                    icon="eva:attach-fill"
-                    style="color: white"
-                  ></iconify-icon>
-                  Attach file
-                </label>
-                <input class="hidden" id="file-upload" type="file" />
+                <div class="flex items-center gap-x-4">
+                  <label
+                    for="attachFile"
+                    class="rounded-full h-fit text-white text-sm items-center gap-x-2 bg-[#3D56F5] inline-flex px-4 py-2 cursor-pointer"
+                  >
+                    <iconify-icon
+                      width="20"
+                      icon="eva:attach-fill"
+                      class="text-white"
+                    ></iconify-icon>
+                    Attach file
+                  </label>
+                  <p id="nameAndExt"></p>
+                </div>
+                <input
+                  class="hidden"
+                  id="attachFile"
+                  name="attachFile"
+                  type="file"
+                />
+
                 <p class="mt-2 text-[#8594AD] text-sm">
                   Ukuran file maksimum 100 MB
                 </p>
@@ -1499,6 +1508,19 @@
           jumlahBudgetInput.value = 0;
         }
       }
+
+      let nameAndExt = document.getElementById("nameAndExt");
+
+      document.querySelector("input[type=file]").onchange = function (e) {
+        const name = e.target.files[0].name;
+        const lastDot = name.lastIndexOf(".");
+        const fileName = name.substring(0, lastDot);
+        const ext = name.substring(lastDot + 1);
+
+        console.log(fileName, ext);
+
+        nameAndExt.innerText = fileName + "." + ext;
+      };
     </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>

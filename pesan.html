@@ -633,383 +633,433 @@
 
     <main>
       <section>
-        <div class="max-w-screen-xl mx-auto">
-          <div
-            class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 mb-28"
-          >
+        <div class="border border-x-0 border-[#DADADA] my-10">
+          <div class="grid grid-cols-12 gap-y-6">
             <div
-              class="flex flex-wrap border border-b-[#DADADAAA] border-t-0 border-x-0 py-6 px-10"
+              class="col-span-12 md:col-span-3 border border-r-[#DADADA] border-l-0 border-y-0"
             >
-              <div class="md:mr-9">
-                <div class="relative w-20 h-20">
-                  <img
-                    class="w-20 h-20 rounded-full"
-                    src="./assets/images/user-profile.png"
-                    alt=""
-                  />
-                  <span
-                    class="bottom-1 right-1 absolute w-3.5 h-3.5 bg-[#12B76A] border-2 border-white rounded-full"
-                  ></span>
-                  <span
-                    class="top-1 p-1 left-1 absolute flex justify-center items-center rounded-full h-[18px] w-[18px] bg-[#F0F4FD]"
+              <div class="relative h-[68px]">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
                   >
-                    <img src="./assets/icons/pencil-edit.svg" alt="edit"
-                  /></span>
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
                 </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block h-full w-full p-4 pl-10 text-sm text-gray-900 border border-transparent rounded-lg focus:ring-transparent focus:border-transparent"
+                  placeholder="Mencari"
+                  required
+                />
               </div>
 
-              <div class="flex flex-col gap-y-1 my-4">
-                <h2 class="text-[#37474F] text-2xl font-semibold">
-                  PT.JAYA ABADI
-                </h2>
-                <div class="flex">
-                  <iconify-icon
-                    width="24"
-                    icon="ph:map-pin"
-                    style="color: #8594ad"
-                  ></iconify-icon>
-                  <div class="ml-1.5 pt-0.5">
-                    <div class="text-sm text-[#8594AD] font-medium">
-                      <p class="mb-1">Batam, indonesia - 17:53</p>
-                      <p>
-                        Batamindo Industrial Park, Jl. Beringin No.08, <br />
-                        Muka Kuning, Kec. Sei Beduk, Kota Batam, Kepulauan Riau
-                        29433
-                      </p>
+              <div class="overflow-y-auto max-h-screen">
+                <div
+                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0 bg-[#FAFAFA]"
+                >
+                  <div class="mr-4">
+                    <div class="relative w-14 h-14">
+                      <img
+                        class="w-14 h-14 rounded-full"
+                        src="./assets/images/user-profile.png"
+                        alt=""
+                      />
+                      <span
+                        class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#12B76A] border-2 border-white rounded-full"
+                      ></span>
                     </div>
-                    <p class="font-semibold text-xl mt-4">71%</p>
-                    <div
-                      class="md:w-[100px] w-full bg-[#DADADA] rounded-full h-1 my-2"
-                    >
-                      <div
-                        class="bg-[#2264D1] h-1 rounded-full"
-                        style="width: 71%"
-                      ></div>
+                  </div>
+                  <div class="flex flex-col gap-y-1 w-full">
+                    <div class="flex justify-between">
+                      <p class="text-[#37474F] font-semibold">Tok Dalang</p>
+                      <p class="text-[#8594AD] text-sm">5/10/23</p>
                     </div>
-                    <p class="text-[#8594AD] text-xs font-medium">
-                      71% kesuksesan kerja sama
+                    <p class="text-sm text-[#37474F] line-clamp-1 mb-1">
+                      Dicari Kelapa tua dengan kualitas super...
+                    </p>
+                    <p class="text-sm text-[#959595] line-clamp-1">
+                      Saya : Halo kembali, tolong berikan detail ....
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                >
+                  <div class="mr-4">
+                    <div class="relative w-14 h-14">
+                      <img
+                        class="w-14 h-14 rounded-full"
+                        src="./assets/images/user-profile.png"
+                        alt=""
+                      />
+                      <span
+                        class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#DADADA] border-2 border-white rounded-full"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-y-1 w-full">
+                    <div class="flex justify-between">
+                      <p class="text-[#37474F] font-semibold">Opet</p>
+                      <p class="text-[#8594AD] text-sm">5/10/23</p>
+                    </div>
+                    <p class="text-sm text-[#37474F] line-clamp-1 mb-1">
+                      Dicari Kelapa tua dengan kualitas super...
+                    </p>
+                    <p class="text-sm text-[#959595] line-clamp-1">
+                      Saya : Halo kembali, tolong berikan detail ....
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                >
+                  <div class="mr-4">
+                    <div class="relative w-14 h-14">
+                      <img
+                        class="w-14 h-14 rounded-full"
+                        src="./assets/images/user-profile.png"
+                        alt=""
+                      />
+                      <span
+                        class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#DADADA] border-2 border-white rounded-full"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-y-1 w-full">
+                    <div class="flex justify-between">
+                      <p class="text-[#37474F] font-semibold">Opet</p>
+                      <p class="text-[#8594AD] text-sm">5/10/23</p>
+                    </div>
+                    <p class="text-sm text-[#37474F] line-clamp-1 mb-1">
+                      Dicari Kelapa tua dengan kualitas super...
+                    </p>
+                    <p class="text-sm text-[#959595] line-clamp-1">
+                      Saya : Halo kembali, tolong berikan detail ....
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                >
+                  <div class="mr-4">
+                    <div class="relative w-14 h-14">
+                      <img
+                        class="w-14 h-14 rounded-full"
+                        src="./assets/images/user-profile.png"
+                        alt=""
+                      />
+                      <span
+                        class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#DADADA] border-2 border-white rounded-full"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-y-1 w-full">
+                    <div class="flex justify-between">
+                      <p class="text-[#37474F] font-semibold">Opet</p>
+                      <p class="text-[#8594AD] text-sm">5/10/23</p>
+                    </div>
+                    <p class="text-sm text-[#37474F] line-clamp-1 mb-1">
+                      Dicari Kelapa tua dengan kualitas super...
+                    </p>
+                    <p class="text-sm text-[#959595] line-clamp-1">
+                      Saya : Halo kembali, tolong berikan detail ....
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                >
+                  <div class="mr-4">
+                    <div class="relative w-14 h-14">
+                      <img
+                        class="w-14 h-14 rounded-full"
+                        src="./assets/images/user-profile.png"
+                        alt=""
+                      />
+                      <span
+                        class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#DADADA] border-2 border-white rounded-full"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-y-1 w-full">
+                    <div class="flex justify-between">
+                      <p class="text-[#37474F] font-semibold">Opet</p>
+                      <p class="text-[#8594AD] text-sm">5/10/23</p>
+                    </div>
+                    <p class="text-sm text-[#37474F] line-clamp-1 mb-1">
+                      Dicari Kelapa tua dengan kualitas super...
+                    </p>
+                    <p class="text-sm text-[#959595] line-clamp-1">
+                      Saya : Halo kembali, tolong berikan detail ....
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                >
+                  <div class="mr-4">
+                    <div class="relative w-14 h-14">
+                      <img
+                        class="w-14 h-14 rounded-full"
+                        src="./assets/images/user-profile.png"
+                        alt=""
+                      />
+                      <span
+                        class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#DADADA] border-2 border-white rounded-full"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-y-1 w-full">
+                    <div class="flex justify-between">
+                      <p class="text-[#37474F] font-semibold">Opet</p>
+                      <p class="text-[#8594AD] text-sm">5/10/23</p>
+                    </div>
+                    <p class="text-sm text-[#37474F] line-clamp-1 mb-1">
+                      Dicari Kelapa tua dengan kualitas super...
+                    </p>
+                    <p class="text-sm text-[#959595] line-clamp-1">
+                      Saya : Halo kembali, tolong berikan detail ....
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                >
+                  <div class="mr-4">
+                    <div class="relative w-14 h-14">
+                      <img
+                        class="w-14 h-14 rounded-full"
+                        src="./assets/images/user-profile.png"
+                        alt=""
+                      />
+                      <span
+                        class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#DADADA] border-2 border-white rounded-full"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-y-1 w-full">
+                    <div class="flex justify-between">
+                      <p class="text-[#37474F] font-semibold">Opet</p>
+                      <p class="text-[#8594AD] text-sm">5/10/23</p>
+                    </div>
+                    <p class="text-sm text-[#37474F] line-clamp-1 mb-1">
+                      Dicari Kelapa tua dengan kualitas super...
+                    </p>
+                    <p class="text-sm text-[#959595] line-clamp-1">
+                      Saya : Halo kembali, tolong berikan detail ....
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                >
+                  <div class="mr-4">
+                    <div class="relative w-14 h-14">
+                      <img
+                        class="w-14 h-14 rounded-full"
+                        src="./assets/images/user-profile.png"
+                        alt=""
+                      />
+                      <span
+                        class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#DADADA] border-2 border-white rounded-full"
+                      ></span>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-y-1 w-full">
+                    <div class="flex justify-between">
+                      <p class="text-[#37474F] font-semibold">Opet</p>
+                      <p class="text-[#8594AD] text-sm">5/10/23</p>
+                    </div>
+                    <p class="text-sm text-[#37474F] line-clamp-1 mb-1">
+                      Dicari Kelapa tua dengan kualitas super...
+                    </p>
+                    <p class="text-sm text-[#959595] line-clamp-1">
+                      Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="grid grid-cols-12">
+            <div class="col-span-12 md:col-span-9">
               <div
-                class="col-span-12 md:col-span-3 border max-md:border-x-0 md:border-r-[#DADADA] border-l-0 border-t-0 max-md:border-b-[#DADADA] md:border-b-0"
+                class="border border-b-[#DADADA] border-x-0 border-t-0 px-4 py-2"
               >
-                <div
-                  class="border border-b-[#DADADA] border-t-0 border-x-0 pb-10"
-                >
-                  <h2 class="p-6 font-semibold text-2xl">Lihat Profil</h2>
-                  <div class="flex items-center bg-[#F6D10080] py-2 px-2">
-                    <span
-                      class="w-3.5 h-3.5 bg-[#2264D1] border-2 mr-6 border-white rounded-full"
-                    ></span>
-                    <p class="font-semibold text-xl">Pangan</p>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-wrap justify-center gap-y-3 xl:justify-start border border-b-[#DADADA] border-t-0 border-x-0 px-6 py-4 gap-x-8"
-                >
-                  <div class="flex flex-col items-center">
-                    <p class="font-semibold text-xl mb-4">4</p>
-                    <p class="font-medium text-sm">Vendor aktif</p>
-                  </div>
-                  <div class="flex flex-col items-center">
-                    <p class="font-semibold text-xl mb-4">4</p>
-                    <p class="font-medium text-sm">Total Vendor</p>
-                  </div>
-                </div>
-                <div class="px-6 py-3 whitespace-normal">
-                  <h3 class="font-semibold text-xl mb-4">Informasi Tambahan</h3>
-                  <div class="flex flex-wrap items-center mb-3 text-sm">
-                    <p class="font-semibold mr-3">Telephone :</p>
-                    <p class="font-medium">081234523443</p>
-                  </div>
-                  <div class="flex flex-wrap items-center mb-3 text-sm">
-                    <p class="font-semibold mr-3">Email :</p>
-                    <p class="font-medium">cvjayaa@gmail.com</p>
-                  </div>
+                <h2 class="text-lg font-semibold mb-1">Tok dalang</h2>
+                <div class="flex text-sm">
+                  <p class="font-semibold mr-8">11:00</p>
+                  <p class="text-[#8594AD] font-semibold">
+                    Dicari kelapa tua dengan kualitas super
+                  </p>
                 </div>
               </div>
-              <div class="col-span-12 md:col-span-9">
-                <div
-                  class="border border border-b-[#DADADA] border-t-0 border-x-0 p-6"
+
+              <div
+                class="border border-b-[#DADADA] border-x-0 border-t-0 px-4 py-2"
+              >
+                <a class="text-sm font-medium text-[#2264D1]" href="#"
+                  >lihat Proposal</a
                 >
-                  <div class="flex items-center gap-x-4 mb-7">
-                    <h2 class="font-bold text-2xl">
-                      Supplier buah | kebutuhan pangan
-                    </h2>
-                  </div>
+              </div>
 
-                  <div
-                    class="flex items-center justify-between xl:justify-start"
-                  >
-                    <p
-                      class="font-medium mb-2 xl:w-3/4 mr-4 lg:mr-16 line-clamp-3 teks-deskripsi"
-                    >
-                      Sebagai supplier buah, kami memahami betapa pentingnya
-                      memenuhi harapan pelanggan dan memberikan layanan yang
-                      luar biasa. Kami bangga menjadi mitra terpercaya dalam
-                      menyediakan buah-buahan berkualitas tinggi kepada klien
-                      kami Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Minus, quo! Est tempora inventore voluptatibus
-                      quisquam? Architecto veniam recusandae debitis sed
-                      consectetur assumenda ipsam ducimus facere quas. Sunt
-                      doloribus officia ratione labore quas, repellat amet
-                      dignissimos veritatis, quod repellendus, aperiam magni
-                      aliquid doloremque temporibus cum consequuntur voluptatum
-                      inventore esse dolore voluptatem quo ipsa delectus? Ipsam
-                      doloremque in, id reiciendis obcaecati nesciunt deleniti
-                      itaque impedit aliquam. Animi suscipit necessitatibus,
-                      reprehenderit deserunt magni quod voluptates eum tenetur
-                      nostrum culpa dignissimos tempora ipsam fuga modi rerum
-                      velit quos, vel voluptatibus non repellat provident
-                      laboriosam expedita nemo. Nulla eligendi expedita,
-                      assumenda quae recusandae ipsum enim!
+              <div class="flex flex-col h-full">
+                <div class="overflow-y-auto max-h-screen">
+                  <div class="flex py-4 items-center gap-x-4">
+                    <div
+                      class="border border-b-[#DADADA] border-t-0 flex-1"
+                    ></div>
+                    <p class="text-[#8594AD] font-medium text-sm">
+                      Rabu, Mei 10
                     </p>
+                    <div
+                      class="border border-b-[#DADADA] border-t-0 flex-1"
+                    ></div>
                   </div>
-                  <button
-                    class="btn-lebih-lanjut w-fit text-[#2264D1] font-semibold text-sm"
-                  >
-                    Lebih lanjut
-                  </button>
+
+                  <div class="px-6 py-3 bg-[#FAFAFA]">
+                    <div class="flex gap-x-4 items-center">
+                      <div class="">
+                        <div class="relative w-12 h-12">
+                          <img
+                            class="w-12 h-12 rounded-full"
+                            src="./assets/images/user-profile.png"
+                            alt=""
+                          />
+                          <span
+                            class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#12B76A] border-2 border-white rounded-full"
+                          ></span>
+                        </div>
+                      </div>
+                      <p class="font-semibold text-sm mb-3">Paman muthu</p>
+                      <p class="text-xs mb-3 text-[#8594AD]">8:46</p>
+                    </div>
+
+                    <p class="pl-16 text-xs">
+                      Kami dengan senang hati ingin memperkenalkan produk kelapa
+                      tua berkualitas baik dari perusahaan kami kepada Anda.
+                      Sebagai perusahaan yang berkomitmen untuk menyediakan
+                      produk-produk terbaik, kami yakin bahwa produk kelapa tua
+                      kami akan memenuhi kebutuhan dan harapan Anda.
+                      <br />
+                      <br />
+                      Kami sangat antusias untuk dapat menjadi mitra Anda dalam
+                      menyediakan produk kelapa tua berkualitas baik. Kami yakin
+                      bahwa produk kami akan memberikan kepuasan kepada
+                      pelanggan Anda dan membantu meningkatkan kualitas produk
+                      akhir Anda.
+                      <br />
+                      <br />
+                      Hormat Kami,,
+                      <br />
+                      <br />
+                      Paman Muthu
+                    </p>
+
+                    <div
+                      class="border border-[2px] border-l-[#8594AD] border-r-0 border-y-0 ml-8 mt-6 h-[40px] flex items-center"
+                    >
+                      <a
+                        class="px-4 text-sm font-semibold text-[#2264D1]"
+                        href="#"
+                        >Lihat Rincian</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="px-6 py-3">
+                    <div class="flex gap-x-4 items-center">
+                      <div class="">
+                        <div class="relative w-12 h-12">
+                          <img
+                            class="w-12 h-12 rounded-full"
+                            src="./assets/images/user-profile.png"
+                            alt=""
+                          />
+                          <span
+                            class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#12B76A] border-2 border-white rounded-full"
+                          ></span>
+                        </div>
+                      </div>
+                      <p class="font-semibold text-sm mb-3">Tok Dalang</p>
+                      <p class="text-xs mb-3 text-[#8594AD]">8:46</p>
+                    </div>
+
+                    <p class="pl-16 text-xs">Halo, selamat pagi</p>
+                  </div>
+
+                  <div class="px-6 py-3">
+                    <div class="flex gap-x-4 items-center">
+                      <div class="">
+                        <div class="relative w-12 h-12">
+                          <img
+                            class="w-12 h-12 rounded-full"
+                            src="./assets/images/user-profile.png"
+                            alt=""
+                          />
+                          <span
+                            class="bottom-0 right-0 absolute w-3.5 h-3.5 bg-[#12B76A] border-2 border-white rounded-full"
+                          ></span>
+                        </div>
+                      </div>
+                      <p class="font-semibold text-sm mb-3">Tok Dalang</p>
+                      <p class="text-xs mb-3 text-[#8594AD]">8:46</p>
+                    </div>
+
+                    <p class="pl-16 text-xs">Halo, selamat pagi</p>
+                  </div>
                 </div>
-                <div class="">
-                  <h2 class="px-6 pt-4 font-semibold text-2xl">
-                    Riwayat Proyek
-                  </h2>
 
-                  <div class="px-6 border-b border-gray-200">
-                    <ul
-                      class="flex flex-wrap -mb-px text-xl font-medium"
-                      id="myTab"
-                      data-tabs-toggle="#myTabContent"
-                      role="tablist"
-                    >
-                      <li
-                        class="[&_.text-blue-600]:text-black [&_.text-blue-600]:border-black"
-                        role="presentation"
-                      >
-                        <button
-                          class="inline-block py-4 max-md:px-4 pr-4 border-b-2 rounded-t-lg"
-                          id="profile-tab"
-                          data-tabs-target="#profile"
-                          type="button"
-                          role="tab"
-                          aria-controls="profile"
-                          aria-selected="false"
-                        >
-                          Proyek Yang Selesaikan (12)
-                        </button>
-                      </li>
-                      <li
-                        class="[&_.text-blue-600]:text-black [&_.text-blue-600]:border-black"
-                        role="presentation"
-                      >
-                        <button
-                          class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
-                          id="dashboard-tab"
-                          data-tabs-target="#dashboard"
-                          type="button"
-                          role="tab"
-                          aria-controls="dashboard"
-                          aria-selected="false"
-                        >
-                          Sedang Berlangsung (2)
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                  <div id="myTabContent">
-                    <div
-                      class="hidden rounded-lg"
-                      id="profile"
-                      role="tabpanel"
-                      aria-labelledby="profile-tab"
-                    >
-                      <div class="">
-                        <a
-                          href="#"
-                          class="p-6 flex flex-col hover:bg-[#D1F1FF80] border border-b-[#DADADA] border-t-0 border-x-0"
-                        >
-                          <h2 class="text-[#2264D1] font-semibold text-xl mb-3">
-                            Teh hitam Karimun
-                          </h2>
-                          <div
-                            class="flex flex-wrap gap-y-3 gap-x-4 items-center"
-                          >
-                            <div class="flex items-center gap-x-1">
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                            </div>
-                            <p class="text-[#8594AD]">
-                              Mar 28, 2023 - Apr 5, 2023
-                            </p>
-                          </div>
-                          <p class="my-4 italic">
-                            " Pekerjaan yang bagus untuk bekerja dengan muthu.
-                            akan mempekerjakan lagi"
-                          </p>
-                          <div
-                            class="flex flex-wrap items-center text-[#37474F] font-medium text-lg"
-                          >
-                            <p class="mr-4 sm:mr-32">IDR 1.000.000</p>
-                            <p>Harga Tetap</p>
-                          </div>
-                        </a>
+                <textarea
+                  id="message"
+                  rows="7"
+                  class="block p-2.5 w-full text-sm text-gray-900 border border-t-[#DADADA] border-x-0 border-b-0 focus:ring-transparent focus:border-gray-300"
+                  placeholder="Tulis pesan..."
+                ></textarea>
 
-                        <a
-                          href="#"
-                          class="p-6 flex flex-col hover:bg-[#D1F1FF80]"
-                        >
-                          <h2 class="text-[#2264D1] font-semibold text-xl mb-3">
-                            Teh hitam Karimun
-                          </h2>
-                          <div
-                            class="flex flex-wrap gap-y-3 gap-x-4 items-center"
-                          >
-                            <div class="flex items-center gap-x-1">
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                            </div>
-                            <p class="text-[#8594AD]">
-                              Mar 28, 2023 - Apr 5, 2023
-                            </p>
-                          </div>
-                          <p class="my-4 italic">
-                            " Pekerjaan yang bagus untuk bekerja dengan muthu.
-                            akan mempekerjakan lagi"
-                          </p>
-                          <div
-                            class="flex flex-wrap items-center text-[#37474F] font-medium text-lg"
-                          >
-                            <p class="mr-4 sm:mr-32">IDR 1.000.000</p>
-                            <p>Harga Tetap</p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div
-                      class="hidden rounded-lg"
-                      id="dashboard"
-                      role="tabpanel"
-                      aria-labelledby="dashboard-tab"
-                    >
-                      <div class="">
-                        <a
-                          href="#"
-                          class="p-6 flex flex-col hover:bg-[#D1F1FF80]"
-                        >
-                          <h2 class="text-[#2264D1] font-semibold text-xl mb-3">
-                            Teh hijau Karimun
-                          </h2>
-                          <div
-                            class="flex flex-wrap gap-y-3 gap-x-4 items-center"
-                          >
-                            <div class="flex items-center gap-x-1">
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                              <iconify-icon
-                                width="25"
-                                icon="ph:star-fill"
-                                class="text-[#2264D1]"
-                              ></iconify-icon>
-                            </div>
-                            <p class="text-[#8594AD]">
-                              Mar 28, 2023 - Apr 5, 2023
-                            </p>
-                          </div>
-                          <p class="my-4 italic">
-                            " Pekerjaan yang bagus untuk bekerja dengan muthu.
-                            akan mempekerjakan lagi"
-                          </p>
-                          <div
-                            class="flex flex-wrap items-center text-[#37474F] font-medium text-lg"
-                          >
-                            <p class="mr-4 sm:mr-32">IDR 1.000.000</p>
-                            <p>Harga Tetap</p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
+                <div class="flex items-center justify-between px-10 py-4">
+                  <div class="flex">
+                    <button class="h-fit">
+                      <iconify-icon
+                        class="text-[#808080] mr-4"
+                        icon="octicon:bold-16"
+                      ></iconify-icon>
+                    </button>
+                    <button>
+                      <iconify-icon
+                        class="text-[#808080]"
+                        icon="tabler:italic"
+                      ></iconify-icon>
+                    </button>
                   </div>
-                  <div
-                    class="px-6 py-8 border border-t-[#DADADA] border-b-0 border-x-0"
-                  >
-                    <div class="flex mb-8 items-center">
-                      <h3 class="font-medium text-2xl mr-8 md:mr-20">
-                        Industri Unggulan
-                      </h3>
-                    </div>
-                    <button
-                      class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
-                    >
-                      Pangan
+                  <div class="flex items-center">
+                    <button class="flex items-center">
+                      <iconify-icon
+                        width="20"
+                        icon="eva:attach-fill"
+                      ></iconify-icon>
+                    </button>
+                    <div
+                      class="inline-block mx-2 w-0.5 self-stretch bg-[#DADADA]"
+                    ></div>
+                    <button class="flex items-center">
+                      <iconify-icon
+                        width="20"
+                        class="text-[#2264D1]"
+                        icon="carbon:send"
+                      ></iconify-icon>
                     </button>
                   </div>
                 </div>
@@ -1101,15 +1151,6 @@
     </footer>
     <!-- Footer -->
 
-    <script>
-      let teksDeskripsi = document.querySelector(".teks-deskripsi"),
-        btnMore = document.querySelector(".btn-lebih-lanjut");
-
-      btnMore.onclick = function () {
-        teksDeskripsi.classList.toggle("line-clamp-3");
-        btnMore.classList.add("hidden");
-      };
-    </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
