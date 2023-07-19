@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/logo-sirapi.svg"
+      type="image/x-icon"
+    />
+    <title>Sirapi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="max-w-screen-xl mx-auto my-12">
+          <div class="grid grid-cols-12 md:gap-x-16 px-4">
+            <div class="col-span-12 md:col-span-3">
+              <h2 class="font-medium text-3xl text-[#37474F] mb-10">
+                Pengaturan
+              </h2>
+              <h3 class="font-medium text-2xl text-[#37474F] mb-4">
+                User Settings
+              </h3>
+              <div class="mb-4">
+                <ul
+                  class="flex flex-col -mb-px text-sm font-medium text-center"
+                  id="myTab"
+                  data-tabs-toggle="#myTabContent"
+                  role="tablist"
+                >
+                  <li
+                    class="[&_.text-blue-600]:border-l [&_.text-blue-600]:text-[#2264D1] justify-start flex"
+                    role="presentation"
+                  >
+                    <button
+                      class="inline-block px-4 py-3"
+                      id="profile-tab"
+                      data-tabs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                    >
+                      Contact Info
+                    </button>
+                  </li>
+                  <li
+                    class="[&_.text-blue-600]:border-l [&_.text-blue-600]:text-[#2264D1] justify-start flex"
+                    role="presentation"
+                  >
+                    <button
+                      class="inline-block px-4 py-3"
+                      id="dashboard-tab"
+                      data-tabs-target="#dashboard"
+                      type="button"
+                      role="tab"
+                      aria-controls="dashboard"
+                      aria-selected="false"
+                    >
+                      Profil Saya
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-12 md:col-span-9">
+              <h2 class="font-medium text-3xl text-[#37474F] mb-10">
+                Kontak Info
+              </h2>
+              <div id="myTabContent">
+                <div
+                  class="hidden text-[#37474F]"
+                  id="profile"
+                  role="tabpanel"
+                  aria-labelledby="profile-tab"
+                >
+                  <div class="px-8 py-6 rounded-lg border mb-8">
+                    <p class="text-[#37474F] font-medium text-2xl mb-6">Akun</p>
+
+                    <div class="mb-4 md:w-1/2">
+                      <div>
+                        <label
+                          for="first_name"
+                          class="block mb-2 text-sm font-medium text-gray-900"
+                          >Nama Depan</label
+                        >
+                        <input
+                          type="text"
+                          id="first_name"
+                          class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                          placeholder="Upin"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-4 md:w-1/2">
+                      <div>
+                        <label
+                          for="last_name"
+                          class="block mb-2 text-sm font-medium text-gray-900"
+                          >Nama Belakang</label
+                        >
+                        <input
+                          type="text"
+                          id="last_name"
+                          class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                          placeholder="Ipin"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-4 md:w-1/2">
+                      <label
+                        for="email"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                        >Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="Upinipin@gmaili.com"
+                        required
+                      />
+                    </div>
+
+                    <div class="flex gap-x-6 mt-10">
+                      <button
+                        type="button"
+                        class="text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-lg text-sm px-5 py-2.5"
+                      >
+                        Perbaharui
+                      </button>
+                      <button
+                        type="button"
+                        class="md:mr-6 text-[#3D56F5] hover:text-white font-medium rounded-lg text-sm px-5 py-2.5"
+                      >
+                        Batal
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="px-8 py-6 rounded-lg border flex flex-col md:flex-row gap-y-3 items-center gap-x-4"
+                  >
+                    <div class="w-full md:w-1/2">
+                      <p class="text-[#37474F] font-medium text-2xl mb-6">
+                        lokasi
+                      </p>
+
+                      <div class="mb-4">
+                        <div>
+                          <label
+                            for="alamat_perusahaan"
+                            class="block mb-2 text-sm font-medium text-gray-900"
+                            >Alamat Perusahaan</label
+                          >
+                          <input
+                            type="text"
+                            id="alamat_perusahaan"
+                            class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            placeholder="...."
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <div>
+                          <label
+                            for="zip_code"
+                            class="block mb-2 text-sm font-medium text-gray-900"
+                            >ZIP CODE</label
+                          >
+                          <input
+                            type="text"
+                            id="zip_code"
+                            class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            placeholder="...."
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-4">
+                        <label
+                          for="no_telp"
+                          class="block mb-2 text-sm font-medium text-gray-900"
+                          >Nomor Telepon</label
+                        >
+                        <div class="flex">
+                          <span
+                            class="inline-flex items-center px-3 text-sm text-gray-900 border border-r-0 border-gray-300 rounded-l-md"
+                          >
+                            <img src="./assets/images/id-flag.png" alt="" />
+                          </span>
+                          <input
+                            type="no_telp"
+                            id="Nomor Telepon-admin"
+                            class="rounded-none rounded-r-lg border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
+                            placeholder="+62 8123738424"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="flex gap-x-6 mt-10">
+                        <button
+                          type="button"
+                          class="text-white bg-[#3D56F5] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-lg text-sm px-5 py-2.5"
+                        >
+                          Perbaharui
+                        </button>
+                        <button
+                          type="button"
+                          class="md:mr-6 text-[#3D56F5] hover:text-white font-medium rounded-lg text-sm px-5 py-2.5"
+                        >
+                          Batal
+                        </button>
+                      </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255309.4668994267!2d104.08677969632826!3d1.000190373610885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d90d34929e60ab%3A0x32e5accc29d56dd7!2sDinas%20Perindustrian%20dan%20Perdagangan%20Provinsi%20Kepulauan%20Riau!5e0!3m2!1sid!2sid!4v1689776188701!5m2!1sid!2sid"
+                        width="100%"
+                        height="200"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="hidden p-4 rounded-lg"
+                  id="dashboard"
+                  role="tabpanel"
+                  aria-labelledby="dashboard-tab"
+                >
+                  <p class="text-sm text-gray-500">
+                    This is some placeholder content the
+                    <strong class="font-medium text-gray-800"
+                      >Dashboard tab's associated content</strong
+                    >. Clicking another tab will toggle the visibility of this
+                    one for the next. The tab JavaScript swaps classes to
+                    control the content visibility and styling.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#3676E0] text-white">
+      <div class="py-4 px-4 mx-auto max-w-screen-xl sm:pt-16 lg:px-6">
+        <div
+          class="flex flex-col md:flex-row gap-y-10 md:gap-y-0 justify-between"
+        >
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Kategori</h5>
+            <a class="font-medium" href="#">Elektronika dan telematika ICT</a>
+            <a class="font-medium" href="#">Alat transportasi</a>
+            <a class="font-medium" href="#">Farmasi, kosmetik dan alkes</a>
+            <a class="font-medium" href="#">Pembangkit energi</a>
+            <a class="font-medium" href="#">Pangan</a>
+            <a class="font-medium" href="#">Hulu agro</a>
+            <a class="font-medium" href="#"
+              >Tekstil,kulit,alas kaki dan aneka</a
+            >
+            <a class="font-medium" href="#">Kimia dasar</a>
+            <a class="font-medium" href="#"
+              >Logam dasar dan bahan gajian non logam</a
+            >
+            <a class="font-medium" href="#"
+              >Barang modal, komponen, bahan penolong <br />
+              dan jasa Industri</a
+            >
+            <a class="font-medium" href="#">Kimia dasar, Migas dan Batu bara</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Cara Penggunaan</h5>
+            <a class="font-medium" href="#">Daftar sebagai ikm</a>
+            <a class="font-medium" href="#">Daftar sebagai ib</a>
+            <a class="font-medium" href="#">Cara mulai jual produk</a>
+            <a class="font-medium" href="#">FAQ</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Tentang Sirapi</h5>
+            <a class="font-medium" href="#">Syarat dan ketentuan</a>
+            <a class="font-medium" href="#">Kebijakan privasi</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Hubungan Kami</h5>
+            <a class="font-medium" href="#">Admin@sirapi.com</a>
+            <div class="flex-1"></div>
+            <div class="flex gap-x-6">
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img
+                  class="w-[25px]"
+                  src="./assets/icons/facebook.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img
+                  class="w-[25px]"
+                  src="./assets/icons/instagram.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img class="w-[25px]" src="./assets/icons/youtube.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center font-medium mt-9">
+          © Hak cipta dilindungi. dinas perindustrian dan perdagangan provinsi
+          kepulauan riau.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="./assets/js/index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+  </body>
+</html>
