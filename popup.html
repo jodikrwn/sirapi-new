@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/logo-sirapi.svg"
+      type="image/x-icon"
+    />
+    <title>Sirapi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="w-full h-screen flex justify-center items-center gap-x-16">
+      <!-- Modal delete -->
+      <button
+        data-modal-target="deleteModal"
+        data-modal-toggle="deleteModal"
+        class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        type="button"
+      >
+        Delete
+      </button>
+
+      <!-- Main modal -->
+      <div
+        id="deleteModal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+      >
+        <div class="relative w-[380px] max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-lg shadow">
+            <!-- Modal body -->
+            <div class="p-6 flex items-center flex-col">
+              <img
+                width="100"
+                class="mb-6"
+                src="./assets/icons/alert-circle.svg"
+                alt="alert"
+              />
+              <h2 class="text-2xl text-center mb-2">Kamu Yakin ?</h2>
+              <p class="text-[#8594AD] text-center font-light">
+                Kamu yakin untuk menghapus data ini
+              </p>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center pb-6 justify-center gap-x-4">
+              <button
+                data-modal-hide="deleteModal"
+                type="button"
+                class="text-white bg-[#C1C1C1] rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Batal
+              </button>
+              <button
+                data-modal-hide="deleteModal"
+                type="button"
+                class="text-white bg-[#F15E5E] rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Hapus
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal delete -->
+
+      <!-- Modal berhasil -->
+      <button
+        data-modal-target="berhasilModal"
+        data-modal-toggle="berhasilModal"
+        class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        type="button"
+      >
+        Berhasil
+      </button>
+
+      <!-- Main modal -->
+      <div
+        id="berhasilModal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+      >
+        <div class="relative w-[380px] max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-lg shadow">
+            <!-- Modal body -->
+            <div class="p-6 flex items-center flex-col">
+              <img
+                width="100"
+                class="mb-6"
+                src="./assets/icons/CheckCircleOutline.svg"
+                alt="alert"
+              />
+              <h2 class="text-2xl text-center mb-2">Berhasil Di Hapus</h2>
+              <p class="text-[#8594AD] text-center font-light">
+                data berhasil di hapus
+              </p>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center pb-6 justify-center gap-x-4">
+              <button
+                data-modal-hide="berhasilModal"
+                type="button"
+                class="text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal berhasil -->
+
+      <!-- Modal gagal -->
+      <button
+        data-modal-target="gagalModal"
+        data-modal-toggle="gagalModal"
+        class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        type="button"
+      >
+        gagal
+      </button>
+
+      <!-- Main modal -->
+      <div
+        id="gagalModal"
+        tabindex="-1"
+        aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+      >
+        <div class="relative w-[380px] max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-lg shadow">
+            <!-- Modal body -->
+            <div class="p-6 flex items-center flex-col">
+              <img
+                width="100"
+                class="mb-6"
+                src="./assets/icons/XCircleOutline.svg"
+                alt="alert"
+              />
+              <h2 class="text-2xl text-center mb-2">Gagal</h2>
+              <p class="text-[#8594AD] text-center font-light">
+                data gagal di hapus
+              </p>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center pb-6 justify-center gap-x-4">
+              <button
+                data-modal-hide="gagalModal"
+                type="button"
+                class="text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal gagal -->
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+  </body>
+</html>
