@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/logo-sirapi.svg"
+      type="image/x-icon"
+    />
+    <title>Sirapi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Logged In Admin -->
+    <nav class="bg-[#F3F3FE] border-[#DADADADD]">
+      <div
+        class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4 xl:px-12 px-2"
+      >
+        <div class="flex">
+          <a href="./" class="flex items-center md:mr-20">
+            <img
+              src="./assets/icons/logo-sirapi.svg"
+              class="h-[75px] mr-3"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <div
+            class="items-center justify-between hidden w-full xl:flex xl:w-auto xl:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 xl:hidden">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <ul
+              class="flex flex-col p-4 xl:p-0 mt-4 font-medium border border-gray-100 rounded-lg xl:flex-row xl:space-x-8 xl:mt-0 xl:border-0"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-2 py-2 pl-3 pr-4 text-[#37474F] hover:bg-gray-100 xl:hover:bg-transparent xl:hover:text-blue-700 xl:p-0"
+                  ><iconify-icon
+                    width="19"
+                    icon="teenyicons:home-outline"
+                  ></iconify-icon>
+                  <p>Dashboard</p></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center gap-x-2 py-2 pl-3 pr-4 text-[#2264D1] hover:bg-gray-100 xl:hover:bg-transparent xl:hover:text-blue-700 xl:p-0"
+                  ><iconify-icon
+                    width="21"
+                    icon="solar:document-text-outline"
+                    flip="vertical"
+                  ></iconify-icon>
+                  <p>Report</p></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex xl:order-2">
+          <button
+            data-modal-target="defaultModal"
+            data-modal-toggle="defaultModal"
+            type="button"
+            class="inline-flex order-last mx-4 shadow-lg items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          >
+            <iconify-icon
+              icon="heroicons-solid:menu-alt-1"
+              width="20"
+              rotate="180deg"
+            ></iconify-icon>
+          </button>
+          <div class="flex items-center md:order-2">
+            <!-- User -->
+            <button
+              type="button"
+              class="hidden sm:flex mr-3 text-sm bg-gray-800 rounded-full xl:mr-0 focus:ring-4 focus:ring-gray-300"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="user-dropdown"
+              data-dropdown-placement="bottom"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img
+                class="w-10 h-10 rounded-full"
+                src="./assets/images/user-profile.png"
+                alt="user photo"
+              />
+            </button>
+            <!-- Dropdown User -->
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow"
+              id="user-dropdown"
+            >
+              <div class="px-4 py-3 flex flex-col items-center text-center">
+                <img
+                  class="rounded-full w-16"
+                  src="./assets/images/user-profile.png"
+                  alt=""
+                />
+                <p class="my-2 text-lg font-medium">User</p>
+                <span class="text-[#8594AD] text-xs"
+                  >industri kecil dan menengah</span
+                >
+              </div>
+              <ul class="pb-2" aria-labelledby="user-menu-button">
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-x-2 px-4 py-2 hover:bg-[#F8E57D]"
+                    ><img
+                      class="w-5"
+                      src="./assets/icons/gear.svg"
+                      alt="gear"
+                    />
+                    <p class="font-medium">Settings</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./"
+                    class="flex items-center gap-x-2 px-4 py-2 hover:bg-[#F8E57D]"
+                    ><img
+                      class="w-5"
+                      src="./assets/icons/logout.svg"
+                      alt="gear"
+                    />
+                    <p class="font-medium">Log Out</p></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          id="defaultModal"
+          tabindex="-1"
+          aria-hidden="true"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full"
+        >
+          <div class="relative w-full h-full flex">
+            <!-- Modal content -->
+            <div
+              class="relative bg-white rounded-lg shadow w-full flex flex-col"
+            >
+              <!-- Modal header -->
+              <div class="flex items-start justify-between p-4">
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                  data-modal-hide="defaultModal"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="px-6 pb-6 w-fit mx-auto">
+                <div class="text-center flex flex-col gap-y-2 my-2">
+                  <a
+                    href="#"
+                    class="flex items-center gap-x-2 py-2 pl-3 pr-4 text-[#37474F] rounded hover:bg-gray-100 xl:hover:bg-transparent xl:hover:text-blue-700 xl:p-0"
+                    ><iconify-icon
+                      width="19"
+                      icon="teenyicons:home-outline"
+                    ></iconify-icon>
+                    <p>Dashboard</p></a
+                  >
+                  <a
+                    href="#"
+                    class="flex items-center gap-x-2 py-2 pl-3 pr-4 text-[#2264D1] hover:bg-gray-100 xl:hover:bg-transparent xl:hover:text-blue-700 xl:p-0"
+                    ><iconify-icon
+                      width="21"
+                      icon="solar:document-text-outline"
+                      flip="vertical"
+                    ></iconify-icon>
+                    <p>Report</p></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Logged In Admin -->
+
+    <main>
+      <section>
+        <div class="max-w-screen-xl mx-auto">
+          <div class="m-10 xl:mx-0">
+            <div class="flex flex-wrap gap-y-3 mb-10">
+              <h1 class="text-[#37474F] font-medium text-3xl mr-10">Report</h1>
+
+              <div class="relative w-[300px]">
+                <div
+                  class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+                >
+                  <iconify-icon icon="uiw:date"></iconify-icon>
+                </div>
+                <input
+                  datepicker
+                  datepicker-autohide
+                  type="text"
+                  class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 p-2.5"
+                  placeholder="juni 30, 2023"
+                />
+              </div>
+            </div>
+
+            <div
+              class="flex flex-wrap gap-y-3 justify-between md:w-1/2 text-[#2264D1] mb-24"
+            >
+              <div>
+                <h2 class="font-medium mb-8">Jumlah IKM</h2>
+                <p class="font-bold text-3xl">200</p>
+              </div>
+              <div>
+                <h2 class="font-medium mb-8">Jumlah IB</h2>
+                <p class="font-bold text-3xl">200</p>
+              </div>
+            </div>
+
+            <h2 class="font-medium text-2xl">Detail Transaksi</h2>
+
+            <div class="mb-4 border-b border-[#DADADA]">
+              <ul
+                class="flex flex-wrap -mb-px text-xl text-center"
+                id="myTab"
+                data-tabs-toggle="#myTabContent"
+                role="tablist"
+              >
+                <li
+                  class="[&_.text-blue-600]:border-b-0 [&_.text-blue-600]:text-[#2264D1]"
+                  role="presentation"
+                >
+                  <button
+                    class="inline-block p-4 border-b-2 rounded-t-lg"
+                    id="profile-tab"
+                    data-tabs-target="#profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile"
+                    aria-selected="false"
+                  >
+                    Industri Menengah Kecil
+                  </button>
+                </li>
+                <li
+                  class="[&_.text-blue-600]:border-b-0 [&_.text-blue-600]:text-[#2264D1]"
+                  role="presentation"
+                >
+                  <button
+                    class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                    id="dashboard-tab"
+                    data-tabs-target="#dashboard"
+                    type="button"
+                    role="tab"
+                    aria-controls="dashboard"
+                    aria-selected="false"
+                  >
+                    Industri Besar
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div id="myTabContent">
+              <div
+                class="hidden"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <div class="overflow-x-auto">
+                  <table class="w-full">
+                    <thead class="font-medium">
+                      <tr>
+                        <th scope="col" class="px-6 py-3 text-left">
+                          Nama Perusahaan
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                          Transaksi Berhasil
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                          Transaksi Belum Berhasil
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-right">
+                          Total Transaksi
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-[#F6D100]">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. KARYA UTAMA
+                        </th>
+                        <td class="px-6 text-center">10 Kontrak</td>
+                        <td class="px-6 text-center">30 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000</span>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. KARYA UTAMA
+                        </th>
+                        <td class="px-6 text-center">10 Kontrak</td>
+                        <td class="px-6 text-center">30 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000</span>
+                        </td>
+                      </tr>
+                      <tr class="bg-[#FDF3BF80]">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. KARYA UTAMA
+                        </th>
+                        <td class="px-6 text-center">10 Kontrak</td>
+                        <td class="px-6 text-center">30 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000</span>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. KARYA UTAMA
+                        </th>
+                        <td class="px-6 text-center">10 Kontrak</td>
+                        <td class="px-6 text-center">30 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000</span>
+                        </td>
+                      </tr>
+                      <tr class="bg-[#FDF3BF80]">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. KARYA UTAMA
+                        </th>
+                        <td class="px-6 text-center">10 Kontrak</td>
+                        <td class="px-6 text-center">30 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div
+                class="hidden"
+                id="dashboard"
+                role="tabpanel"
+                aria-labelledby="dashboard-tab"
+              >
+                <div class="overflow-x-auto">
+                  <table class="w-full">
+                    <thead class="font-medium">
+                      <tr>
+                        <th scope="col" class="px-6 py-3 text-left">
+                          Nama Perusahaan
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                          Transaksi Berhasil
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-center">
+                          Transaksi Belum Berhasil
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-right">
+                          Total Transaksi
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-[#F6D100]">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. UTAMA KARYA
+                        </th>
+                        <td class="px-6 text-center">1000 Kontrak</td>
+                        <td class="px-6 text-center">300 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000.000</span>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. UTAMA KARYA
+                        </th>
+                        <td class="px-6 text-center">1000 Kontrak</td>
+                        <td class="px-6 text-center">300 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000.000</span>
+                        </td>
+                      </tr>
+                      <tr class="bg-[#FDF3BF80]">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. UTAMA KARYA
+                        </th>
+                        <td class="px-6 text-center">1000 Kontrak</td>
+                        <td class="px-6 text-center">300 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000.000</span>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. UTAMA KARYA
+                        </th>
+                        <td class="px-6 text-center">1000 Kontrak</td>
+                        <td class="px-6 text-center">300 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000.000</span>
+                        </td>
+                      </tr>
+                      <tr class="bg-[#FDF3BF80]">
+                        <th
+                          scope="row"
+                          class="px-6 text-left py-4 text-[#37474F] font-medium whitespace-nowrap"
+                        >
+                          CV. UTAMA KARYA
+                        </th>
+                        <td class="px-6 text-center">1000 Kontrak</td>
+                        <td class="px-6 text-center">300 Kontrak</td>
+                        <td class="px-6 py-4 text-right">
+                          IDR <span class="font-bold">30.000.000.000</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/datepicker.min.js"></script>
+  </body>
+</html>
