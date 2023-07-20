@@ -804,12 +804,270 @@
                     kirim pesan
                   </button>
                   <button
-                    data-modal-hide="beliModal"
+                    data-modal-target="umpanBalikModal"
+                    data-modal-toggle="umpanBalikModal"
                     type="button"
                     class="md:mr-6 text-[#3D56F5] bg-[#F3F3FE] hover:bg-[#3D56F5] hover:border-[#3D56F5] hover:text-white font-medium rounded-full text-sm px-5 py-2.5"
                   >
                     Kontrak Selesai
                   </button>
+
+                  <!-- Umpan Balik modal -->
+                  <div
+                    id="umpanBalikModal"
+                    tabindex="-1"
+                    aria-hidden="true"
+                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                  >
+                    <div class="relative w-fit max-h-full">
+                      <!-- Modal content -->
+                      <div
+                        class="relative bg-white rounded-lg shadow p-2 sm:p-8"
+                      >
+                        <div class="flex flex-col sm:flex-row gap-y-3 gap-x-4">
+                          <img
+                            class="w-[48px] self-start"
+                            src="./assets/icons/star-umpan-balik.svg"
+                            alt=""
+                          />
+                          <div class="">
+                            <h2
+                              class="text-[#37474F] font-medium text-2xl mb-2"
+                            >
+                              Umpan Balik Publik
+                            </h2>
+                            <p class="text-xl mb-10">
+                              Umpan balik akan dibagikan di profil Ikm Anda
+                              setelah mereka meninggalkan umpan balik untuk Anda
+                            </p>
+
+                            <h3 class="font-semibold text-xl mb-3">
+                              Umpan balik untuk Ikm
+                            </h3>
+                            <div class="flex flex-col sm:flex-row gap-x-8 mb-3">
+                              <div class="flex items-center gap-x-1">
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating1"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating1"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating1"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating1"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating1"
+                                ></iconify-icon>
+                              </div>
+                              <p class="font-medium text-xl">Keterampilan</p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-x-8 mb-3">
+                              <div class="flex items-center gap-x-1">
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating2"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating2"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating2"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating2"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating2"
+                                ></iconify-icon>
+                              </div>
+                              <p class="font-medium text-xl">
+                                Pekerjaan Berkualitas
+                              </p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-x-8 mb-3">
+                              <div class="flex items-center gap-x-1">
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating3"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating3"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating3"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating3"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating3"
+                                ></iconify-icon>
+                              </div>
+                              <p class="font-medium text-xl">Keaktivan</p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-x-8 mb-3">
+                              <div class="flex items-center gap-x-1">
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating4"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating4"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating4"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating4"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating4"
+                                ></iconify-icon>
+                              </div>
+                              <p class="font-medium text-xl">
+                                Kepatuhan terhadap jadwal
+                              </p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-x-8 mb-3">
+                              <div class="flex items-center gap-x-1">
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating5"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating5"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating5"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating5"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating5"
+                                ></iconify-icon>
+                              </div>
+                              <p class="font-medium text-xl">Komunikasi</p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-x-8 mb-3">
+                              <div class="flex items-center gap-x-1">
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating6"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating6"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating6"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating6"
+                                ></iconify-icon>
+                                <iconify-icon
+                                  width="25"
+                                  icon="ph:star-fill"
+                                  class="text-[#8594AD] cursor-pointer star-rating6"
+                                ></iconify-icon>
+                              </div>
+                              <p class="font-medium text-xl">Koperatif</p>
+                            </div>
+
+                            <div class="flex items-center gap-x-3 my-4">
+                              <p class="font-medium text-xl">TOTAL SKOR :</p>
+                              <p id="totalSkor" class="font-semibold text-2xl">
+                                0
+                              </p>
+                            </div>
+
+                            <div class="font-semibold text-xl mb-2">
+                              Bagikan pengalaman anda dengan ikm ini kepada
+                              komunitas sirapi
+                            </div>
+
+                            <textarea
+                              id="message"
+                              rows="6"
+                              class="block p-2.5 w-full text-sm rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                              placeholder="Kerja Bagus, terima kasih !"
+                            ></textarea>
+
+                            <div class="flex mt-6 gap-x-4">
+                              <button
+                                type="button"
+                                class="text-white bg-[#2264D1] hover:bg-blue-800 hover:border-blue-800 hover:text-white font-medium border border-[#3D56F5] rounded-lg text-sm px-5 py-2.5"
+                              >
+                                Proyek Selesai
+                              </button>
+                              <button
+                                data-modal-hide="umpanBalikModal"
+                                type="button"
+                                class="md:mr-6 text-[#3D56F5] bg-[#F3F3FE] hover:bg-[#3D56F5] hover:border-[#3D56F5] hover:text-white font-medium border border-[#3D56F5] rounded-lg text-sm px-5 py-2.5"
+                              >
+                                Batal
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div
@@ -917,6 +1175,87 @@
     </footer>
     <!-- Footer -->
 
+    <script>
+      let totSkor = 0;
+
+      for (let x = 1; x < 7; x++) {
+        let listStar = document.getElementsByClassName("star-rating" + x);
+
+        for (let i = 0; i < listStar.length; i++) {
+          listStar[i].onclick = () => {
+            // kalo abuabu
+            if (listStar[i].classList.contains("text-[#8594AD]")) {
+              // warnain biru kurang dari sama dengan i
+              for (let j = 0; j <= i; j++) {
+                listStar[j].classList.value =
+                  "text-[#2264D1] cursor-pointer checked-star star-rating" + x;
+              }
+              // warnain abu lebih dari i
+              for (let k = i + 1; k < 5; k++) {
+                listStar[k].classList.value =
+                  "text-[#8594AD] cursor-pointer star-rating" + x;
+              }
+            }
+            // kalo kurang dari 5
+            else if (i < listStar.length - 1) {
+              // kalo biru dan setelahnya juga biru
+              if (
+                listStar[i].classList.contains("text-[#2264D1]") &&
+                listStar[i + 1].classList.contains("text-[#2264D1]")
+              ) {
+                // warnain biru kurang dari sama dengan i
+                for (let j = 0; j <= i; j++) {
+                  listStar[j].classList.value =
+                    "text-[#2264D1] cursor-pointer checked-star star-rating" +
+                    x;
+                }
+                // warnain abu lebih dari i
+                for (let k = i + 1; k < 5; k++) {
+                  listStar[k].classList.value =
+                    "text-[#8594AD] cursor-pointer star-rating" + x;
+                }
+              }
+              // kalo biru dan setelahnya abuabu
+              else if (
+                listStar[i].classList.contains("text-[#2264D1]") &&
+                listStar[i + 1].classList.contains("text-[#8594AD]")
+              ) {
+                // warnain abu semua
+                for (let j = 0; j <= 4; j++) {
+                  listStar[j].classList.value =
+                    "text-[#8594AD] cursor-pointer star-rating" + x;
+                }
+              }
+            }
+            // kalo 5
+            else if (i == listStar.length - 1) {
+              // kalo warna biru
+              if (listStar[i].classList.contains("text-[#2264D1]")) {
+                // warnain abu semua
+                for (let j = 0; j <= 4; j++) {
+                  listStar[j].classList.value =
+                    "text-[#8594AD] cursor-pointer star-rating" + x;
+                }
+              }
+              // kalo warna abu
+              else {
+                // warnain biru semua
+                for (let j = 0; j <= 4; j++) {
+                  listStar[j].classList.value =
+                    "text-[#2264D1] star-rating" + x;
+                }
+              }
+            }
+
+            let listStarChecked =
+              document.getElementsByClassName("checked-star");
+
+            totSkor = listStarChecked.length / 6;
+            document.getElementById("totalSkor").innerText = totSkor.toFixed(2);
+          };
+        }
+      }
+    </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
