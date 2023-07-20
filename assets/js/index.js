@@ -4,3 +4,10 @@ function setKategoriCari(kategori) {
   textButton.innerText = kategori;
   button.click();
 }
+
+function setKategoriCariMobile(kategori) {
+  button = document.getElementById("dropdownKategoriMobileButton");
+  textButton = document.getElementById("textKategoriSearchMobile");
+  textButton.innerText = kategori;
+  button.click();
+}

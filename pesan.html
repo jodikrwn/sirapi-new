@@ -334,6 +334,126 @@
               <!-- Modal body -->
               <div class="px-6 pb-6">
                 <div class="relative w-full mb-4">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                      />
+                    </svg>
+                    <span class="sr-only">Search icon</span>
+                  </div>
+                  <div class="flex border border-gray-300 rounded-full">
+                    <input
+                      type="text"
+                      id="search-navbar"
+                      class="block w-full p-2 pl-10 text-sm text-gray-900 border-0 rounded-full focus:ring-0 focus:border-0"
+                      placeholder="Cari..."
+                    />
+                    <div
+                      class="inline-block my-2 w-0.5 self-stretch bg-[#DADADA80]"
+                    ></div>
+
+                    <button
+                      id="dropdownKategoriMobileButton"
+                      data-dropdown-toggle="dropdownKategoriMobile"
+                      class="focus:ring-2 whitespace-nowrap rounded-full focus:outline-none focus:ring-indigo-500 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
+                      type="button"
+                    >
+                      <div id="textKategoriSearchMobile">Industri</div>
+                      <svg
+                        class="w-2.5 h-2.5 ml-2.5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 4 4 4-4"
+                        />
+                      </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div
+                      id="dropdownKategoriMobile"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none w-[230px]"
+                    >
+                      <ul
+                        class="py-2 text-sm text-gray-700"
+                        aria-labelledby="dropdownKategoriMobileButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-[#F6D10080]"
+                            onclick="setKategoriCariMobile('Industri Unggulan')"
+                            ><div class="flex flex-col space-y-0.5">
+                              <p class="font-medium">Industri Unggulan</p>
+                              <span class="text-[10px] text-[#8594AD]"
+                                >Cari industri unggulan</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-[#F6D10080]"
+                            onclick="setKategoriCariMobile('Profil Perusahaan')"
+                            ><div class="flex flex-col space-y-0.5">
+                              <p class="font-medium">Profil Perusahaan</p>
+                              <span class="text-[10px] text-[#8594AD]"
+                                >Cari perusahaan</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-[#F6D10080]"
+                            onclick="setKategoriCariMobile('Bahan Baku')"
+                            ><div class="flex flex-col space-y-0.5">
+                              <p class="font-medium">Bahan Baku</p>
+                              <span class="text-[10px] text-[#8594AD]"
+                                >Cari bahan baku</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-[#F6D10080]"
+                            onclick="setKategoriCariMobile('Lokasi')"
+                            ><div class="flex flex-col space-y-0.5">
+                              <p class="font-medium">Lokasi</p>
+                              <span class="text-[10px] text-[#8594AD]"
+                                >Cari berdasarkan lokasi</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="relative w-full mb-4">
                   <input
                     type="search"
                     id="search-dropdown"
@@ -362,7 +482,7 @@
                     </svg>
                     <span class="sr-only">Search</span>
                   </button>
-                </div>
+                </div> -->
 
                 <div
                   id="accordion-collapse"
@@ -709,8 +829,9 @@
               </div>
 
               <div class="overflow-y-auto max-h-screen">
-                <div
-                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0 bg-[#FAFAFA]"
+                <a
+                  href="#"
+                  class="flex hover:bg-[#D1F1FF80] items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0 bg-[#FAFAFA]"
                 >
                   <div class="mr-4">
                     <div class="relative w-14 h-14">
@@ -736,9 +857,10 @@
                       Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
-                </div>
-                <div
-                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                </a>
+                <a
+                  href="#"
+                  class="flex hover:bg-[#D1F1FF80] items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
                 >
                   <div class="mr-4">
                     <div class="relative w-14 h-14">
@@ -764,9 +886,10 @@
                       Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
-                </div>
-                <div
-                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                </a>
+                <a
+                  href="#"
+                  class="flex hover:bg-[#D1F1FF80] items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
                 >
                   <div class="mr-4">
                     <div class="relative w-14 h-14">
@@ -792,9 +915,10 @@
                       Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
-                </div>
-                <div
-                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                </a>
+                <a
+                  href="#"
+                  class="flex hover:bg-[#D1F1FF80] items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
                 >
                   <div class="mr-4">
                     <div class="relative w-14 h-14">
@@ -820,9 +944,10 @@
                       Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
-                </div>
-                <div
-                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                </a>
+                <a
+                  href="#"
+                  class="flex hover:bg-[#D1F1FF80] items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
                 >
                   <div class="mr-4">
                     <div class="relative w-14 h-14">
@@ -848,9 +973,10 @@
                       Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
-                </div>
-                <div
-                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                </a>
+                <a
+                  href="#"
+                  class="flex hover:bg-[#D1F1FF80] items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
                 >
                   <div class="mr-4">
                     <div class="relative w-14 h-14">
@@ -876,9 +1002,10 @@
                       Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
-                </div>
-                <div
-                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                </a>
+                <a
+                  href="#"
+                  class="flex hover:bg-[#D1F1FF80] items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
                 >
                   <div class="mr-4">
                     <div class="relative w-14 h-14">
@@ -904,9 +1031,10 @@
                       Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
-                </div>
-                <div
-                  class="flex items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
+                </a>
+                <a
+                  href="#"
+                  class="flex hover:bg-[#D1F1FF80] items-center px-4 py-2 border border-t-[#DADADA] border-x-0 border-b-0"
                 >
                   <div class="mr-4">
                     <div class="relative w-14 h-14">
@@ -932,7 +1060,7 @@
                       Saya : Halo kembali, tolong berikan detail ....
                     </p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             <div class="col-span-12 md:col-span-9">
