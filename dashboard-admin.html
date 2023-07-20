@@ -296,12 +296,12 @@
                     </th>
                     <td class="px-6 text-center">
                       <button
-                        id="dropdownIkmIbButton"
-                        data-dropdown-toggle="dropdown"
+                        id="dropdownIkmIbButton1"
+                        data-dropdown-toggle="dropdownIkmIb1"
                         class="bg-white text-[#000] h-[59px] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
                         type="button"
                       >
-                        <p id="textIkmIb">Ikm</p>
+                        <p id="textIkmIb1">Ikm</p>
                         <svg
                           class="w-2.5 h-2.5 ml-2.5"
                           aria-hidden="true"
@@ -320,21 +320,21 @@
                       </button>
                       <!-- Dropdown menu -->
                       <div
-                        id="dropdown"
+                        id="dropdownIkmIb1"
                         class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
                       >
                         <ul
                           class="py-2 text-sm"
-                          aria-labelledby="dropdownIkmIbButton"
+                          aria-labelledby="dropdownIkmIbButton1"
                         >
-                          <li onclick="setIkmIb('Ikm')">
+                          <li onclick="setIkmIb('Ikm',1)">
                             <div
                               class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080] font-medium"
                             >
                               Ikm
                             </div>
                           </li>
-                          <li onclick="setIkmIb('IB')">
+                          <li onclick="setIkmIb('IB',1)">
                             <div
                               class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080] font-medium"
                             >
@@ -369,12 +369,12 @@
                     </th>
                     <td class="px-6 text-center">
                       <button
-                        id="dropdownIkmIbButton"
-                        data-dropdown-toggle="dropdown"
+                        id="dropdownIkmIbButton2"
+                        data-dropdown-toggle="dropdownIkmIb2"
                         class="bg-white text-[#000] h-[59px] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
                         type="button"
                       >
-                        <p id="textIkmIb">Ikm</p>
+                        <p id="textIkmIb2">Ikm</p>
                         <svg
                           class="w-2.5 h-2.5 ml-2.5"
                           aria-hidden="true"
@@ -393,21 +393,21 @@
                       </button>
                       <!-- Dropdown menu -->
                       <div
-                        id="dropdown"
+                        id="dropdownIkmIb2"
                         class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
                       >
                         <ul
                           class="py-2 text-sm"
-                          aria-labelledby="dropdownIkmIbButton"
+                          aria-labelledby="dropdownIkmIbButton2"
                         >
-                          <li onclick="setIkmIb('Ikm')">
+                          <li onclick="setIkmIb('Ikm',2)">
                             <div
                               class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080] font-medium"
                             >
                               Ikm
                             </div>
                           </li>
-                          <li onclick="setIkmIb('IB')">
+                          <li onclick="setIkmIb('IB',2)">
                             <div
                               class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080] font-medium"
                             >
@@ -442,12 +442,12 @@
                     </th>
                     <td class="px-6 text-center">
                       <button
-                        id="dropdownIkmIbButton"
-                        data-dropdown-toggle="dropdown"
+                        id="dropdownIkmIbButton3"
+                        data-dropdown-toggle="dropdownIkmIb3"
                         class="bg-white text-[#000] h-[59px] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
                         type="button"
                       >
-                        <p id="textIkmIb">Ikm</p>
+                        <p id="textIkmIb3">Ikm</p>
                         <svg
                           class="w-2.5 h-2.5 ml-2.5"
                           aria-hidden="true"
@@ -466,21 +466,21 @@
                       </button>
                       <!-- Dropdown menu -->
                       <div
-                        id="dropdown"
+                        id="dropdownIkmIb3"
                         class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
                       >
                         <ul
                           class="py-2 text-sm"
-                          aria-labelledby="dropdownIkmIbButton"
+                          aria-labelledby="dropdownIkmIbButton3"
                         >
-                          <li onclick="setIkmIb('Ikm')">
+                          <li onclick="setIkmIb('Ikm',3)">
                             <div
                               class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080] font-medium"
                             >
                               Ikm
                             </div>
                           </li>
-                          <li onclick="setIkmIb('IB')">
+                          <li onclick="setIkmIb('IB',3)">
                             <div
                               class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080] font-medium"
                             >
@@ -515,11 +515,10 @@
     </main>
 
     <script>
-      function setIkmIb(tipe) {
-        button = document.getElementById("dropdownIkmIbButton");
-        textButton = document.getElementById("textIkmIb");
+      function setIkmIb(tipe, id) {
+        button = document.getElementById("dropdownIkmIbButton" + id.toString());
+        textButton = document.getElementById("textIkmIb" + id);
         textButton.innerText = tipe;
-        tipeDurasi = tipe;
         button.click();
       }
     </script>
