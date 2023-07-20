@@ -158,7 +158,7 @@
             data-modal-target="defaultModal"
             data-modal-toggle="defaultModal"
             type="button"
-            class="inline-flex shadow-lg items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            class="inline-flex order-last md:order-first max-md:mx-4 shadow-lg items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           >
             <iconify-icon
               icon="heroicons-solid:menu-alt-1"
@@ -171,7 +171,7 @@
             <button
               id="dropdownNotificationButton"
               data-dropdown-toggle="dropdownNotification"
-              class="hidden sm:inline-flex mx-6 items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none"
+              class="inline-flex md:mx-6 items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none"
               type="button"
             >
               <img src="./assets/icons/bell.svg" alt="" />
@@ -456,6 +456,45 @@
                     href="#"
                     >Pesan</a
                   >
+                  <h2 id="accordion-collapse-heading-4">
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full px-5 py-2 font-medium text-left text-gray-500 rounded-xl"
+                      data-accordion-target="#accordion-collapse-body-4"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-4"
+                    >
+                      <span>Account</span>
+                      <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        />
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-4"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-4"
+                  >
+                    <div
+                      class="text-center flex flex-col gap-y-2 my-2 text-gray-500"
+                    >
+                      <a href="#">Settings</a>
+                      <a href="#">Log Out</a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="flex-1"></div>
@@ -637,74 +676,188 @@
         <div
           class="hidden md:block xl:p-8 py-4 lg:px-4 rounded-lg border border-[#DADADA]"
         >
-          <div class="max-w-screen-xl mx-auto flex flex-wrap gap-x-16 gap-y-5">
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Farmasi, Kosmetik, Alkes
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Pembangkit Energi
-            </button>
-            <button
-              type="button"
-              class="bg-[#D1F1FF80] text-[#2264D1] rounded-lg py-2 px-3 font-medium font-base"
-            >
-              Pangan
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Hulu agro
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Kimia Dasar
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Alat Transportasi
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Elektronika dan Telematika ICT
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Logam Dasar dan Bahan Gajian Non Logam
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Barang modal, Komponen, Bahan Penolong dan Jasa Industri
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Kimia dasar, Migas dan Batu Bara
-            </button>
-            <button
-              type="button"
-              class="hover:bg-[#D1F1FF80] hover:text-[#2264D1] rounded-lg py-2 px-3 text-[#8594AD] font-medium font-base"
-            >
-              Tekstil,kulit, Alas kaki, Aneka
-            </button>
-          </div>
+          <ul
+            class="max-w-screen-xl mx-auto flex flex-wrap gap-x-16 gap-y-5 text-[#8594AD] font-medium"
+          >
+            <li>
+              <input
+                type="radio"
+                id="Farmasi-Kosmetik-Alkes"
+                name="hosting"
+                value="Farmasi-Kosmetik-Alkes"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Farmasi-Kosmetik-Alkes"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Farmasi, Kosmetik, Alkes</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Pembangkit-Energi"
+                name="hosting"
+                value="Pembangkit-Energi"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Pembangkit-Energi"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Pembangkit Energi</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Pangan"
+                name="hosting"
+                value="Pangan"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Pangan"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Pangan</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Hulu-agro"
+                name="hosting"
+                value="Hulu-agro"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Hulu-agro"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Hulu agro</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Kimia-Dasar"
+                name="hosting"
+                value="Kimia-Dasar"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Kimia-Dasar"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Kimia Dasar</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Alat-Transportasi"
+                name="hosting"
+                value="Alat-Transportasi"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Alat-Transportasi"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Alat Transportasi</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Elektronika-dan-Telematika-ICT"
+                name="hosting"
+                value="Elektronika-dan-Telematika-ICT"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Elektronika-dan-Telematika-ICT"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Elektronika dan Telematika ICT</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Logam-Dasar-dan-Bahan-Gajian-Non-Logam"
+                name="hosting"
+                value="Logam-Dasar-dan-Bahan-Gajian-Non-Logam"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Logam-Dasar-dan-Bahan-Gajian-Non-Logam"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Logam Dasar dan Bahan Gajian Non Logam</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Barang-modal-Komponen-Bahan-Penolong-dan-Jasa-Industri"
+                name="hosting"
+                value="Barang-modal-Komponen-Bahan-Penolong-dan-Jasa-Industri"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Barang-modal-Komponen-Bahan-Penolong-dan-Jasa-Industri"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">
+                  Barang modal, Komponen, Bahan Penolong dan Jasa Industri
+                </div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Kimia-dasar-Migas-dan-Batu-Bara"
+                name="hosting"
+                value="Kimia-dasar-Migas-dan-Batu-Bara"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Kimia-dasar-Migas-dan-Batu-Bara"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Kimia dasar, Migas dan Batu Bara</div>
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="Tekstil-kulit-Alas-kaki-Aneka"
+                name="hosting"
+                value="Tekstil-kulit-Alas-kaki-Aneka"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="Tekstil-kulit-Alas-kaki-Aneka"
+                class="inline-flex items-center justify-between w-full py-2 px-3 rounded-lg cursor-pointer peer-checked:text-[#2264D1] peer-checked:bg-[#D1F1FF80] hover:bg-[#D1F1FF80] hover:text-[#2264D1]"
+              >
+                <div class="block">Tekstil,kulit, Alas kaki, Aneka</div>
+              </label>
+            </li>
+          </ul>
         </div>
       </section>
       <!-- Kategori -->
