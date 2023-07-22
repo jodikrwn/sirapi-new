@@ -89,40 +89,52 @@
 
       <!-- Main modal -->
       <div
-        id="berhasilModal"
-        tabindex="-1"
-        aria-hidden="true"
-        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        class="modal-berhasil relative z-10"
+        aria-labelledby="modal-title"
+        role="dialog"
+        aria-modal="true"
       >
-        <div class="relative w-[380px] max-h-full">
-          <!-- Modal content -->
-          <div class="relative bg-white rounded-lg shadow">
-            <!-- Modal body -->
-            <div class="p-6 flex items-center flex-col">
-              <img
-                width="100"
-                class="mb-6"
-                src="./assets/icons/CheckCircleOutline.svg"
-                alt="alert"
-              />
-              <h2 class="text-2xl text-center mb-2">Berhasil Di Hapus</h2>
-              <p class="text-[#8594AD] text-center font-light">
-                data berhasil di hapus
-              </p>
-            </div>
-            <!-- Modal footer -->
-            <div class="flex items-center pb-6 justify-center gap-x-4">
-              <button
-                data-modal-hide="berhasilModal"
-                type="button"
-                class="text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
-              >
-                OK
-              </button>
+        <div
+          class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        ></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto text-[#37474F]">
+          <div
+            class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+          >
+            <div class="relative w-[380px] max-h-full">
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow">
+                <!-- Modal body -->
+                <div class="p-6 flex items-center flex-col">
+                  <img
+                    width="100"
+                    class="mb-6"
+                    src="./assets/icons/CheckCircleOutline.svg"
+                    alt="alert"
+                  />
+                  <h2 class="text-2xl text-center mb-2">Berhasil Di Hapus</h2>
+                  <p class="text-[#8594AD] text-center font-light">
+                    data berhasil di hapus
+                  </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center pb-6 justify-center gap-x-4">
+                  <button
+                    onclick="okBerhasil()"
+                    data-modal-hide="berhasilModal"
+                    type="button"
+                    class="text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
+                  >
+                    OK
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Modal berhasil -->
 
       <!-- Modal gagal -->
@@ -137,36 +149,47 @@
 
       <!-- Main modal -->
       <div
-        id="gagalModal"
-        tabindex="-1"
-        aria-hidden="true"
-        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        class="modal-gagal relative z-10"
+        aria-labelledby="modal-title"
+        role="dialog"
+        aria-modal="true"
       >
-        <div class="relative w-[380px] max-h-full">
-          <!-- Modal content -->
-          <div class="relative bg-white rounded-lg shadow">
-            <!-- Modal body -->
-            <div class="p-6 flex items-center flex-col">
-              <img
-                width="100"
-                class="mb-6"
-                src="./assets/icons/XCircleOutline.svg"
-                alt="alert"
-              />
-              <h2 class="text-2xl text-center mb-2">Gagal</h2>
-              <p class="text-[#8594AD] text-center font-light">
-                data gagal di hapus
-              </p>
-            </div>
-            <!-- Modal footer -->
-            <div class="flex items-center pb-6 justify-center gap-x-4">
-              <button
-                data-modal-hide="gagalModal"
-                type="button"
-                class="text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
-              >
-                OK
-              </button>
+        <div
+          class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        ></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto text-[#37474F]">
+          <div
+            class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+          >
+            <div class="relative w-[380px] max-h-full">
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow">
+                <!-- Modal body -->
+                <div class="p-6 flex items-center flex-col">
+                  <img
+                    width="100"
+                    class="mb-6"
+                    src="./assets/icons/XCircleOutline.svg"
+                    alt="alert"
+                  />
+                  <h2 class="text-2xl text-center mb-2">Gagal</h2>
+                  <p class="text-[#8594AD] text-center font-light">
+                    data gagal di hapus
+                  </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center pb-6 justify-center gap-x-4">
+                  <button
+                    onclick="okGagal()"
+                    data-modal-hide="gagalModal"
+                    type="button"
+                    class="text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
+                  >
+                    OK
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -174,6 +197,15 @@
       <!-- Modal gagal -->
     </div>
 
+    <script>
+      function okBerhasil() {
+        document.querySelector(".modal-berhasil").classList.add("hidden");
+      }
+
+      function okGagal() {
+        document.querySelector(".modal-gagal").classList.add("hidden");
+      }
+    </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
