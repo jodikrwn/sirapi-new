@@ -121,10 +121,9 @@
                 <!-- Modal footer -->
                 <div class="flex items-center pb-6 justify-center gap-x-4">
                   <button
-                    onclick="okBerhasil()"
                     data-modal-hide="berhasilModal"
                     type="button"
-                    class="text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
+                    class="btn-hide-berhasil text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
                   >
                     OK
                   </button>
@@ -181,10 +180,9 @@
                 <!-- Modal footer -->
                 <div class="flex items-center pb-6 justify-center gap-x-4">
                   <button
-                    onclick="okGagal()"
                     data-modal-hide="gagalModal"
                     type="button"
-                    class="text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
+                    class="btn-hide-gagal text-white bg-[#2264D1] rounded-lg text-sm px-5 py-2.5 text-center"
                   >
                     OK
                   </button>
@@ -198,13 +196,17 @@
     </div>
 
     <script>
-      function okBerhasil() {
-        document.querySelector(".modal-berhasil").classList.add("hidden");
-      }
+      document
+        .querySelector(".btn-hide-berhasil")
+        .addEventListener("click", function () {
+          document.querySelector(".modal-berhasil").classList.add("hidden");
+        });
 
-      function okGagal() {
-        document.querySelector(".modal-gagal").classList.add("hidden");
-      }
+      document
+        .querySelector(".btn-hide-gagal")
+        .addEventListener("click", function () {
+          document.querySelector(".modal-gagal").classList.add("hidden");
+        });
     </script>
     <script src="./assets/js/index.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
