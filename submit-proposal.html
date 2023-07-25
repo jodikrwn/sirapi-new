@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/logo-sirapi.svg"
+      type="image/x-icon"
+    />
+    <title>Sirapi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Logged In IKM -->
+    <nav class="bg-white border-gray-200">
+      <div
+        class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4 xl:px-12 px-2"
+      >
+        <a href="./" class="flex items-center">
+          <img
+            src="./assets/icons/logo-sirapi.svg"
+            class="h-[75px] mr-3"
+            alt="Flowbite Logo"
+          />
+        </a>
+        <div class="flex xl:order-2">
+          <div class="relative hidden xl:block">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <div class="flex border border-gray-300 rounded-full">
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 pl-10 text-sm text-gray-900 border-0 rounded-full focus:ring-0 focus:border-0"
+                placeholder="Cari..."
+              />
+              <div
+                class="inline-block my-2 w-0.5 self-stretch bg-[#DADADA80]"
+              ></div>
+
+              <button
+                id="dropdownKategoriButton"
+                data-dropdown-toggle="dropdownKategori"
+                class="focus:ring-2 whitespace-nowrap rounded-full focus:outline-none focus:ring-indigo-500 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
+                type="button"
+              >
+                <div id="textKategoriSearch">Industri</div>
+                <svg
+                  class="w-2.5 h-2.5 ml-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownKategori"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none w-[230px]"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700"
+                  aria-labelledby="dropdownKategoriButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      onclick="setKategoriCari('Industri Unggulan')"
+                      ><div class="flex flex-col space-y-0.5">
+                        <p class="font-medium">Industri Unggulan</p>
+                        <span class="text-[10px] text-[#8594AD]"
+                          >Cari industri unggulan</span
+                        >
+                      </div></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      onclick="setKategoriCari('Profil Perusahaan')"
+                      ><div class="flex flex-col space-y-0.5">
+                        <p class="font-medium">Profil Perusahaan</p>
+                        <span class="text-[10px] text-[#8594AD]"
+                          >Cari perusahaan</span
+                        >
+                      </div></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      onclick="setKategoriCari('Bahan Baku')"
+                      ><div class="flex flex-col space-y-0.5">
+                        <p class="font-medium">Bahan Baku</p>
+                        <span class="text-[10px] text-[#8594AD]"
+                          >Cari bahan baku</span
+                        >
+                      </div></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      onclick="setKategoriCari('Lokasi')"
+                      ><div class="flex flex-col space-y-0.5">
+                        <p class="font-medium">Lokasi</p>
+                        <span class="text-[10px] text-[#8594AD]"
+                          >Cari berdasarkan lokasi</span
+                        >
+                      </div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button
+            data-modal-target="defaultModal"
+            data-modal-toggle="defaultModal"
+            type="button"
+            class="inline-flex order-last mx-4 shadow-lg items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          >
+            <iconify-icon
+              icon="heroicons-solid:menu-alt-1"
+              width="20"
+              rotate="180deg"
+            ></iconify-icon>
+          </button>
+          <div class="flex items-center md:order-2">
+            <!-- Notification -->
+            <button
+              id="dropdownNotificationButton"
+              data-dropdown-toggle="dropdownNotification"
+              class="inline-flex md:mx-6 items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none"
+              type="button"
+            >
+              <img src="./assets/icons/bell.svg" alt="" />
+              <div class="relative flex">
+                <div
+                  class="relative inline-flex w-3 h-3 bg-[#12B76A] border-2 border-white rounded-full -top-2 right-3"
+                ></div>
+              </div>
+            </button>
+            <!-- Dropdown Notification -->
+            <div
+              id="dropdownNotification"
+              class="z-20 hidden w-[295px] bg-white divide-y divide-gray-100 rounded-lg shadow"
+              aria-labelledby="dropdownNotificationButton"
+            >
+              <div
+                class="divide-y divide-gray-100 overflow-y-auto max-h-[300px]"
+              >
+                <a
+                  href="#"
+                  class="flex px-4 py-3 hover:bg-[#FBE88080] rounded-b-lg"
+                >
+                  <img class="mr-5" src="./assets/icons/send.svg" alt="send" />
+                  <p class="text-sm">
+                    Kontrak Kamu “ dicari serbuk kepala kuliatas murni “ telah
+                    dimulai
+                  </p>
+                </a>
+                <a
+                  href="#"
+                  class="flex px-4 py-3 hover:bg-[#FBE88080] rounded-b-lg"
+                >
+                  <img class="mr-5" src="./assets/icons/send.svg" alt="send" />
+                  <p class="text-sm">
+                    Kontrak Kamu “ dicari serbuk kepala kuliatas murni “ telah
+                    dimulai
+                  </p>
+                </a>
+                <a
+                  href="#"
+                  class="flex px-4 py-3 hover:bg-[#FBE88080] rounded-b-lg"
+                >
+                  <img class="mr-5" src="./assets/icons/send.svg" alt="send" />
+                  <p class="text-sm">
+                    Kontrak Kamu “ dicari serbuk kepala kuliatas murni “ telah
+                    dimulai
+                  </p>
+                </a>
+                <a
+                  href="#"
+                  class="flex px-4 py-3 hover:bg-[#FBE88080] rounded-b-lg"
+                >
+                  <img class="mr-5" src="./assets/icons/send.svg" alt="send" />
+                  <p class="text-sm">
+                    Kontrak Kamu “ dicari serbuk kepala kuliatas murni “ telah
+                    dimulai
+                  </p>
+                </a>
+              </div>
+            </div>
+            <!-- Notification -->
+
+            <!-- User -->
+            <button
+              type="button"
+              class="hidden sm:flex mr-3 text-sm bg-gray-800 rounded-full xl:mr-0 focus:ring-4 focus:ring-gray-300"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="user-dropdown"
+              data-dropdown-placement="bottom"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img
+                class="w-8 h-8 rounded-full"
+                src="./assets/images/user.png"
+                alt="user photo"
+              />
+            </button>
+            <!-- Dropdown User -->
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow"
+              id="user-dropdown"
+            >
+              <div class="px-4 py-3 flex flex-col items-center text-center">
+                <img
+                  class="rounded-full w-16"
+                  src="./assets/images/user-profile.png"
+                  alt=""
+                />
+                <p class="my-2 text-lg font-medium">User</p>
+                <span class="text-[#8594AD] text-xs"
+                  >industri kecil dan menengah</span
+                >
+              </div>
+              <ul class="pb-2" aria-labelledby="user-menu-button">
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-x-2 px-4 py-2 hover:bg-[#F8E57D]"
+                    ><img
+                      class="w-5"
+                      src="./assets/icons/gear.svg"
+                      alt="gear"
+                    />
+                    <p class="font-medium">Settings</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./"
+                    class="flex items-center gap-x-2 px-4 py-2 hover:bg-[#F8E57D]"
+                    ><img
+                      class="w-5"
+                      src="./assets/icons/logout.svg"
+                      alt="gear"
+                    />
+                    <p class="font-medium">Log Out</p></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          id="defaultModal"
+          tabindex="-1"
+          aria-hidden="true"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full"
+        >
+          <div class="relative w-full h-full flex">
+            <!-- Modal content -->
+            <div
+              class="relative bg-white rounded-lg shadow w-full flex flex-col"
+            >
+              <!-- Modal header -->
+              <div class="flex items-start justify-between p-4">
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                  data-modal-hide="defaultModal"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="px-6 pb-6">
+                <div class="relative w-full mb-4">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                      />
+                    </svg>
+                    <span class="sr-only">Search icon</span>
+                  </div>
+                  <div class="flex border border-gray-300 rounded-lg">
+                    <input
+                      type="text"
+                      id="search-navbar"
+                      class="block w-full p-2 pl-10 text-sm text-gray-900 border-0 rounded-full focus:ring-0 focus:border-0"
+                      placeholder="Cari..."
+                    />
+                    <div
+                      class="inline-block my-2 w-0.5 self-stretch bg-[#DADADA80]"
+                    ></div>
+
+                    <button
+                      id="dropdownKategoriMobileButton"
+                      data-dropdown-toggle="dropdownKategoriMobile"
+                      class="focus:ring-2 rounded-full focus:outline-none focus:ring-indigo-500 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
+                      type="button"
+                    >
+                      <div id="textKategoriSearchMobile">Industri</div>
+                      <svg
+                        class="w-2.5 h-2.5 ml-2.5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 4 4 4-4"
+                        />
+                      </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div
+                      id="dropdownKategoriMobile"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none w-[230px]"
+                    >
+                      <ul
+                        class="py-2 text-sm text-gray-700"
+                        aria-labelledby="dropdownKategoriMobileButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-[#F6D10080]"
+                            onclick="setKategoriCariMobile('Industri Unggulan')"
+                            ><div class="flex flex-col space-y-0.5">
+                              <p class="font-medium">Industri Unggulan</p>
+                              <span class="text-[10px] text-[#8594AD]"
+                                >Cari industri unggulan</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-[#F6D10080]"
+                            onclick="setKategoriCariMobile('Profil Perusahaan')"
+                            ><div class="flex flex-col space-y-0.5">
+                              <p class="font-medium">Profil Perusahaan</p>
+                              <span class="text-[10px] text-[#8594AD]"
+                                >Cari perusahaan</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-[#F6D10080]"
+                            onclick="setKategoriCariMobile('Bahan Baku')"
+                            ><div class="flex flex-col space-y-0.5">
+                              <p class="font-medium">Bahan Baku</p>
+                              <span class="text-[10px] text-[#8594AD]"
+                                >Cari bahan baku</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-[#F6D10080]"
+                            onclick="setKategoriCariMobile('Lokasi')"
+                            ><div class="flex flex-col space-y-0.5">
+                              <p class="font-medium">Lokasi</p>
+                              <span class="text-[10px] text-[#8594AD]"
+                                >Cari berdasarkan lokasi</span
+                              >
+                            </div></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  id="accordion-collapse"
+                  data-active-classes="bg-gray-100"
+                  data-accordion="collapse"
+                >
+                  <h2 id="accordion-collapse-heading-1">
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full px-5 py-2 font-medium text-left text-gray-500 rounded-xl"
+                      data-accordion-target="#accordion-collapse-body-1"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-1"
+                    >
+                      <span>Proyek </span>
+                      <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        />
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-1"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-1"
+                  >
+                    <div
+                      class="text-center flex flex-col gap-y-2 my-2 text-gray-500"
+                    >
+                      <a href="#">Cari Proyek</a>
+                      <a href="#">Sediakan produk</a>
+                      <a href="#">Sediakan jasa</a>
+                    </div>
+                  </div>
+                  <h2 id="accordion-collapse-heading-2">
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full px-5 py-2 font-medium text-left text-gray-500 rounded-xl"
+                      data-accordion-target="#accordion-collapse-body-2"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-2"
+                    >
+                      <span>Proyek saya</span>
+                      <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        />
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-2"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-2"
+                  >
+                    <div
+                      class="text-center flex flex-col gap-y-2 my-2 text-gray-500"
+                    >
+                      <a href="#">Proyek yang berlangsung</a>
+                      <a href="#">Riwayat Proposal</a>
+                      <a href="#">Statistik saya</a>
+                      <a href="#">Produk Saya</a>
+                      <a href="#">Jasa Saya</a>
+                      <a href="#">Riwayat Proyek</a>
+                    </div>
+                  </div>
+                  <a
+                    class="flex items-center justify-between w-full px-5 py-2 font-medium text-left text-gray-500 rounded-xl"
+                    href="#"
+                    >Pesan</a
+                  >
+                  <h2 id="accordion-collapse-heading-4">
+                    <button
+                      type="button"
+                      class="flex items-center justify-between w-full px-5 py-2 font-medium text-left text-gray-500 rounded-xl"
+                      data-accordion-target="#accordion-collapse-body-4"
+                      aria-expanded="false"
+                      aria-controls="accordion-collapse-body-4"
+                    >
+                      <span>Account</span>
+                      <svg
+                        data-accordion-icon
+                        class="w-3 h-3 rotate-180 shrink-0"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 5 5 1 1 5"
+                        />
+                      </svg>
+                    </button>
+                  </h2>
+                  <div
+                    id="accordion-collapse-body-4"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-4"
+                  >
+                    <div
+                      class="text-center flex flex-col gap-y-2 my-2 text-gray-500"
+                    >
+                      <a href="#">Settings</a>
+                      <a href="#">Log Out</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1"></div>
+              <hr />
+              <a href="#" class="flex gap-4 items-center py-4 px-8">
+                <img
+                  class="rounded-full w-10 h-10"
+                  src="./assets/images/user-profile.png"
+                  alt="user"
+                />
+                <div class="text-xs">
+                  <p class="font-medium">Username</p>
+                  <p>email@gmail.com</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full xl:flex xl:w-auto xl:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 xl:hidden">
+            <div
+              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Search..."
+            />
+          </div>
+          <ul
+            class="flex flex-col p-4 xl:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 xl:flex-row xl:space-x-8 xl:mt-0 xl:border-0 xl:bg-white"
+          >
+            <li>
+              <button
+                id="dropdownSupplyLink"
+                data-dropdown-toggle="dropdownSupply"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
+              >
+                Supply
+                <svg
+                  class="w-2.5 h-2.5 ml-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown Supply -->
+              <div
+                id="dropdownSupply"
+                class="z-10 hidden font-normal bg-[#fafafa] divide-y divide-gray-100 rounded-lg shadow-lg w-44"
+              >
+                <ul
+                  class="py-2 text-sm font-medium"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Cari Produk</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Cari servis</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button
+                id="dropdownProyekLink"
+                data-dropdown-toggle="dropdownProyek"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
+              >
+                Proyek
+                <svg
+                  class="w-2.5 h-2.5 ml-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown Proyek -->
+              <div
+                id="dropdownProyek"
+                class="z-10 hidden font-normal bg-[#fafafa] divide-y divide-gray-100 rounded-lg shadow-lg w-fit"
+              >
+                <ul
+                  class="py-2 text-sm font-medium"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Proyek yang berlangsung</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Proposal</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Statistik Saya</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Riwayat Proyek</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Riwayat Produk</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-[#F6D10080]"
+                      >Riwayat Jasa</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 xl:hover:bg-transparent xl:hover:text-blue-700 xl:p-0"
+                >Pesan</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Logged In IKM -->
+
+    <main>
+      <section>
+        <div class="max-w-screen-xl mx-auto">
+          <h1
+            class="my-10 text-center px-8 xl:px-0 md:text-left font-semibold text-3xl"
+          >
+            Rincian Proposal
+          </h1>
+
+          <div
+            class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 md:pl-16 px-4 py-10"
+          >
+            <h2 class="text-2xl font-semibold mb-8">Rincian Proyek</h2>
+            <div class="flex md:flex-row flex-col pb-8">
+              <div
+                class="border md:border-r-[#DADADA] max-md:border-r-0 border-y-0 border-l-0 py-4 pr-4"
+              >
+                <h3 class="text-[#2264D1] text-xl font-semibold mb-6">
+                  Di Cari Produk Kelapa Tua
+                </h3>
+                <div class="flex items-center gap-x-5 mb-6">
+                  <button
+                    class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
+                  >
+                    Pangan
+                  </button>
+                  <p class="text-[#8594AD] text-sm font-medium">
+                    Diposting Mei 30,2023
+                  </p>
+                </div>
+                <p class="font-medium line-clamp-3 teks-deskripsi">
+                  Kami dengan senang hati ingin memperkenalkan produk kelapa tua
+                  berkualitas baik dari perusahaan kami kepada Anda. <br />
+                  Sebagai perusahaan yang berkomitmen untuk<br />
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt, qui. Illo voluptates beatae reprehenderit nihil,
+                  ipsum ullam quia debitis porro provident error sint molestias
+                  reiciendis numquam commodi consequatur animi omnis?
+                </p>
+                <div class="flex flex-col gap-y-4 my-8">
+                  <button
+                    class="btn-lihat-detail w-fit text-[#2264D1] font-semibold text-sm"
+                  >
+                    Lihat detail
+                  </button>
+
+                  <a class="text-[#2264D1] font-semibold" href="#"
+                    >Lihat Proyek Postingan</a
+                  >
+                </div>
+              </div>
+              <div
+                class="text-center md:px-10 whitespace-nowrap flex flex-col justify-end gap-y-3"
+              >
+                <div>
+                  <p class="font-semibold mb-3">Ajukan ketentuan Anda</p>
+                  <p class="text-[#8594AD] font-medium">Harga Tetap</p>
+                </div>
+                <div class="my-8">
+                  <p class="font-semibold mb-3">14, Mar 2023 - 20, juli 2023</p>
+                  <p class="text-[#8594AD] font-medium">Panjang Proyek</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="border border-t-[#DADADA] border-x-0 border-b-0 pt-5 pb-8"
+            >
+              <h4 class="text-[#37474F] font-semibold text-lg">
+                Industri Ungggulan
+              </h4>
+              <div class="flex flex-wrap gap-x-4 gap-y-3 mt-5">
+                <button
+                  class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
+                >
+                  Pangan
+                </button>
+                <button
+                  class="bg-[#FFE07D] rounded-full py-2 px-3 text-[#2264D1] font-semibold text-xs"
+                >
+                  Biji Kopi
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 px-8 py-10"
+          >
+            <p class="font-medium text-lg">
+              Berapa lama durasi yang dibutuhkan proyek ini?
+            </p>
+            <div class="mt-3 flex md:gap-x-8 gap-x-4 items-center">
+              <input
+                type="number"
+                id="jumlahDurasiInput"
+                class="md:w-[180px] h-full w-1/2 border border-[#DADADA] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+                min="0"
+                value="1"
+                required
+              />
+
+              <button
+                id="dropdownTipeDurasiButton"
+                data-dropdown-toggle="dropdownTipeDurasi"
+                class="font-medium md:w-[180px] w-1/2 justify-between focus:ring-blue-500 focus:border-blue-500 block p-2.5 rounded-lg px-4 text-[#37474F] py-2.5 text-center inline-flex items-center border border-[#DADADA]"
+                type="button"
+              >
+                <p class="whitespace-nowrap" id="textTipeDurasiButton">Hari</p>
+                <svg
+                  class="w-2.5 h-2.5 ml-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <!-- Dropdown tipe durasi -->
+              <div
+                id="dropdownTipeDurasi"
+                class="z-10 hidden md:w-[210px] bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-fit border border-[#DADADA]"
+              >
+                <ul
+                  class="py-2 text-[#37474F]"
+                  aria-labelledby="dropdownTipeDurasiButton"
+                >
+                  <li onclick="setTipeDurasi('Hari')">
+                    <div
+                      class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                    >
+                      Hari
+                    </div>
+                  </li>
+                  <li onclick="setTipeDurasi('Minggu')">
+                    <div
+                      class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                    >
+                      Minggu
+                    </div>
+                  </li>
+                  <li onclick="setTipeDurasi('Bulan')">
+                    <div
+                      class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                    >
+                      Bulan
+                    </div>
+                  </li>
+                  <li onclick="setTipeDurasi('Tahun')">
+                    <div
+                      class="cursor-pointer block px-4 py-2 hover:bg-[#F6D10080]"
+                    >
+                      Tahun
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="border border-[#DADADA] rounded-lg mx-8 xl:mx-0 mt-10 mb-28 px-8 py-10"
+          >
+            <h2 class="text-2xl font-medium mb-10">Detail tambahan</h2>
+            <h3 class="text-xl font-medium mb-3">Proposal Penawaran</h3>
+            <textarea
+              id="proposal"
+              maxlength="5000"
+              rows="8"
+              class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            ></textarea>
+
+            <h3 class="text-xl font-medium mt-10 mb-3">Lampiran</h3>
+
+            <div class="flex flex-wrap gap-y-3 gap-x-8 items-start mb-4">
+              <div class="flex items-center gap-x-3">
+                <iconify-icon width="24" icon="eva:attach-fill"></iconify-icon>
+                <p id="filename" class="text-lg">awm.png</p>
+                <p class="text-lg">(5.8MB)</p>
+                <button
+                  class="flex bg-white hover:bg-red-600 hover:text-white text-[#2264D1] justify-center items-center rounded-full h-[36px] w-[36px] border border-[#DADADA]"
+                >
+                  <iconify-icon width="21" icon="ph:trash-bold"></iconify-icon>
+                </button>
+              </div>
+
+              <div class="flex">
+                <div class="flex flex-col mt-1">
+                  <div class="flex items-center gap-x-3">
+                    <iconify-icon
+                      width="24"
+                      icon="eva:attach-fill"
+                    ></iconify-icon>
+                    <p class="text-lg">awm.png</p>
+                    <p class="text-lg">(5.8MB)</p>
+                  </div>
+                  <div class="w-full bg-[#DADADA] rounded-full h-1.5 mt-3">
+                    <div
+                      class="bg-[#2264D1] h-1.5 rounded-full pr-10"
+                      style="width: 45%"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="flex bg-white text-transparent justify-center items-center rounded-full h-[36px]"
+                >
+                  <iconify-icon width="0" icon="ph:trash-bold"></iconify-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center w-full mb-4">
+              <label
+                for="dropzone-file"
+                class="flex flex-col items-center justify-center w-full h-36"
+              >
+                <div class="absolute z-50">
+                  <p class="text-lg font-medium text-[#37474F]">
+                    Seret atau
+                    <span class="text-[#2264D1] underline cursor-pointer"
+                      >unggah</span
+                    >
+                    file proyek
+                  </p>
+                </div>
+                <input
+                  id="dropzone-file"
+                  multiple
+                  type="file"
+                  class="dropzone-file"
+                />
+              </label>
+            </div>
+
+            <p class="text-[#8594AD] font-medium">
+              Anda dapat melampirkan hingga 10 file dengan ukuran masing-masing
+              di bawah 25 MB. Sertakan contoh pekerjaan atau dokumen lain untuk
+              mendukung lamaran Anda. Jangan lampirkan resume Anda - profil Anda
+              secara otomatis diteruskan ke klien dengan proposal Anda.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#3676E0] text-white">
+      <div class="py-4 px-4 mx-auto max-w-screen-xl sm:pt-16 lg:px-6">
+        <div
+          class="flex flex-col md:flex-row gap-y-10 md:gap-y-0 justify-between"
+        >
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Kategori</h5>
+            <a class="font-medium" href="#">Elektronika dan telematika ICT</a>
+            <a class="font-medium" href="#">Alat transportasi</a>
+            <a class="font-medium" href="#">Farmasi, kosmetik dan alkes</a>
+            <a class="font-medium" href="#">Pembangkit energi</a>
+            <a class="font-medium" href="#">Pangan</a>
+            <a class="font-medium" href="#">Hulu agro</a>
+            <a class="font-medium" href="#"
+              >Tekstil,kulit,alas kaki dan aneka</a
+            >
+            <a class="font-medium" href="#">Kimia dasar</a>
+            <a class="font-medium" href="#"
+              >Logam dasar dan bahan gajian non logam</a
+            >
+            <a class="font-medium" href="#"
+              >Barang modal, komponen, bahan penolong <br />
+              dan jasa Industri</a
+            >
+            <a class="font-medium" href="#">Kimia dasar, Migas dan Batu bara</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Cara Penggunaan</h5>
+            <a class="font-medium" href="#">Daftar sebagai ikm</a>
+            <a class="font-medium" href="#">Daftar sebagai ib</a>
+            <a class="font-medium" href="#">Cara mulai jual produk</a>
+            <a class="font-medium" href="#">FAQ</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Tentang Sirapi</h5>
+            <a class="font-medium" href="#">Syarat dan ketentuan</a>
+            <a class="font-medium" href="#">Kebijakan privasi</a>
+          </div>
+          <div class="flex flex-col gap-y-3">
+            <h5 class="font-semibold text-xl">Hubungan Kami</h5>
+            <a class="font-medium" href="#">Admin@sirapi.com</a>
+            <div class="flex-1"></div>
+            <div class="flex gap-x-6">
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img
+                  class="w-[25px]"
+                  src="./assets/icons/facebook.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img
+                  class="w-[25px]"
+                  src="./assets/icons/instagram.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="#"
+                class="flex justify-center items-center rounded-full h-[40px] w-[40px] bg-[#F6D100]"
+              >
+                <img class="w-[25px]" src="./assets/icons/youtube.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center font-medium mt-9">
+          © Hak cipta dilindungi. dinas perindustrian dan perdagangan provinsi
+          kepulauan riau.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script>
+      let teksDeskripsi = document.querySelector(".teks-deskripsi"),
+        btnMore = document.querySelector(".btn-lihat-detail");
+
+      btnMore.onclick = function () {
+        teksDeskripsi.classList.toggle("line-clamp-3");
+        btnMore.classList.add("hidden");
+      };
+
+      function setTipeDurasi(tipe) {
+        button = document.getElementById("dropdownTipeDurasiButton");
+        textButton = document.getElementById("textTipeDurasiButton");
+        textButton.innerText = tipe;
+        tipeDurasi = tipe;
+        button.click();
+      }
+    </script>
+    <script src="./assets/js/index.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+  </body>
+</html>
